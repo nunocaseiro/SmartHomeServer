@@ -1,0 +1,62 @@
+[2020-11-18 18:11:48.546] [exthost] [info] extension host started
+[2020-11-18 18:11:48.770] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2020-11-18 18:11:48.771] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/extensions/debug-auto-launch/dist/extension
+[2020-11-18 18:11:48.790] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2020-11-18 18:11:48.795] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/extensions/emmet/dist/node/emmetNodeMain
+[2020-11-18 18:11:48.977] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2020-11-18 18:11:48.978] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/extensions/git/dist/main
+[2020-11-18 18:11:49.348] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2020-11-18 18:11:49.348] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/extensions/merge-conflict/dist/mergeConflictMain
+[2020-11-18 18:11:49.377] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2020-11-18 18:11:49.377] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/extensions/search-result/dist/extension.js
+[2020-11-18 18:11:49.818] [exthost] [info] ExtensionService#_doActivateExtension vscode.github {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2020-11-18 18:11:49.820] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/extensions/github/dist/extension.js
+[2020-11-18 18:11:50.086] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.js-debug {"startup":false,"extensionId":{"value":"ms-vscode.js-debug","_lower":"ms-vscode.js-debug"},"activationEvent":"onCommand:extension.js-debug.clearAutoAttachVariables"}
+[2020-11-18 18:11:50.088] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/extensions/ms-vscode.js-debug/src/extension.js
+[2020-11-18 18:11:50.695] [exthost] [info] eager extensions activated
+[2020-11-18 19:53:23.535] [exthost] [info] ExtensionService#_doActivateExtension ms-toolsai.jupyter {"startup":false,"extensionId":{"value":"ms-toolsai.jupyter","_lower":"ms-toolsai.jupyter"},"activationEvent":"onLanguage:python"}
+[2020-11-18 19:53:23.535] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/extensions/ms-toolsai.jupyter-2020.11.358541065/out/client/extension
+[2020-11-18 19:53:26.235] [exthost] [info] ExtensionService#_doActivateExtension ms-python.python {"startup":false,"extensionId":{"value":"ms-python.python","_lower":"ms-python.python"},"activationEvent":"onLanguage:python"}
+[2020-11-18 19:53:26.235] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/extensions/ms-python.python-2020.11.367453362/out/client/extension
+[2020-11-18 19:58:32.643] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"extensionId":{"value":"vscode.html-language-features","_lower":"vscode.html-language-features"},"activationEvent":"onLanguage:html"}
+[2020-11-18 19:58:32.643] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/extensions/html-language-features/client/dist/node/htmlClientMain
+[2020-11-18 20:00:41.668] [exthost] [error] [ms-python.python] provider FAILED
+[2020-11-18 20:00:41.668] [exthost] [error] Error: DisposableStore is missing...
+	at W._convertCompletionItem (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:774:944)
+	at W.resolveCompletionItem (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:774:680)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2020-11-18 20:09:13.696] [exthost] [error] [ms-python.python] provider FAILED
+[2020-11-18 20:09:13.696] [exthost] [error] Error: DisposableStore is missing...
+	at W._convertCompletionItem (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:774:944)
+	at W.resolveCompletionItem (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:774:680)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2020-11-18 20:20:50.996] [exthost] [error] [ms-python.python] provider FAILED
+[2020-11-18 20:20:50.996] [exthost] [error] Error: DisposableStore is missing...
+	at W._convertCompletionItem (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:774:944)
+	at W.resolveCompletionItem (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:774:680)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2020-11-18 20:20:51.225] [exthost] [error] [ms-python.python] provider FAILED
+[2020-11-18 20:20:51.225] [exthost] [error] Error: DisposableStore is missing...
+	at W._convertCompletionItem (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:774:944)
+	at W.resolveCompletionItem (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:774:680)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2020-11-18 20:20:51.451] [exthost] [error] [ms-python.python] provider FAILED
+[2020-11-18 20:20:51.451] [exthost] [error] Error: DisposableStore is missing...
+	at W._convertCompletionItem (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:774:944)
+	at W.resolveCompletionItem (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:774:680)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2020-11-18 20:38:33.081] [exthost] [error] [ms-python.python] provider FAILED
+[2020-11-18 20:38:33.081] [exthost] [error] Error: DisposableStore is missing...
+	at W._convertCompletionItem (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:774:944)
+	at W.resolveCompletionItem (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:774:680)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2020-11-18 20:38:33.112] [exthost] [error] [ms-python.python] provider FAILED
+[2020-11-18 20:38:33.112] [exthost] [error] Error: DisposableStore is missing...
+	at W._convertCompletionItem (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:774:944)
+	at W.resolveCompletionItem (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:774:680)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)

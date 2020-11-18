@@ -1,0 +1,43 @@
+[2020-11-18 18:11:45.695] [remoteagent] [info] 
+
+*
+* Visual Studio Code Server
+*
+* Reminder: You may only use this software with Visual Studio family products,
+* as described in the license https://aka.ms/vscode-remote/license
+*
+
+
+[2020-11-18 18:11:45.696] [remoteagent] [info] Extension host agent started.
+[2020-11-18 18:11:46.436] [remoteagent] [info] [127.0.0.1][af5498e8][ManagementConnection] New connection established.
+[2020-11-18 18:11:46.438] [remoteagent] [info] [127.0.0.1][7a947cc1][ExtensionHostConnection] New connection established.
+[2020-11-18 18:11:46.556] [remoteagent] [info] [127.0.0.1][7a947cc1][ExtensionHostConnection] <33229> Launched Extension Host Process.
+[2020-11-18 18:11:54.443] [remoteagent] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2020-11-18 19:34:29.410] [remoteagent] [info] [127.0.0.1][f9e1abd1][ManagementConnection] New connection established.
+[2020-11-18 19:34:29.411] [remoteagent] [info] [127.0.0.1][164dc5ea][ExtensionHostConnection] New connection established.
+[2020-11-18 19:34:29.415] [remoteagent] [info] [127.0.0.1][164dc5ea][ExtensionHostConnection] <34673> Launched Extension Host Process.
+[2020-11-18 19:34:33.005] [remoteagent] [info] [127.0.0.1][f9e1abd1][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2020-11-18 19:34:34.033] [remoteagent] [info] [127.0.0.1][164dc5ea][ExtensionHostConnection] <34673> Extension Host Process exited with code: 0, signal: null.
+[2020-11-18 19:53:15.975] [remoteagent] [info] Installing extension: ms-python.python
+[2020-11-18 19:53:16.321] [remoteagent] [info] Downloaded extension: ms-python.python undefined
+[2020-11-18 19:53:20.258] [remoteagent] [info] Extracted extension to /home/smarthome/.vscode-server/extensions/.ms-python.python-2020.11.367453362: ms-python.python
+[2020-11-18 19:53:20.259] [remoteagent] [info] Renamed to /home/smarthome/.vscode-server/extensions/ms-python.python-2020.11.367453362
+[2020-11-18 19:53:20.267] [remoteagent] [info] Installation completed. ms-python.python
+[2020-11-18 19:53:20.418] [remoteagent] [info] Installing extension: ms-toolsai.jupyter
+[2020-11-18 19:53:20.852] [remoteagent] [info] Downloaded extension: ms-toolsai.jupyter undefined
+[2020-11-18 19:53:22.743] [remoteagent] [info] Extracted extension to /home/smarthome/.vscode-server/extensions/.ms-toolsai.jupyter-2020.11.358541065: ms-toolsai.jupyter
+[2020-11-18 19:53:22.744] [remoteagent] [info] Renamed to /home/smarthome/.vscode-server/extensions/ms-toolsai.jupyter-2020.11.358541065
+[2020-11-18 19:53:22.750] [remoteagent] [info] Installation completed. ms-toolsai.jupyter
+[2020-11-18 19:53:22.757] [remoteagent] [info] Extensions installed successfully: ms-toolsai.jupyter
+[2020-11-18 19:53:22.772] [remoteagent] [info] Extensions installed successfully: ms-python.python
+[2020-11-18 19:53:50.143] [remoteagent] [info] Listing 1 persistent terminals, 1 total terminals
+[2020-11-18 20:59:42.232] [remoteagent] [info] [127.0.0.1][af5498e8][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[2020-11-18 23:14:27.594] [remoteagent] [info] [127.0.0.1][af5498e8][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[2020-11-18 23:14:27.595] [remoteagent] [info] [127.0.0.1][7b5c0d7d][ManagementConnection] New connection established.
+[2020-11-18 23:14:27.598] [remoteagent] [info] [127.0.0.1][50d190e5][ExtensionHostConnection] New connection established.
+[2020-11-18 23:14:27.606] [remoteagent] [info] [127.0.0.1][50d190e5][ExtensionHostConnection] <40809> Launched Extension Host Process.
+[2020-11-18 23:14:27.821] [remoteagent] [info] Listing 1 persistent terminals, 1 total terminals
+[2020-11-18 23:14:31.964] [remoteagent] [info] Replaying 6989 chars and 1 size events.
+[2020-11-18 23:14:37.001] [remoteagent] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2020-11-18 23:19:27.604] [remoteagent] [info] [127.0.0.1][af5498e8][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+[2020-11-18 23:19:28.670] [remoteagent] [info] [127.0.0.1][7a947cc1][ExtensionHostConnection] <33229> Extension Host Process exited with code: 0, signal: null.
