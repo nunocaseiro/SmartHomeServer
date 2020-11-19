@@ -1,16 +1,47 @@
 from django.db import models
 
 # Create your models here.
+class House(models.Model):
+    name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return "%s" % (self.name)
+
+class Room(models.Model):
+    name = models.CharField(max_length=20)
+    house = models.ForeignKey(House, on_delete=models.CASCADE)
+    ip = models.CharField(max_length=20)
+
+    def __str__(self):
+        return "%s" % (self.name)
+
 class Sensor(models.Model):
-    ssid = models.IntegerField(blank=True, null=True)
-    nome = models.CharField(max_length=20)
+    SENSOR_TYPE = [
+        ("led", 'LED'),
+        ("weight", 'WEIGHT'),
+        ("camera", 'CAMERA'),
+        ("servo", 'SERVO'),
+    ]
+    name = models.CharField(max_length=20)
+    sensortype = models.CharField(max_length=20,choices=SENSOR_TYPE, default="Undefined")
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
 
     def __str__(self):
-        return "%s" % (self.ssid)
+        return "%s" % (self.name)
 
-class ValorSensor(models.Model):
-    ssidsensor = models.ForeignKey(Sensor, on_delete=models.CASCADE)
-    valor = models.DecimalField(max_digits=3, decimal_places=1)
+class SensorValue(models.Model):
+    idsensor = models.ForeignKey(Sensor, on_delete=models.CASCADE)
+    value = models.DecimalField(max_digits=3, decimal_places=1)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return "%s : %s" % (self.ssidsensor, self.valor)
+        return "%s : %s" % (self.idsensor, self.value)
+
+
+
+
+
+
+
+
+

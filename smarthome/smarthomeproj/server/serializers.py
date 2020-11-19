@@ -1,10 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from smarthomeproj.server.models import Sensor, ValorSensor
-
-
-
-
+from smarthomeproj.server.models import Sensor, SensorValue, House, Room
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -16,8 +12,6 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
         fields = ['url', 'name']
-
-
 
 class User1Serializer(serializers.ModelSerializer):
     class Meta:
@@ -35,9 +29,19 @@ class User1Serializer(serializers.ModelSerializer):
 class SensorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sensor
-        fields = ['ssid', 'nome']
+        fields = ['id', 'name', 'sensortype','room']
 
-class ValorSensorSerializer(serializers.ModelSerializer):
+class SensorValueSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ValorSensor
-        fields = ['ssidsensor', 'valor']
+        model = SensorValue
+        fields = ['id','idsensor', 'value', 'created_at']
+
+class HouseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = House
+        fields = ['name']
+    
+class RoomSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Room
+        fields = ['name','house','ip']
