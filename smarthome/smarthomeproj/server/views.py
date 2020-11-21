@@ -44,7 +44,7 @@ class SensorValueViewSet(viewsets.ModelViewSet):
     serializer_class = SensorValueSerializer
     permission_classes = [permissions.IsAuthenticated]
 
-class HouseViewSet(viewsets.ModelViewSet):
+class HomeViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
