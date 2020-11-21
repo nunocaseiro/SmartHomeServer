@@ -1,0 +1,28 @@
+Looking for git in: git
+Using git 2.25.1 from git
+> git rev-parse --git-dir
+Open repository: /home/smarthome
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s 22f9f4c5f75292217ed313792138d77e29d0f377
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s 22f9f4c5f75292217ed313792138d77e29d0f377
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s ec1f6bddd8024cdf5775cac2e50f429d028d64f8
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s 22f9f4c5f75292217ed313792138d77e29d0f377
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s 22f9f4c5f75292217ed313792138d77e29d0f377

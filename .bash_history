@@ -168,3 +168,109 @@ ls
 pwd
 cd smarthome
 ls
+source /home/smarthome/smarthomeenv/bin/activate
+/home/smarthome/smarthomeenv/bin/python3.8 /home/smarthome/.vscode-server/extensions/ms-python.python-2020.11.367453362/pythonFiles/pyvsc-run-isolated.py pip install -U pylint
+git init
+git add .
+git commit -m "First commit"
+git config --global user.email "smarthome2021@gmail.com"
+git config --global user.name "smarthome"
+git remote add https://github.com/nunocaseiro/SmartHomeServer.git
+git remote add origin https://github.com/nunocaseiro/SmartHomeServer.git
+git remove -v
+git remote -v
+git push -u origin main
+git push -u origin 
+git push -u origin master
+git remote -v
+git checkout master
+git pull origin master
+git checkout main
+git pull origin main
+git push -u origin main
+git remove -v
+git remote -v
+git remove add origin https://github.com/nunocaseiro/SmartHomeServer.git
+git remote add origin https://github.com/nunocaseiro/SmartHomeServer.git
+git remote -v
+git push -u origin main
+git pull
+git pull main
+git pull master
+git pull
+git push -f
+git checkout
+git push -f
+git push origin master
+git add .
+git commit -m "First commit"
+git push -u origin master
+git push -u origin main
+git push -f origin main
+git push -u origin main
+git pull
+git push origin main
+git checkout
+git add .
+git commit -mt "Second commit"
+git commit -m "Second commit"
+git push origin master
+lssudo systemctl restart gunicorn
+sudo systemctl restart gunicorn
+ls
+cd smarthome
+ls
+cd ..
+manage.py makemigrations
+smarthome/smarthomeproj/manage.py makemigrations
+smarthome/manage.py makemigrations
+smarthome/manage.py migration
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+systemctl status gunicorn.service
+sudo systemctl restart gunicorn
+systemctl status gunicorn.service
+sudo systemctl restart gunicorn
+systemctl status gunicorn.service
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+systemctl status gunicorn.service
+git add .
+git commit -m "Implemented models and endpoints: user,room,house,sensorvalues,sensor"
+git push -u origin master
+cd smarthome
+ls
+cd ..
+cd smarthomeenv/
+cd ..
+source smarthomeenv/bin/activate
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+systemctl status gunicorn.service
+source /home/smarthome/smarthomeenv/bin/activate
+sudo systemctl restart gunicorn

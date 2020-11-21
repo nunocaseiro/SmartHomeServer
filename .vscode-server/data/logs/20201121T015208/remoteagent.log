@@ -1,0 +1,29 @@
+[2020-11-21 01:52:08.453] [remoteagent] [info] 
+
+*
+* Visual Studio Code Server
+*
+* Reminder: You may only use this software with Visual Studio family products,
+* as described in the license https://aka.ms/vscode-remote/license
+*
+
+
+[2020-11-21 01:52:08.453] [remoteagent] [info] Extension host agent started.
+[2020-11-21 01:52:09.161] [remoteagent] [info] Deleted from disk ms-toolsai.jupyter /home/smarthome/.vscode-server/extensions/ms-toolsai.jupyter-2020.11.358541065
+[2020-11-21 01:52:09.210] [remoteagent] [info] Deleted from disk ms-python.python /home/smarthome/.vscode-server/extensions/ms-python.python-2020.11.367453362
+[2020-11-21 01:52:09.301] [remoteagent] [info] [127.0.0.1][82a69cbe][ManagementConnection] New connection established.
+[2020-11-21 01:52:09.306] [remoteagent] [info] [127.0.0.1][0f72ec42][ExtensionHostConnection] New connection established.
+[2020-11-21 01:52:09.422] [remoteagent] [info] [127.0.0.1][0f72ec42][ExtensionHostConnection] <94943> Launched Extension Host Process.
+[2020-11-21 01:52:09.532] [remoteagent] [info] Listing 0 persistent terminals, 0 total terminals
+[2020-11-21 01:52:19.874] [remoteagent] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2020-11-21 01:53:14.500] [remoteagent] [info] [127.0.0.1][aa69837b][ManagementConnection] New connection established.
+[2020-11-21 01:53:14.508] [remoteagent] [info] [127.0.0.1][26cb8dc2][ExtensionHostConnection] New connection established.
+[2020-11-21 01:53:14.517] [remoteagent] [info] [127.0.0.1][26cb8dc2][ExtensionHostConnection] <95228> Launched Extension Host Process.
+[2020-11-21 01:53:21.220] [remoteagent] [info] Listing 1 persistent terminals, 1 total terminals
+[2020-11-21 01:53:38.746] [remoteagent] [info] [127.0.0.1][aa69837b][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2020-11-21 01:53:39.778] [remoteagent] [info] [127.0.0.1][26cb8dc2][ExtensionHostConnection] <95228> Extension Host Process exited with code: 0, signal: null.
+[2020-11-21 01:53:51.044] [remoteagent] [info] [127.0.0.1][1a40e2dc][ManagementConnection] New connection established.
+[2020-11-21 01:53:51.047] [remoteagent] [info] [127.0.0.1][3c760508][ExtensionHostConnection] New connection established.
+[2020-11-21 01:53:51.052] [remoteagent] [info] [127.0.0.1][3c760508][ExtensionHostConnection] <95420> Launched Extension Host Process.
+[2020-11-21 01:53:51.303] [remoteagent] [info] Listing 2 persistent terminals, 2 total terminals
+[2020-11-21 01:53:58.456] [remoteagent] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)

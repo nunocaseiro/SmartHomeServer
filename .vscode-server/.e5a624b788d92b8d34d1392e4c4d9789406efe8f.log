@@ -11,44 +11,27 @@
 IP Address: 161.35.8.148
 IP Address: 10.10.0.5
 IP Address: 10.116.0.2
-Extension host agent listening on 39269
+Extension host agent listening on 36771
 
 
-[18:11:45] Extension host agent started.
-[18:11:46] [127.0.0.1][af5498e8][ManagementConnection] New connection established.
-[18:11:46] [127.0.0.1][7a947cc1][ExtensionHostConnection] New connection established.
+[01:52:08] Extension host agent started.
+[01:52:09] Deleted from disk ms-toolsai.jupyter /home/smarthome/.vscode-server/extensions/ms-toolsai.jupyter-2020.11.358541065
+[01:52:09] Deleted from disk ms-python.python /home/smarthome/.vscode-server/extensions/ms-python.python-2020.11.367453362
+[01:52:09] [127.0.0.1][82a69cbe][ManagementConnection] New connection established.
+[01:52:09] [127.0.0.1][0f72ec42][ExtensionHostConnection] New connection established.
 bash: cannot set terminal process group (-1): Inappropriate ioctl for device
 bash: no job control in this shell
-[18:11:46] [127.0.0.1][7a947cc1][ExtensionHostConnection] <33229> Launched Extension Host Process.
-[18:11:54] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
-[19:34:29] [127.0.0.1][f9e1abd1][ManagementConnection] New connection established.
-[19:34:29] [127.0.0.1][164dc5ea][ExtensionHostConnection] New connection established.
-[19:34:29] [127.0.0.1][164dc5ea][ExtensionHostConnection] <34673> Launched Extension Host Process.
-[19:34:33] [127.0.0.1][f9e1abd1][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
-[19:34:34] [127.0.0.1][164dc5ea][ExtensionHostConnection] <34673> Extension Host Process exited with code: 0, signal: null.
-[19:53:15] Installing extension: ms-python.python
-[19:53:16] Downloaded extension: ms-python.python undefined
-[19:53:20] Extracted extension to /home/smarthome/.vscode-server/extensions/.ms-python.python-2020.11.367453362: ms-python.python
-[19:53:20] Renamed to /home/smarthome/.vscode-server/extensions/ms-python.python-2020.11.367453362
-[19:53:20] Installation completed. ms-python.python
-[19:53:20] Installing extension: ms-toolsai.jupyter
-[19:53:20] Downloaded extension: ms-toolsai.jupyter undefined
-[19:53:22] Extracted extension to /home/smarthome/.vscode-server/extensions/.ms-toolsai.jupyter-2020.11.358541065: ms-toolsai.jupyter
-[19:53:22] Renamed to /home/smarthome/.vscode-server/extensions/ms-toolsai.jupyter-2020.11.358541065
-[19:53:22] Installation completed. ms-toolsai.jupyter
-[19:53:22] Extensions installed successfully: ms-toolsai.jupyter
-[19:53:22] Extensions installed successfully: ms-python.python
-[19:53:50] Listing 1 persistent terminals, 1 total terminals
-[20:59:42] [127.0.0.1][af5498e8][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
-Error: Unexpected SIGPIPE
-    at process.<anonymous> (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/bootstrap.js:5:377)
-    at process.emit (events.js:223:5)
-[23:14:27] [127.0.0.1][af5498e8][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
-[23:14:27] [127.0.0.1][7b5c0d7d][ManagementConnection] New connection established.
-[23:14:27] [127.0.0.1][50d190e5][ExtensionHostConnection] New connection established.
-[23:14:27] [127.0.0.1][50d190e5][ExtensionHostConnection] <40809> Launched Extension Host Process.
-[23:14:27] Listing 1 persistent terminals, 1 total terminals
-[23:14:31] Replaying 6989 chars and 1 size events.
-[23:14:37] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
-[23:19:27] [127.0.0.1][af5498e8][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
-[23:19:28] [127.0.0.1][7a947cc1][ExtensionHostConnection] <33229> Extension Host Process exited with code: 0, signal: null.
+[01:52:09] [127.0.0.1][0f72ec42][ExtensionHostConnection] <94943> Launched Extension Host Process.
+[01:52:09] Listing 0 persistent terminals, 0 total terminals
+[01:52:19] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[01:53:14] [127.0.0.1][aa69837b][ManagementConnection] New connection established.
+[01:53:14] [127.0.0.1][26cb8dc2][ExtensionHostConnection] New connection established.
+[01:53:14] [127.0.0.1][26cb8dc2][ExtensionHostConnection] <95228> Launched Extension Host Process.
+[01:53:21] Listing 1 persistent terminals, 1 total terminals
+[01:53:38] [127.0.0.1][aa69837b][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[01:53:39] [127.0.0.1][26cb8dc2][ExtensionHostConnection] <95228> Extension Host Process exited with code: 0, signal: null.
+[01:53:51] [127.0.0.1][1a40e2dc][ManagementConnection] New connection established.
+[01:53:51] [127.0.0.1][3c760508][ExtensionHostConnection] New connection established.
+[01:53:51] [127.0.0.1][3c760508][ExtensionHostConnection] <95420> Launched Extension Host Process.
+[01:53:51] Listing 2 persistent terminals, 2 total terminals
+[01:53:58] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)

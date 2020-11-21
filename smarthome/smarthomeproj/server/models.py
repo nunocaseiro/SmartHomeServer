@@ -1,4 +1,6 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
+
 
 # Create your models here.
 class House(models.Model):
@@ -25,6 +27,12 @@ class Sensor(models.Model):
     name = models.CharField(max_length=20)
     sensortype = models.CharField(max_length=20,choices=SENSOR_TYPE, default="Undefined")
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    gpio = models.IntegerField(
+        default=1,
+        validators=[
+            MaxValueValidator(20),
+            MinValueValidator(0)
+        ])
 
     def __str__(self):
         return "%s" % (self.name)

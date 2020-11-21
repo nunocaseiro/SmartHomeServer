@@ -1,0 +1,16 @@
+Error 2020-11-20 17:58:39: Jupyter Extension (Error in Failed to update settings.json, method:fixSettingsFile): [EntryNotFound (FileSystemError): Unable to read file 'vscode-remote://ssh-remote+161.35.8.148/home/smarthome/.config/Code/User/settings.json' (EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, open '/home/smarthome/.config/Code/User/settings.json')
+	at _handleError (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:754:838)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+	at async m.readFile (/home/smarthome/.vscode-server/extensions/ms-toolsai.jupyter-2020.11.372831992/out/client/extension.js:49:824323)
+	at async g.fixSettingsFile (/home/smarthome/.vscode-server/extensions/ms-toolsai.jupyter-2020.11.372831992/out/client/extension.js:47:291968)] {
+  code: 'FileNotFound',
+  name: 'EntryNotFound (FileSystemError)'
+}
+Error 2020-11-20 17:58:39: Jupyter Extension (Error in Failed to update settings.json, method:fixSettingsFile): [EntryNotFound (FileSystemError): Unable to read file 'vscode-remote://ssh-remote+161.35.8.148/home/smarthome/.vscode/settings.json' (EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, open '/home/smarthome/.vscode/settings.json')
+	at _handleError (/home/smarthome/.vscode-server/bin/e5a624b788d92b8d34d1392e4c4d9789406efe8f/out/vs/server/remoteExtensionHostProcess.js:754:838)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+	at async m.readFile (/home/smarthome/.vscode-server/extensions/ms-toolsai.jupyter-2020.11.372831992/out/client/extension.js:49:824323)
+	at async g.fixSettingsFile (/home/smarthome/.vscode-server/extensions/ms-toolsai.jupyter-2020.11.372831992/out/client/extension.js:47:291968)] {
+  code: 'FileNotFound',
+  name: 'EntryNotFound (FileSystemError)'
+}

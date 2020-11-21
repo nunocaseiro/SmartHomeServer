@@ -29,7 +29,7 @@ class User1Serializer(serializers.ModelSerializer):
 class SensorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sensor
-        fields = ['id', 'name', 'sensortype','room']
+        fields = ['id', 'name', 'sensortype','room', 'gpio']
 
 class SensorValueSerializer(serializers.ModelSerializer):
     class Meta:
