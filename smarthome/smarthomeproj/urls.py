@@ -24,12 +24,12 @@ router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'sensors', views.SensorViewSet)
 router.register(r'sensorsvalues', views.SensorValueViewSet)
-router.register(r'houses',views.HouseViewSet)
+router.register(r'home',views.HomeViewSet)
 router.register(r'rooms',views.RoomViewSet)
 
 admin.site.register(models.Sensor)
 admin.site.register(models.SensorValue)
-admin.site.register(models.House)
+admin.site.register(models.Home)
 admin.site.register(models.Room)
 
 
