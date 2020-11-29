@@ -1,10 +1,10 @@
 from django.contrib.auth.models import User, Group
-from smarthomeproj.server.models import Sensor, SensorValue, House, Room
+from smarthomeproj.server.models import Sensor, SensorValue, Home, Room
 from rest_framework import viewsets
 from rest_framework import permissions
 from rest_framework import generics
 
-from smarthomeproj.server.serializers import UserSerializer, GroupSerializer, User1Serializer, SensorSerializer, SensorValueSerializer, RoomSerializer, HouseSerializer
+from smarthomeproj.server.serializers import UserSerializer, GroupSerializer, User1Serializer, SensorSerializer, SensorValueSerializer, RoomSerializer, HomeSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -48,8 +48,8 @@ class HomeViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
-    queryset = House.objects.all()
-    serializer_class = HouseSerializer
+    queryset = Home.objects.all()
+    serializer_class = HomeSerializer
     permission_classes = [permissions.IsAuthenticated]
 
 class RoomViewSet(viewsets.ModelViewSet):

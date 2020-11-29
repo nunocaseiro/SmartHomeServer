@@ -3,7 +3,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 # Create your models here.
-class HomeZz(models.Model):
+class Home(models.Model):
     name = models.CharField(max_length=20)
 
     def __str__(self):
@@ -11,7 +11,7 @@ class HomeZz(models.Model):
 
 class Room(models.Model):
     name = models.CharField(max_length=20)
-    house = models.ForeignKey(House, on_delete=models.CASCADE)
+    home = models.ForeignKey(Home, on_delete=models.CASCADE)
     ip = models.CharField(max_length=20)
 
     def __str__(self):
