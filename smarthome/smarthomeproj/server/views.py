@@ -3,6 +3,13 @@ from smarthomeproj.server.models import Sensor, SensorValue, Home, Room
 from rest_framework import viewsets
 from rest_framework import permissions
 from rest_framework import generics
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.generics import RetrieveAPIView
+from rest_framework.views import APIView
+from django.http import Http404
+
 
 from smarthomeproj.server.serializers import UserSerializer, GroupSerializer, User1Serializer, SensorSerializer, SensorValueSerializer, RoomSerializer, HomeSerializer
 
@@ -59,4 +66,22 @@ class RoomViewSet(viewsets.ModelViewSet):
     queryset = Room.objects.all()
     serializer_class = RoomSerializer
     permission_classes = [permissions.IsAuthenticated]
+    #def list(self, request, *args, **kwargs):
+     #   queryset = self.filter_queryset(self.get_queryset())
+      #  return Response(queryset.values())
 
+
+
+class LastValue(generics.ListAPIView):
+    serializer_class = SensorValueSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    def get_queryset(self):
+        """
+        This view should return a list of all the purchases for
+        the user as determined by the username portion of the URL.
+        """
+        
+        idsensor = self.request.query_params.get('idsensor', None)
+        queryset = SensorValue.objects.all().filter(idsensor=idsensor).order_by('-created_at')[:1]
+       
+        return queryset

@@ -34,12 +34,12 @@ class SensorSerializer(serializers.ModelSerializer):
 class SensorValueSerializer(serializers.ModelSerializer):
     class Meta:
         model = SensorValue
-        fields = ['id','idsensor', 'value', 'created_at']
+        fields = ['id','idsensor', 'value']
 
 class HomeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Home
-        fields = ['name']
+        fields = ['name','id']
     
 class RoomSerializer(serializers.ModelSerializer):
     class Meta:
