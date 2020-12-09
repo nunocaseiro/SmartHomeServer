@@ -44,5 +44,11 @@ urlpatterns = [
     path('account/register', views.UserCreate.as_view()),
     #re_path('^api/sensorsvalues/idsensor/(?P<username>.+)/$', views.LastValue.as_view()),
     path('api/lastvaluesensor/', views.LastValue.as_view()),
-     url(r'^$', TemplateView.as_view(template_name='index.html')),
+    path('api/sensorsofroom/', views.SensorsOfRoom.as_view()),
+    path('api/roomsfortesting/', views.RoomsForIOS.as_view()),
+    path('api/sensorsoftype/', views.AllSensorsOfType.as_view()),
+    path('api/userdetails/', views.GetUserByUsername.as_view()),
+    path('api/countSensorsByRoom/', views.GetCountSensors.as_view()),
+    url(r'^$', TemplateView.as_view(template_name='index.html')),
+    url(r'^dj-rest-auth/', include('dj_rest_auth.urls'))
 ]

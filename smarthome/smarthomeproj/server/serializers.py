@@ -5,7 +5,7 @@ from smarthomeproj.server.models import Sensor, SensorValue, Home, Room
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ['url', 'username', 'email', 'groups']
+        fields = ['id','url', 'username', 'email', 'groups', 'first_name', 'last_name']
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
@@ -26,15 +26,53 @@ class User1Serializer(serializers.ModelSerializer):
         user.save()
         return user
 
-class SensorSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Sensor
-        fields = ['id', 'name', 'sensortype','room', 'gpio']
-
 class SensorValueSerializer(serializers.ModelSerializer):
     class Meta:
         model = SensorValue
         fields = ['id','idsensor', 'value']
+
+class SensorSerializerMeta(serializers.ModelSerializer):
+    class Meta:
+        model = Sensor
+        fields = ['id', 'name', 'sensortype','room', 'gpio']
+
+class SensorSerializer(serializers.ModelSerializer):
+    value = serializers.SerializerMethodField("get_last_value")
+    roomname = serializers.SerializerMethodField("get_room_name")
+    roomtype = serializers.SerializerMethodField("get_room_type")
+
+    def get_last_value(self,obj):
+            #queryset = SensorValue.objects.all().filter(idsensor=idsensor).order_by('-created_at')[:1]
+        try:
+            value = SensorValue.objects.all().filter(idsensor=obj.id).order_by('-created_at')[:1]
+            serializer = SensorValueSerializer(value, many=True)
+            return serializer.data[0]["value"]
+        except Exception:
+                return 0
+    
+    def get_room_name(self,obj):
+            #queryset = SensorValue.objects.all().filter(idsensor=idsensor).order_by('-created_at')[:1]
+        try:
+            room = Room.objects.get(pk=obj.room.id)
+            serializer = RoomSerializer(room)
+            return serializer.data["name"]
+        except Exception:
+                return 0
+    
+    def get_room_type(self,obj):
+            #queryset = SensorValue.objects.all().filter(idsensor=idsensor).order_by('-created_at')[:1]
+        try:
+            room = Room.objects.get(pk=obj.room.id)
+            serializer = RoomSerializer(room)
+            return serializer.data["roomtype"]
+        except Exception:
+                return 0
+        
+    class Meta:
+        model = Sensor
+        fields = ['id', 'name', 'sensortype','room', 'gpio', 'value', 'roomname', 'roomtype']
+    
+    
 
 class HomeSerializer(serializers.ModelSerializer):
     class Meta:
@@ -44,4 +82,4 @@ class HomeSerializer(serializers.ModelSerializer):
 class RoomSerializer(serializers.ModelSerializer):
     class Meta:
         model = Room
-        fields = ['name','home','ip']
+        fields = ['id','name','home','ip', 'roomtype']
