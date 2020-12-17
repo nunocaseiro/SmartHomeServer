@@ -12,6 +12,7 @@ from django.http import Http404
 from django.http import HttpResponse
 import json
 from itertools import chain
+from . import mqtt as mqtt
 
 from smarthomeproj.server.serializers import UserSerializer, GroupSerializer, User1Serializer, SensorSerializer, SensorValueSerializer, RoomSerializer, HomeSerializer, SensorSerializerMeta
 
@@ -42,6 +43,7 @@ class SensorViewSet(viewsets.ModelViewSet):
     API endpoint that allows users to be viewed or edited.
     """
     queryset = Sensor.objects.all()
+    #mqtt.client.publish("mensagens/teste", payload="enviei mensagen", qos=0, retain=False)
     serializer_class = SensorSerializer
     permission_classes = [permissions.IsAuthenticated]
 

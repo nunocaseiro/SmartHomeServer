@@ -27,7 +27,7 @@ class Room(models.Model):
 class Sensor(models.Model):
     SENSOR_TYPE = [
         ("led", 'LED'),
-        ("motion", 'MOTION'),
+        ("plug", 'PLUG'),
         ("camera", 'CAMERA'),
         ("servo", 'SERVO'),
     ]
