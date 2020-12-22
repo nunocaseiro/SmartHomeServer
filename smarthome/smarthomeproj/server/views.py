@@ -43,7 +43,7 @@ class SensorViewSet(viewsets.ModelViewSet):
     API endpoint that allows users to be viewed or edited.
     """
     queryset = Sensor.objects.all()
-    #mqtt.client.publish("mensagens/teste", payload="enviei mensagen", qos=0, retain=False)
+    #mqtt.client.publish("mensagens/teste", payload="enviei mensagens", qos=0, retain=False)
     serializer_class = SensorSerializer
     permission_classes = [permissions.IsAuthenticated]
 

@@ -1,3 +1,1 @@
-from . import mqtt
-
-mqtt.client.loop_start()
+default_app_config = 'smarthomeproj.server.apps.ServerConfig'
