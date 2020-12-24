@@ -1,26 +1,105 @@
 import paho.mqtt.client as mqtt
 import logging
-
+import json
+from .models import Room, Sensor
 
 logger = logging.getLogger("django")
+allsensors = Sensor.objects.all().filter(ios=False)
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
-    from .models import Room
-    logger.error("Connected with result code "+str(rc))
-    allrooms = Room.objects.all().filter(testing=False)
-    for room in allrooms:
-        client.subscribe("rooms/"+room.name)
-        logger.info("rooms/"+room.name)
-    
+   
+    #logger.error("Connected with result code "+str(rc))
+    for sensor in allsensors:
+        client.subscribe("/"+str(sensor.id))
+        logger.info("/"+sensor.name)
+
+def on_disconnect(client, userdata, rc):
+    client.loop_stop(force=False)
+    if rc != 0:
+        print("Unexpected disconnection.")
+    else:
+        print("Disconnected")
 
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
-    logger.info(str(msg.payload))
-    
+    from .models import Room, Sensor, SensorValue
 
-client = mqtt.Client()
+    m_decode=str(msg.payload.decode("utf-8","ignore"))
+    m_in=json.loads(m_decode) 
+    #logger.info(m_in)
+    
+    idSensor = int(msg.topic[1:])
+    #logger.info(idSensor)
+
+    sensor = Sensor.objects.get(id=idSensor)
+    if (m_in["to"] == "servidor" and m_in["from"] == "espNuno" ):
+        if (sensor.atuador != None):
+            atuador = Sensor.objects.get(id=sensor.atuador.id)
+
+        if(atuador.sensortype == "led"):
+            if(atuador.atuador != None):
+                atuador2 = Sensor.objects.get(id=atuador.atuador.id)
+                #enviar estado em vez de value
+            if m_in["value"] == "0.00":
+                #if sensorValue.value == 1.00:
+                    sensorV = SensorValue(idsensor = sensor, value = 0.0)
+                    sensorV.save()
+                    logger.info("zero")
+                    #publicar mensagem
+                    client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","off")))
+                    client.publish("/"+str(atuador2.id), json.dumps(createMessage("espNuno","server","turn","off")))
+                    #client.publish("/"+str(atuador2.id), "off")
+
+            if m_in["value"] == "1.00":
+                #if sensorValue.value == 0.00:
+                    logger.info("um")
+                    sensorV = SensorValue(idsensor = sensor, value = 1.0)
+                    sensorV.save()
+                    #publicar mensagem
+                    #client.publish("/"+str(atuador.id), "on")
+                    client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","on")))
+                    client.publish("/"+str(atuador2.id), json.dumps(createMessage("espNuno","server","turn","on")))
+                    #client.publish("/"+str(atuador2.id), "on") 
+
+def createMessage(to,fr0m,action,value):
+    send_msg = {
+        "to": to,
+        "from": fr0m,
+        "action":action,
+        "value":value
+    }
+    return send_msg
+
+
+
+    """ if (sensor.atuador != None):
+        atuador = Sensor.objects.get(id=sensor.atuador.id)
+#separar o que envio do que recebo
+        if(atuador.sensortype == "led"):
+            if(atuador.atuador != None):
+                atuador2 = Sensor.objects.get(id=atuador.atuador.id)
+                #enviar estado em vez de value
+            if msg.payload.decode("utf-8")== "0.00":
+                sensorV = SensorValue(idsensor = sensor, value = 0.0)
+                sensorV.save()
+                logger.info("zero")
+                #publicar mensagem
+                client.publish("/"+str(atuador.id), "off")
+                client.publish("/"+str(atuador2.id), "off")
+
+            if msg.payload.decode("utf-8")== "1.00":
+                logger.info("um")
+                sensorV = SensorValue(idsensor = sensor, value = 1.0)
+                sensorV.save()
+                #publicar mensagem
+                client.publish("/"+str(atuador.id), "on")
+                client.publish("/"+str(atuador2.id), "on") """
+
+
+
+client = mqtt.Client("server")
 client.username_pw_set("smarthome","smarthome")
 client.on_connect = on_connect
 client.on_message = on_message
-
+client.on_disconnect = on_disconnect
 client.connect("161.35.8.148", 1883, 60)

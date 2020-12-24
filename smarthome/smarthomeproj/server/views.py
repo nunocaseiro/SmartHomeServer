@@ -130,6 +130,8 @@ class GetUserByUsername(generics.ListAPIView):
         return queryset
 
 class GetCountSensors(APIView):
+    from . import mqtt
+    mqtt.client.loop_start()
     serializer_class = SensorSerializer
     permission_classes = [permissions.IsAuthenticated]
     def get(self, request, format=None):
