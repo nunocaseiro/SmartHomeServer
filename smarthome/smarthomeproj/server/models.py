@@ -52,6 +52,9 @@ class SensorValue(models.Model):
     value = models.DecimalField(max_digits=3, decimal_places=1)
     created_at = models.DateTimeField(auto_now_add=True)
 
+class Photo(models.Model):
+    photo = models.ImageField(upload_to='static/photos')
+    created_at = models.DateTimeField(auto_now_add=True)
 
 
 

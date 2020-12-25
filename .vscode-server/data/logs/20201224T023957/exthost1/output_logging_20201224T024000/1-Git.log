@@ -1,0 +1,442 @@
+Looking for git in: git
+Using git 2.25.1 from git
+> git rev-parse --git-dir
+Open repository: /home/smarthome
+> git status -z -u
+> git check-ignore -v -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s c75d0456fb9e1affc332e08d244dd31a1ec32591
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/smarthomeproj/server/admin.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/admin.py
+> git cat-file -s 8c38f3f3dad51e4585f3984282c2a4bec5349c1e
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s fce5d66b76c43946e464089455bf5f355171efea
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s cbbc1b3027643aeb183f3d31e0191e16aa0b7f2b
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s cbbc1b3027643aeb183f3d31e0191e16aa0b7f2b
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s fce5d66b76c43946e464089455bf5f355171efea
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/tests.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/tests.py
+> git cat-file -s 7ce503c2dd97ba78597f6ff6e4393132753573f6
+> git check-ignore -v -z --stdin
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/smarthomeproj/server/admin.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/admin.py
+> git cat-file -s 8c38f3f3dad51e4585f3984282c2a4bec5349c1e
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/asgi.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/asgi.py
+> git cat-file -s 0ddb9d2d41a84755a0b6c09cc2505971a8449579
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s c75d0456fb9e1affc332e08d244dd31a1ec32591
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/admin.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/admin.py
+> git cat-file -s 8c38f3f3dad51e4585f3984282c2a4bec5349c1e
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/smarthomeproj/server/admin.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/admin.py
+> git cat-file -s 8c38f3f3dad51e4585f3984282c2a4bec5349c1e
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/staticFrontend/index.html
+> git ls-files --stage -- /home/smarthome/smarthome/staticFrontend/index.html
+> git cat-file -s 1c8c95fb1ddaeb13953bf6fb2b20fb333b431ab7
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s fce5d66b76c43946e464089455bf5f355171efea
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s fce5d66b76c43946e464089455bf5f355171efea
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s c75d0456fb9e1affc332e08d244dd31a1ec32591
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s cbbc1b3027643aeb183f3d31e0191e16aa0b7f2b
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s cbbc1b3027643aeb183f3d31e0191e16aa0b7f2b
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s c75d0456fb9e1affc332e08d244dd31a1ec32591
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s c75d0456fb9e1affc332e08d244dd31a1ec32591
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s fce5d66b76c43946e464089455bf5f355171efea
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s c75d0456fb9e1affc332e08d244dd31a1ec32591
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/__init__.py
+> git cat-file -s e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+> git show --textconv :smarthome/smarthomeproj/wsgi.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/wsgi.py
+> git cat-file -s 0d6dcf62829f4fc087fbc28cc8c47c244452cdcc
+> git show --textconv :smarthome/smarthomeproj/.gitignore
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/.gitignore
+> git cat-file -s 541a820f6c59178661b11167ef8b683afdd678c7
+> git show --textconv :smarthome/smarthomeproj/asgi.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/asgi.py
+> git cat-file -s 0ddb9d2d41a84755a0b6c09cc2505971a8449579
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s c75d0456fb9e1affc332e08d244dd31a1ec32591
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/smarthomeproj/server/__init__.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/__init__.py
+> git cat-file -s d3f79b270f84a77d4171e1f8afe24b81ebc20c73
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s c75d0456fb9e1affc332e08d244dd31a1ec32591
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s dad1c6ca35645005cba2836ca0ce044b89984692
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s b3097c41a03ee56a071f6684a2d352a63522ff13
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s c9e988e54c9eb51e0854035b451a2af0fd881d41
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 694101ca724b8fccd7e51d66d76ee6be902fa841
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 2f10f7ab2fce2fa4eca23ba38a49e0a0c4b8e0fb
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 2f10f7ab2fce2fa4eca23ba38a49e0a0c4b8e0fb
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 2f10f7ab2fce2fa4eca23ba38a49e0a0c4b8e0fb
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py

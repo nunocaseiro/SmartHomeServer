@@ -1,0 +1,40 @@
+
+
+*
+* Visual Studio Code Server
+*
+* Reminder: You may only use this software with Visual Studio family products,
+* as described in the license https://aka.ms/vscode-remote/license
+*
+
+Extension host agent listening on 34433
+
+[18:20:41] Extension host agent started.
+[18:20:42] [127.0.0.1][a0a97b03][ManagementConnection] New connection established.
+[18:20:42] [127.0.0.1][56447c51][ExtensionHostConnection] New connection established.
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+[18:20:42] [127.0.0.1][56447c51][ExtensionHostConnection] <545195> Launched Extension Host Process.
+[18:20:42] Listing 0 persistent terminals, 0 total terminals
+[18:20:45] Installing extension: ms-python.python
+[18:20:46] Downloaded extension: ms-python.python undefined
+[18:20:50] Extracted extension to /home/smarthome/.vscode-server/extensions/.ms-python.python-2020.12.424452561: ms-python.python
+[18:20:50] Renamed to /home/smarthome/.vscode-server/extensions/ms-python.python-2020.12.424452561
+[18:20:50] Installation completed. ms-python.python
+[18:20:50] Extensions installed successfully: ms-python.python
+[18:21:10] [127.0.0.1][a0a97b03][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[18:21:11] [127.0.0.1][56447c51][ExtensionHostConnection] <545195> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[18:21:11] Last EH closed, waiting before shutting down
+[18:21:11] [127.0.0.1][c4dbcb31][ManagementConnection] New connection established.
+[18:21:11] [127.0.0.1][4c45b999][ExtensionHostConnection] New connection established.
+[18:21:11] [127.0.0.1][4c45b999][ExtensionHostConnection] <545289> Launched Extension Host Process.
+[18:21:12] Listing 0 persistent terminals, 0 total terminals
+[18:22:55] [127.0.0.1][c4dbcb31][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[18:22:56] [127.0.0.1][4c45b999][ExtensionHostConnection] <545289> Extension Host Process exited with code: 0, signal: null.
+Cancelling previous shutdown timeout
+[18:22:56] Cancelling previous shutdown timeout
+Last EH closed, waiting before shutting down
+[18:22:56] Last EH closed, waiting before shutting down
+Last EH closed, shutting down
+[18:27:56] Last EH closed, shutting down

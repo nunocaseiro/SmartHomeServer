@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User, Group
-from smarthomeproj.server.models import Sensor, SensorValue, Home, Room
+from smarthomeproj.server.models import Sensor, SensorValue, Home, Room, Photo
 from rest_framework import viewsets
 from rest_framework import permissions
 from rest_framework import generics
@@ -14,7 +14,7 @@ import json
 from itertools import chain
 from . import mqtt as mqtt
 
-from smarthomeproj.server.serializers import UserSerializer, GroupSerializer, User1Serializer, SensorSerializer, SensorValueSerializer, RoomSerializer, HomeSerializer, SensorSerializerMeta
+from smarthomeproj.server.serializers import UserSerializer, GroupSerializer, User1Serializer, SensorSerializer, SensorValueSerializer, RoomSerializer, HomeSerializer, SensorSerializerMeta, PhotoSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -62,6 +62,15 @@ class HomeViewSet(viewsets.ModelViewSet):
     queryset = Home.objects.all()
     serializer_class = HomeSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+class PhotoViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Photo.objects.all()
+    serializer_class = PhotoSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
 
 class RoomViewSet(viewsets.ModelViewSet):
     """

@@ -1,0 +1,30 @@
+[2020-12-23 20:09:33.021] [remoteagent] [info] 
+
+*
+* Visual Studio Code Server
+*
+* Reminder: You may only use this software with Visual Studio family products,
+* as described in the license https://aka.ms/vscode-remote/license
+*
+
+
+[2020-12-23 20:09:33.021] [remoteagent] [info] Extension host agent started.
+[2020-12-23 20:09:33.363] [remoteagent] [info] [127.0.0.1][33a6d41d][ManagementConnection] New connection established.
+[2020-12-23 20:09:33.366] [remoteagent] [info] [127.0.0.1][0427c68b][ExtensionHostConnection] New connection established.
+[2020-12-23 20:09:33.487] [remoteagent] [info] [127.0.0.1][0427c68b][ExtensionHostConnection] <942494> Launched Extension Host Process.
+[2020-12-23 20:09:33.613] [remoteagent] [info] Listing 0 persistent terminals, 0 total terminals
+[2020-12-23 22:16:48.063] [remoteagent] [info] [127.0.0.1][33a6d41d][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[2020-12-23 22:27:12.404] [remoteagent] [info] [127.0.0.1][33a6d41d][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[2020-12-23 22:27:12.406] [remoteagent] [info] [127.0.0.1][4bd6f2fd][ManagementConnection] New connection established.
+[2020-12-23 22:27:12.409] [remoteagent] [info] [127.0.0.1][135ab7bd][ExtensionHostConnection] New connection established.
+[2020-12-23 22:27:12.417] [remoteagent] [info] [127.0.0.1][135ab7bd][ExtensionHostConnection] <957646> Launched Extension Host Process.
+[2020-12-23 22:27:12.652] [remoteagent] [info] Listing 1 persistent terminals, 1 total terminals
+[2020-12-23 22:27:16.804] [remoteagent] [info] Replaying 264 chars and 1 size events.
+[2020-12-23 22:32:12.406] [remoteagent] [info] [127.0.0.1][33a6d41d][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+[2020-12-23 22:32:13.507] [remoteagent] [info] [127.0.0.1][0427c68b][ExtensionHostConnection] <942494> Extension Host Process exited with code: 0, signal: null.
+[2020-12-23 23:39:02.327] [remoteagent] [info] [127.0.0.1][20bff42e][ManagementConnection] New connection established.
+[2020-12-23 23:39:02.329] [remoteagent] [info] [127.0.0.1][c8f8484f][ExtensionHostConnection] New connection established.
+[2020-12-23 23:39:02.337] [remoteagent] [info] [127.0.0.1][c8f8484f][ExtensionHostConnection] <966636> Launched Extension Host Process.
+[2020-12-23 23:39:02.581] [remoteagent] [info] Listing 1 persistent terminals, 1 total terminals
+[2020-12-23 23:55:52.015] [remoteagent] [info] [127.0.0.1][20bff42e][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2020-12-23 23:55:53.094] [remoteagent] [info] [127.0.0.1][c8f8484f][ExtensionHostConnection] <966636> Extension Host Process exited with code: 0, signal: null.

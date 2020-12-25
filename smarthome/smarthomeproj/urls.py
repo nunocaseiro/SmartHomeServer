@@ -28,11 +28,13 @@ router.register(r'sensors', views.SensorViewSet)
 router.register(r'sensorsvalues', views.SensorValueViewSet)
 router.register(r'homes',views.HomeViewSet)
 router.register(r'rooms',views.RoomViewSet)
+router.register(r'photos',views.PhotoViewSet)
 
 admin.site.register(models.Sensor)
 admin.site.register(models.SensorValue)
 admin.site.register(models.Home)
 admin.site.register(models.Room)
+admin.site.register(models.Photo)
 
 
 # Wire up our API using automatic URL routing.

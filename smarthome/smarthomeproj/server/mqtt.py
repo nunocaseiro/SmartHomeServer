@@ -1,6 +1,7 @@
 import paho.mqtt.client as mqtt
 import logging
 import json
+from json.decoder import JSONDecodeError
 from .models import Room, Sensor
 
 logger = logging.getLogger("django")
@@ -24,12 +25,15 @@ def on_disconnect(client, userdata, rc):
 def on_message(client, userdata, msg):
     from .models import Room, Sensor, SensorValue
 
-    m_decode=str(msg.payload.decode("utf-8","ignore"))
-    m_in=json.loads(m_decode) 
-    #logger.info(m_in)
-    
-    idSensor = int(msg.topic[1:])
+    try:
+        m_decode=str(msg.payload.decode("utf-8","ignore"))
+        m_in=json.loads(m_decode) 
+        #logger.info(m_in)
+        
+        idSensor = int(msg.topic[1:])
     #logger.info(idSensor)
+    except ValueError:
+        logger.error(ValueError)
 
     sensor = Sensor.objects.get(id=idSensor)
     if (m_in["to"] == "servidor" and m_in["from"] == "espNuno" ):
@@ -45,10 +49,8 @@ def on_message(client, userdata, msg):
                     sensorV = SensorValue(idsensor = sensor, value = 0.0)
                     sensorV.save()
                     logger.info("zero")
-                    #publicar mensagem
                     client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","off")))
-                    client.publish("/"+str(atuador2.id), json.dumps(createMessage("espNuno","server","turn","off")))
-                    #client.publish("/"+str(atuador2.id), "off")
+
 
             if m_in["value"] == "1.00":
                 #if sensorValue.value == 0.00:
@@ -56,10 +58,11 @@ def on_message(client, userdata, msg):
                     sensorV = SensorValue(idsensor = sensor, value = 1.0)
                     sensorV.save()
                     #publicar mensagem
-                    #client.publish("/"+str(atuador.id), "on")
+                    
                     client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","on")))
-                    client.publish("/"+str(atuador2.id), json.dumps(createMessage("espNuno","server","turn","on")))
-                    #client.publish("/"+str(atuador2.id), "on") 
+                    client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","photo","on")))
+                    # if atuador2 tipo camera entao envia mensagem para tirar foto
+                    
 
 def createMessage(to,fr0m,action,value):
     send_msg = {

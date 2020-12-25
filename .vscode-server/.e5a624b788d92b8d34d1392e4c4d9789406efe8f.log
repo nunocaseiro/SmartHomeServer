@@ -11,27 +11,22 @@
 IP Address: 161.35.8.148
 IP Address: 10.10.0.5
 IP Address: 10.116.0.2
-Extension host agent listening on 36771
+Extension host agent listening on 46527
 
 
-[01:52:08] Extension host agent started.
-[01:52:09] Deleted from disk ms-toolsai.jupyter /home/smarthome/.vscode-server/extensions/ms-toolsai.jupyter-2020.11.358541065
-[01:52:09] Deleted from disk ms-python.python /home/smarthome/.vscode-server/extensions/ms-python.python-2020.11.367453362
-[01:52:09] [127.0.0.1][82a69cbe][ManagementConnection] New connection established.
-[01:52:09] [127.0.0.1][0f72ec42][ExtensionHostConnection] New connection established.
+[23:52:24] Extension host agent started.
+[23:52:25] [127.0.0.1][a1374c26][ManagementConnection] New connection established.
+[23:52:25] [127.0.0.1][a7725cb8][ExtensionHostConnection] New connection established.
 bash: cannot set terminal process group (-1): Inappropriate ioctl for device
 bash: no job control in this shell
-[01:52:09] [127.0.0.1][0f72ec42][ExtensionHostConnection] <94943> Launched Extension Host Process.
-[01:52:09] Listing 0 persistent terminals, 0 total terminals
-[01:52:19] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
-[01:53:14] [127.0.0.1][aa69837b][ManagementConnection] New connection established.
-[01:53:14] [127.0.0.1][26cb8dc2][ExtensionHostConnection] New connection established.
-[01:53:14] [127.0.0.1][26cb8dc2][ExtensionHostConnection] <95228> Launched Extension Host Process.
-[01:53:21] Listing 1 persistent terminals, 1 total terminals
-[01:53:38] [127.0.0.1][aa69837b][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
-[01:53:39] [127.0.0.1][26cb8dc2][ExtensionHostConnection] <95228> Extension Host Process exited with code: 0, signal: null.
-[01:53:51] [127.0.0.1][1a40e2dc][ManagementConnection] New connection established.
-[01:53:51] [127.0.0.1][3c760508][ExtensionHostConnection] New connection established.
-[01:53:51] [127.0.0.1][3c760508][ExtensionHostConnection] <95420> Launched Extension Host Process.
-[01:53:51] Listing 2 persistent terminals, 2 total terminals
-[01:53:58] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[23:52:25] [127.0.0.1][a7725cb8][ExtensionHostConnection] <524277> Launched Extension Host Process.
+[23:52:25] Deleted from disk ms-toolsai.jupyter /home/smarthome/.vscode-server/extensions/ms-toolsai.jupyter-2020.12.411183155
+[23:52:25] Listing 0 persistent terminals, 0 total terminals
+[23:52:26] Deleted from disk octref.vetur /home/smarthome/.vscode-server/extensions/octref.vetur-0.31.1
+[23:52:26] Deleted from disk ms-python.python /home/smarthome/.vscode-server/extensions/ms-python.python-2020.11.371526539
+[00:36:50] [127.0.0.1][a1374c26][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[00:36:52] [127.0.0.1][a7725cb8][ExtensionHostConnection] <524277> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[00:36:52] Last EH closed, waiting before shutting down
+Last EH closed, shutting down
+[00:41:52] Last EH closed, shutting down

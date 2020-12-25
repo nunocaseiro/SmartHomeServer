@@ -1,4 +1,0 @@
-> /usr/bin/python3 ~/.vscode-server/extensions/ms-toolsai.jupyter-2020.11.372831992/pythonFiles/pyvsc-run-isolated.py -c "import jupyter"
-> /usr/bin/python3 ~/.vscode-server/extensions/ms-toolsai.jupyter-2020.11.372831992/pythonFiles/pyvsc-run-isolated.py -c "import jupyter"
-> /usr/bin/python3 ~/.vscode-server/extensions/ms-toolsai.jupyter-2020.11.372831992/pythonFiles/pyvsc-run-isolated.py -c "import notebook"
-> /usr/bin/python3 ~/.vscode-server/extensions/ms-toolsai.jupyter-2020.11.372831992/pythonFiles/pyvsc-run-isolated.py -c "import notebook"
