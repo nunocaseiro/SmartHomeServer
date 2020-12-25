@@ -2,7 +2,9 @@ import paho.mqtt.client as mqtt
 import logging
 import json
 from json.decoder import JSONDecodeError
-from .models import Room, Sensor
+from .models import Room, Sensor, Photo
+import re
+from . import licensePlateRecognition as plate
 
 logger = logging.getLogger("django")
 allsensors = Sensor.objects.all().filter(ios=False)
@@ -27,16 +29,14 @@ def on_message(client, userdata, msg):
 
     try:
         m_decode=str(msg.payload.decode("utf-8","ignore"))
-        m_in=json.loads(m_decode) 
-        #logger.info(m_in)
-        
+        m_in=json.loads(m_decode)        
         idSensor = int(msg.topic[1:])
     #logger.info(idSensor)
     except ValueError:
         logger.error(ValueError)
 
     sensor = Sensor.objects.get(id=idSensor)
-    if (m_in["to"] == "servidor" and m_in["from"] == "espNuno" ):
+    if (m_in["to"] == "server" and m_in["from"] == "espNuno" ):
         if (sensor.atuador != None):
             atuador = Sensor.objects.get(id=sensor.atuador.id)
 
@@ -50,6 +50,7 @@ def on_message(client, userdata, msg):
                     sensorV.save()
                     logger.info("zero")
                     client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","off")))
+                    client.publish("/"+str(atuador2.id), json.dumps(createMessage("espNuno","server","turn","off")))
 
 
             if m_in["value"] == "1.00":
@@ -62,7 +63,21 @@ def on_message(client, userdata, msg):
                     client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","on")))
                     client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","photo","on")))
                     # if atuador2 tipo camera entao envia mensagem para tirar foto
-                    
+        if (m_in["action"] == "photo" and m_in["value"] == "sent"):
+            logger.info("KAESTOU")
+            photo = Photo.objects.latest('created_at')
+            logger.info(str(photo.photo))
+            text = plate.extractLicensePlate(str(photo.photo))
+            logger.info(text)
+            textToCompare = re.sub('[\W_]+', '', text) 
+            textToCompare = textToCompare.strip()
+            logger.info(textToCompare)
+            allsensors = Sensor.objects.all().filter(ios=False)
+            logger.info(atuador.id)
+            client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","on")),1)         
+      
+        
+    
 
 def createMessage(to,fr0m,action,value):
     send_msg = {

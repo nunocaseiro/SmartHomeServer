@@ -52,5 +52,6 @@ urlpatterns = [
     path('api/userdetails/', views.GetUserByUsername.as_view()),
     path('api/countSensorsByRoom/', views.GetCountSensors.as_view()),
     url(r'^$', TemplateView.as_view(template_name='index.html')),
-    url(r'^dj-rest-auth/', include('dj_rest_auth.urls'))
+    url(r'^dj-rest-auth/', include('dj_rest_auth.urls')),
+    url("api/insertPhoto/", views.postPhoto)
 ]

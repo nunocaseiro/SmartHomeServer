@@ -13,9 +13,10 @@ from django.http import HttpResponse
 import json
 from itertools import chain
 from . import mqtt as mqtt
-
+from . import licensePlateRecognition as plate
 from smarthomeproj.server.serializers import UserSerializer, GroupSerializer, User1Serializer, SensorSerializer, SensorValueSerializer, RoomSerializer, HomeSerializer, SensorSerializerMeta, PhotoSerializer
-
+import logging
+logger = logging.getLogger("django")
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -70,6 +71,7 @@ class PhotoViewSet(viewsets.ModelViewSet):
     queryset = Photo.objects.all()
     serializer_class = PhotoSerializer
     permission_classes = [permissions.IsAuthenticated]
+  
 
 
 class RoomViewSet(viewsets.ModelViewSet):
@@ -152,3 +154,15 @@ class GetCountSensors(APIView):
         queryset = Sensor.objects.filter(room=idroom).count()
        
         return Response(queryset)
+
+@api_view(['POST'])
+def postPhoto(request):
+    """
+    List all code snippets, or create a new snippet.
+    """
+    if request.method == 'POST':
+        serializer = PhotoSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

@@ -52,10 +52,15 @@ class SensorValue(models.Model):
     value = models.DecimalField(max_digits=3, decimal_places=1)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return "Id sensor: %s Value: %f" % (self.idsensor, self.value)
+
 class Photo(models.Model):
     photo = models.ImageField(upload_to='static/photos')
     created_at = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return "Id sensor: %s" % (self.photo)
 
 
 
