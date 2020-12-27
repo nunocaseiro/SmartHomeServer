@@ -1,0 +1,36 @@
+[2020-12-26 14:49:37.355] [exthost] [info] extension host started
+[2020-12-26 14:49:44.975] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2020-12-26 14:49:44.976] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/debug-auto-launch/dist/extension
+[2020-12-26 14:49:44.990] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2020-12-26 14:49:44.990] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/emmet/dist/node/emmetNodeMain
+[2020-12-26 14:49:45.046] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2020-12-26 14:49:45.046] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/git/dist/main
+[2020-12-26 14:49:45.118] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2020-12-26 14:49:45.118] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/merge-conflict/dist/mergeConflictMain
+[2020-12-26 14:49:45.124] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2020-12-26 14:49:45.125] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/search-result/dist/extension.js
+[2020-12-26 14:49:45.538] [exthost] [info] ExtensionService#_doActivateExtension vscode.github {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2020-12-26 14:49:45.539] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/github/dist/extension.js
+[2020-12-26 14:49:45.920] [exthost] [info] eager extensions activated
+[2020-12-26 14:49:45.935] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.js-debug {"startup":false,"extensionId":{"value":"ms-vscode.js-debug","_lower":"ms-vscode.js-debug"},"activationEvent":"onCommand:extension.js-debug.clearAutoAttachVariables"}
+[2020-12-26 14:49:45.938] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/ms-vscode.js-debug/src/extension.js
+[2020-12-26 14:49:46.522] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1003
+[2020-12-26 14:49:51.262] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1003
+[2020-12-26 14:50:03.172] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1003
+[2020-12-26 14:50:08.631] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1004
+[2020-12-26 14:51:32.449] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1004
+[2020-12-26 14:51:38.056] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1005
+[2020-12-26 14:51:43.547] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1005
+[2020-12-26 14:51:49.067] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1006
+[2020-12-26 14:51:54.447] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1006
+[2020-12-26 14:52:23.284] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1006
+[2020-12-26 14:52:28.651] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1006
+[2020-12-26 14:52:31.295] [exthost] [info] ExtensionService#_doActivateExtension ms-toolsai.jupyter {"startup":false,"extensionId":{"value":"ms-toolsai.jupyter","_lower":"ms-toolsai.jupyter"},"activationEvent":"onLanguage:python"}
+[2020-12-26 14:52:31.295] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/extensions/ms-toolsai.jupyter-2020.12.414227025/out/client/extension
+[2020-12-26 14:52:35.254] [exthost] [info] ExtensionService#_doActivateExtension ms-python.python {"startup":false,"extensionId":{"value":"ms-python.python","_lower":"ms-python.python"},"activationEvent":"onLanguage:python"}
+[2020-12-26 14:52:35.255] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/extensions/ms-python.python-2020.12.424452561/out/client/extension
+[2020-12-26 14:52:36.113] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1008
+[2020-12-26 14:53:21.402] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1012
+[2020-12-26 14:53:26.859] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1013
+[2020-12-26 14:53:59.308] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1013
+[2020-12-26 14:54:04.710] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 1014

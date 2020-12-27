@@ -19,3 +19,5 @@
 [2020-12-25 17:30:39.558] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/extensions/ms-toolsai.jupyter-2020.12.414227025/out/client/extension
 [2020-12-25 17:30:42.869] [exthost] [info] ExtensionService#_doActivateExtension ms-python.python {"startup":false,"extensionId":{"value":"ms-python.python","_lower":"ms-python.python"},"activationEvent":"onLanguage:python"}
 [2020-12-25 17:30:42.874] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/extensions/ms-python.python-2020.12.424452561/out/client/extension
+[2020-12-25 18:58:41.583] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"extensionId":{"value":"vscode.html-language-features","_lower":"vscode.html-language-features"},"activationEvent":"onLanguage:html"}
+[2020-12-25 18:58:41.583] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/html-language-features/client/dist/node/htmlClientMain

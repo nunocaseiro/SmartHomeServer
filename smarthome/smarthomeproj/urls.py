@@ -19,6 +19,7 @@ from rest_framework import routers
 from django.views.generic import TemplateView
 from smarthomeproj.server import views
 from smarthomeproj.server import models
+from django.contrib.auth.admin import UserAdmin
 from django.conf.urls import url
 
 router = routers.DefaultRouter()
@@ -35,6 +36,7 @@ admin.site.register(models.SensorValue)
 admin.site.register(models.Home)
 admin.site.register(models.Room)
 admin.site.register(models.Photo)
+#admin.site.register(models.User, UserAdmin)
 
 
 # Wire up our API using automatic URL routing.

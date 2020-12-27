@@ -16,6 +16,7 @@ from . import mqtt as mqtt
 from . import licensePlateRecognition as plate
 from smarthomeproj.server.serializers import UserSerializer, GroupSerializer, User1Serializer, SensorSerializer, SensorValueSerializer, RoomSerializer, HomeSerializer, SensorSerializerMeta, PhotoSerializer
 import logging
+
 logger = logging.getLogger("django")
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -166,3 +167,13 @@ def postPhoto(request):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+def get_permissions(self):
+    """
+    Instantiates and returns the list of permissions that this view requires.
+    """
+    if self.action == 'list':
+        permission_classes = [permissions.IsAuthenticated]
+    else:
+        permission_classes = [permissions.IsAdmin]
+    return [permission() for permission in permission_classes]

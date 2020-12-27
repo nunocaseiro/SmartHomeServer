@@ -704,3 +704,446 @@ DROP TABLE "server_car" CASCADE; (params ())
 /Door1N
 /Motion1N
 /Led1N
+(0.002) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.003) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.006) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.003) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.003) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.002) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.003) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.003) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+CREATE TABLE "server_userprofile" ("id" serial NOT NULL PRIMARY KEY, "home_id" integer NOT NULL, "user_id" integer NOT NULL UNIQUE); (params None)
+(0.009) CREATE TABLE "server_userprofile" ("id" serial NOT NULL PRIMARY KEY, "home_id" integer NOT NULL, "user_id" integer NOT NULL UNIQUE); args=None
+(0.001) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('server', '0023_userprofile', '2020-12-27T19:31:54.585575+00:00'::timestamptz) RETURNING "django_migrations"."id"; args=('server', '0023_userprofile', datetime.datetime(2020, 12, 27, 19, 31, 54, 585575, tzinfo=<UTC>))
+ALTER TABLE "server_userprofile" ADD CONSTRAINT "server_userprofile_home_id_06c93f0e_fk_server_home_id" FOREIGN KEY ("home_id") REFERENCES "server_home" ("id") DEFERRABLE INITIALLY DEFERRED; (params ())
+(0.004) ALTER TABLE "server_userprofile" ADD CONSTRAINT "server_userprofile_home_id_06c93f0e_fk_server_home_id" FOREIGN KEY ("home_id") REFERENCES "server_home" ("id") DEFERRABLE INITIALLY DEFERRED; args=()
+ALTER TABLE "server_userprofile" ADD CONSTRAINT "server_userprofile_user_id_109a825e_fk_auth_user_id" FOREIGN KEY ("user_id") REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED; (params ())
+(0.002) ALTER TABLE "server_userprofile" ADD CONSTRAINT "server_userprofile_user_id_109a825e_fk_auth_user_id" FOREIGN KEY ("user_id") REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED; args=()
+CREATE INDEX "server_userprofile_home_id_06c93f0e" ON "server_userprofile" ("home_id"); (params ())
+(0.002) CREATE INDEX "server_userprofile_home_id_06c93f0e" ON "server_userprofile" ("home_id"); args=()
+(0.002) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'dj_rest_auth'; args=('dj_rest_auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'dj_rest_auth'; args=('dj_rest_auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'authtoken'; args=('authtoken',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'authtoken' AND "django_content_type"."model" = 'token') LIMIT 21; args=('authtoken', 'token')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'authtoken' AND "django_content_type"."model" = 'tokenproxy') LIMIT 21; args=('authtoken', 'tokenproxy')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (11, 12) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(11, 12)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'authtoken'; args=('authtoken',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'server'; args=('server',)
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('server', 'userprofile') RETURNING "django_content_type"."id"; args=('server', 'userprofile')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'photo') LIMIT 21; args=('server', 'photo')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'sensor') LIMIT 21; args=('server', 'sensor')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'sensorvalue') LIMIT 21; args=('server', 'sensorvalue')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'userprofile') LIMIT 21; args=('server', 'userprofile')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'home') LIMIT 21; args=('server', 'home')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'room') LIMIT 21; args=('server', 'room')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7, 8, 9, 10, 14, 15) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7, 8, 9, 10, 14, 15)
+(0.001) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") VALUES ('Can add user profile', 15, 'add_userprofile'), ('Can change user profile', 15, 'change_userprofile'), ('Can delete user profile', 15, 'delete_userprofile'), ('Can view user profile', 15, 'view_userprofile') RETURNING "auth_permission"."id"; args=('Can add user profile', 15, 'add_userprofile', 'Can change user profile', 15, 'change_userprofile', 'Can delete user profile', 15, 'delete_userprofile', 'Can view user profile', 15, 'view_userprofile')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'server'; args=('server',)
+(0.002) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.004) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.004) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.003) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.003) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+DROP TABLE "server_userprofile" CASCADE; (params ())
+(0.003) DROP TABLE "server_userprofile" CASCADE; args=()
+(0.001) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('server', '0024_delete_userprofile', '2020-12-27T20:32:33.601041+00:00'::timestamptz) RETURNING "django_migrations"."id"; args=('server', '0024_delete_userprofile', datetime.datetime(2020, 12, 27, 20, 32, 33, 601041, tzinfo=<UTC>))
+(0.001) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'dj_rest_auth'; args=('dj_rest_auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'dj_rest_auth'; args=('dj_rest_auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'authtoken'; args=('authtoken',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'authtoken' AND "django_content_type"."model" = 'token') LIMIT 21; args=('authtoken', 'token')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'authtoken' AND "django_content_type"."model" = 'tokenproxy') LIMIT 21; args=('authtoken', 'tokenproxy')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (11, 12) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(11, 12)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'authtoken'; args=('authtoken',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'server'; args=('server',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'sensor') LIMIT 21; args=('server', 'sensor')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'sensorvalue') LIMIT 21; args=('server', 'sensorvalue')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'room') LIMIT 21; args=('server', 'room')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'home') LIMIT 21; args=('server', 'home')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'photo') LIMIT 21; args=('server', 'photo')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7, 8, 9, 10, 14) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7, 8, 9, 10, 14)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'server'; args=('server',)
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.003) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N
+(0.003) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+(0.001) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'dj_rest_auth'; args=('dj_rest_auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'dj_rest_auth'; args=('dj_rest_auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'authtoken'; args=('authtoken',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'authtoken' AND "django_content_type"."model" = 'token') LIMIT 21; args=('authtoken', 'token')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'authtoken' AND "django_content_type"."model" = 'tokenproxy') LIMIT 21; args=('authtoken', 'tokenproxy')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (11, 12) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(11, 12)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'authtoken'; args=('authtoken',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'server'; args=('server',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'sensor') LIMIT 21; args=('server', 'sensor')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'sensorvalue') LIMIT 21; args=('server', 'sensorvalue')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'room') LIMIT 21; args=('server', 'room')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'home') LIMIT 21; args=('server', 'home')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'server' AND "django_content_type"."model" = 'photo') LIMIT 21; args=('server', 'photo')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7, 8, 9, 10, 14) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7, 8, 9, 10, 14)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'server'; args=('server',)
+(0.001) SELECT "server_sensor"."id", "server_sensor"."name", "server_sensor"."sensortype", "server_sensor"."room_id", "server_sensor"."ios", "server_sensor"."atuador_id", "server_sensor"."gpio" FROM "server_sensor" WHERE NOT "server_sensor"."ios"; args=()
+/Door1N
+/Motion1N
+/Led1N

@@ -13,3 +13,7 @@
 [2020-12-25 17:20:38.550] [remoteagent] [info] [127.0.0.1][a395190f][ExtensionHostConnection] New connection established.
 [2020-12-25 17:20:38.666] [remoteagent] [info] [127.0.0.1][a395190f][ExtensionHostConnection] <161187> Launched Extension Host Process.
 [2020-12-25 17:20:38.788] [remoteagent] [info] Listing 0 persistent terminals, 0 total terminals
+[2020-12-26 02:04:36.008] [remoteagent] [info] [127.0.0.1][da86b756][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2020-12-26 02:04:37.111] [remoteagent] [info] [127.0.0.1][a395190f][ExtensionHostConnection] <161187> Extension Host Process exited with code: 0, signal: null.
+[2020-12-26 02:04:37.111] [remoteagent] [info] Last EH closed, waiting before shutting down
+[2020-12-26 02:09:37.112] [remoteagent] [info] Last EH closed, shutting down

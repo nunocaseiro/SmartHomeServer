@@ -1593,3 +1593,150 @@ sudo systemctl status gunicorn
 sudo systemctl restart gunicorn
 sudo systemctl status gunicorn
 sudo systemctl restart gunicorn
+ls
+cd ..
+ls
+source smarthomeenv/bin/activate
+ls
+cd .
+ls
+cd smarthome
+ls
+cd ..
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+smarthome/manage.py collectstatic
+sudo systemctl restart gunicorn
+tesseract
+sudo apt install tesseract-ocr
+cd ..
+ls
+cd smarthome/
+ls
+git add .
+deactivate
+git add .
+git commit -m "post photos"
+git push
+ls
+source smarthomeenv/activate
+source smarthomeenv/bin/activate
+pip install opencv-python
+pip install imutils
+pip install numpy
+pip install pytesseract
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+pip install opencv-python
+sudo systemctl restart gunicorn
+deactivate
+pip install opencv-python
+sudo systemctl restart gunicorn
+source smarthomeenv/activate
+source smarthomeenv/bin/activate
+opencv-python-headless
+pip install opencv-python-headless
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+pip install django-background-tasks
+sudo systemctl restart gunicorn
+pip install django-background-tasks
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+deactivate
+l
+cd smarthome
+ls
+git add .
+git commit -m "door open"
+git push
+sudo systemctl restart gunicorn
+sudo postgreesql
+psql
+sudo netstat -tulpn | grep LISTEN
+psql
+python3 manage.py makemigrations
+python3 manage.py createsuperuser
+pip3 install django-countries
+python3 manage.py makemigrations

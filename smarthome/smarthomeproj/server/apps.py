@@ -2,6 +2,8 @@ from django.apps import AppConfig
 
 class ServerConfig(AppConfig):
     name = 'smarthomeproj.server'
+    label = 'server'
+    verbose_name ='server'
     run_already = False
 
     def ready(self):
