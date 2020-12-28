@@ -30,12 +30,16 @@ router.register(r'sensorsvalues', views.SensorValueViewSet)
 router.register(r'homes',views.HomeViewSet)
 router.register(r'rooms',views.RoomViewSet)
 router.register(r'photos',views.PhotoViewSet)
+router.register(r'profiles',views.ProfileViewSet)
+router.register(r'vehicles',views.VehicleViewSet)
 
 admin.site.register(models.Sensor)
 admin.site.register(models.SensorValue)
 admin.site.register(models.Home)
 admin.site.register(models.Room)
 admin.site.register(models.Photo)
+admin.site.register(models.Profile)
+admin.site.register(models.Vehicle)
 #admin.site.register(models.User, UserAdmin)
 
 

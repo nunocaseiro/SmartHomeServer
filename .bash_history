@@ -1740,3 +1740,132 @@ python3 manage.py makemigrations
 python3 manage.py createsuperuser
 pip3 install django-countries
 python3 manage.py makemigrations
+ls
+cd ..
+ls
+source smarthomeenv/source/activate
+source smarthomeenv/source/bin/activate
+source smarthomeenv/bin/activate
+ls
+\
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo journalctl -u gunicorn
+sudo systemctl restart gunicorn
+sudo journalctl -u gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+ls
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+python3 manage.py makemigrations
+smarthome/manage.py manage.py makemigrations
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+smarthome/manage.py manage.py makemigrations
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+Users.objects
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+sudo systemctl status gunicorn
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate´
+smarthome/manage.py migrate
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+deactivate
+git add .
+git commit -m "groups"
+git push

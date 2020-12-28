@@ -13,3 +13,16 @@
 [2020-12-27 17:29:04.529] [remoteagent] [info] [127.0.0.1][33e65cd3][ExtensionHostConnection] New connection established.
 [2020-12-27 17:29:04.652] [remoteagent] [info] [127.0.0.1][33e65cd3][ExtensionHostConnection] <323677> Launched Extension Host Process.
 [2020-12-27 17:29:04.785] [remoteagent] [info] Listing 0 persistent terminals, 0 total terminals
+[2020-12-27 21:29:26.711] [remoteagent] [info] [127.0.0.1][c08025df][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[2020-12-27 22:21:05.635] [remoteagent] [info] [127.0.0.1][c08025df][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[2020-12-27 22:21:05.638] [remoteagent] [info] [127.0.0.1][0e9fe8cd][ManagementConnection] New connection established.
+[2020-12-27 22:21:05.640] [remoteagent] [info] [127.0.0.1][a5735972][ExtensionHostConnection] New connection established.
+[2020-12-27 22:21:05.649] [remoteagent] [info] [127.0.0.1][a5735972][ExtensionHostConnection] <375205> Launched Extension Host Process.
+[2020-12-27 22:21:05.887] [remoteagent] [info] Listing 1 persistent terminals, 1 total terminals
+[2020-12-27 22:21:10.479] [remoteagent] [info] Replaying 861564 chars and 3 size events.
+[2020-12-27 22:26:05.636] [remoteagent] [info] [127.0.0.1][c08025df][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+[2020-12-27 22:26:06.743] [remoteagent] [info] [127.0.0.1][33e65cd3][ExtensionHostConnection] <323677> Extension Host Process exited with code: 0, signal: null.
+[2020-12-28 03:46:10.109] [remoteagent] [info] [127.0.0.1][0e9fe8cd][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2020-12-28 03:46:11.213] [remoteagent] [info] [127.0.0.1][a5735972][ExtensionHostConnection] <375205> Extension Host Process exited with code: 0, signal: null.
+[2020-12-28 03:46:11.213] [remoteagent] [info] Last EH closed, waiting before shutting down
+[2020-12-28 03:51:11.214] [remoteagent] [info] Last EH closed, shutting down
