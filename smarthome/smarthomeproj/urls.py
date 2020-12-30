@@ -32,6 +32,8 @@ router.register(r'rooms',views.RoomViewSet)
 router.register(r'photos',views.PhotoViewSet)
 router.register(r'profiles',views.ProfileViewSet)
 router.register(r'vehicles',views.VehicleViewSet)
+router.register(r'favourites',views.FavouriteViewSet)
+
 
 admin.site.register(models.Sensor)
 admin.site.register(models.SensorValue)
@@ -40,6 +42,7 @@ admin.site.register(models.Room)
 admin.site.register(models.Photo)
 admin.site.register(models.Profile)
 admin.site.register(models.Vehicle)
+admin.site.register(models.Favourite)
 #admin.site.register(models.User, UserAdmin)
 
 
@@ -54,6 +57,7 @@ urlpatterns = [
     path('api/lastvaluesensor/', views.LastValue.as_view()),
     path('api/sensorsofroom/', views.SensorsOfRoom.as_view()),
     path('api/roomsfortesting/', views.RoomsForIOS.as_view()),
+    path('api/actualrooms/', views.RoomsForAndroid.as_view()),
     path('api/sensorsoftype/', views.AllSensorsOfType.as_view()),
     path('api/userdetails/', views.GetUserByUsername.as_view()),
     path('api/userprofile/', views.GetUserProfileByUsername.as_view()),

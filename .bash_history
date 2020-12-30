@@ -1869,3 +1869,86 @@ deactivate
 git add .
 git commit -m "groups"
 git push
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+ls
+cd 
+ls
+source smarthomeenv/bin/activate
+ls
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+source smarthomeenv/bin/activate
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+deactivate
+git add .
+git commit -m "vehicle and profile models"
+git push
+sudo systemctl restart gunicorn
+source smarthomeenv/bin/activate
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+ls
+cd ..
+ls
+git add .
+git commit -m "stuff"
+git push
+smarthome/manage.py makemigrations
+ls
+cd ..
+ls
+source smarthomeenv/bin/activate
+ls
+cd smarthome
+ls
+cd ..
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+deactivate
+sudo systemctl restart gunicorn

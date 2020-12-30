@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User, Group
-from smarthomeproj.server.models import Sensor, SensorValue, Home, Room, Photo, Profile, Vehicle
+from smarthomeproj.server.models import Sensor, SensorValue, Home, Room, Photo, Profile, Vehicle, Favourite
 from rest_framework import viewsets
 from rest_framework import permissions
 from rest_framework import generics
@@ -11,10 +11,13 @@ from rest_framework.views import APIView
 from django.http import Http404
 from django.http import HttpResponse
 import json
+
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework import permissions
 from itertools import chain
 from . import mqtt as mqtt
 from . import licensePlateRecognition as plate
-from smarthomeproj.server.serializers import UserSerializer, GroupSerializer, User1Serializer, SensorSerializer, SensorValueSerializer, RoomSerializer, HomeSerializer, SensorSerializerMeta, PhotoSerializer, ProfileSerializer, VehicleSerializer
+from smarthomeproj.server.serializers import UserSerializer, GroupSerializer, User1Serializer, SensorSerializer, SensorValueSerializer, RoomSerializer, HomeSerializer, SensorSerializerMeta, PhotoSerializer, ProfileSerializer, VehicleSerializer, FavouriteSerializer
 import logging
 
 logger = logging.getLogger("django")
@@ -118,6 +121,14 @@ class RoomsForIOS(generics.ListAPIView):
         queryset = Room.objects.all().filter(testing=True)
         return queryset
 
+class RoomsForAndroid(generics.ListAPIView):
+    serializer_class = RoomSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    def get_queryset(self):
+      
+        queryset = Room.objects.all().filter(testing=False)
+        return queryset
+
 
 class SensorsOfRoom(generics.ListAPIView):
     serializer_class = SensorSerializer
@@ -159,8 +170,8 @@ class GetUserProfileByUsername(generics.ListAPIView):
         return queryset
 
 class GetCountSensors(APIView):
-    from . import mqtt
-    mqtt.client.loop_start()
+    #from . import mqtt
+    #mqtt.client.loop_start()
     serializer_class = SensorSerializer
     permission_classes = [permissions.IsAuthenticated]
     def get(self, request, format=None):
@@ -174,10 +185,12 @@ class GetCountSensors(APIView):
         return Response(queryset)
 
 @api_view(['POST'])
+@permission_classes((permissions.AllowAny,))
 def postPhoto(request):
     """
     List all code snippets, or create a new snippet.
     """
+    
     if request.method == 'POST':
         serializer = PhotoSerializer(data=request.data)
         if serializer.is_valid():
@@ -185,15 +198,7 @@ def postPhoto(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-def get_permissions(self):
-    """
-    Instantiates and returns the list of permissions that this view requires.
-    """
-    if self.action == 'list':
-        permission_classes = [permissions.IsAuthenticated]
-    else:
-        permission_classes = [permissions.IsAdmin]
-    return [permission() for permission in permission_classes]
+
 
 class VehicleViewSet(viewsets.ModelViewSet):
     """
@@ -203,6 +208,13 @@ class VehicleViewSet(viewsets.ModelViewSet):
     serializer_class = VehicleSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+class FavouriteViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Favourite.objects.all()
+    serializer_class = FavouriteSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
 class GetStatistics(APIView):
     permission_classes = [permissions.IsAuthenticated]

@@ -1514,3 +1514,996 @@ Open repository: /home/smarthome
 > git remote --verbose
 > git config --get commit.template
 > git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n10 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n10 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git cat-file -s 2c66f6c478d4cb272f219bf6db195e3dca7b27dc
+> git show --textconv :smarthome/smarthomeproj/urls.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n10 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n11 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git status -z -u
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git cat-file -s 2c66f6c478d4cb272f219bf6db195e3dca7b27dc
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git show --textconv :smarthome/smarthomeproj/urls.py
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n11 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n11 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git status -z -u
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git cat-file -s 2c66f6c478d4cb272f219bf6db195e3dca7b27dc
+> git show --textconv :smarthome/smarthomeproj/urls.py
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n11 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s f90b26a22d80e7741c76c6f3c3cbed676c891020
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/tests.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s 74366385b0cc6b7251ba941ce2a2ceb61fcd30d1
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s f90b26a22d80e7741c76c6f3c3cbed676c891020
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git show --textconv :smarthome/smarthomeproj/urls.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git cat-file -s 2c66f6c478d4cb272f219bf6db195e3dca7b27dc
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s f90b26a22d80e7741c76c6f3c3cbed676c891020
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git show --textconv :smarthome/smarthomeproj/urls.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git cat-file -s 2c66f6c478d4cb272f219bf6db195e3dca7b27dc
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n11 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n11 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n11 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n11 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n11 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n11 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s f90b26a22d80e7741c76c6f3c3cbed676c891020
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/debug.log
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s 4ff12145ae8b606411f06134efde160c934d345f
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count bf91d606a9f91e594dfcadb58d93e249962210d8.. -- /home/smarthome/smarthome/debug.log
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n7 -- /home/smarthome/smarthome/debug.log
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s f90b26a22d80e7741c76c6f3c3cbed676c891020
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git config --get commit.template
+> git cat-file -s 74366385b0cc6b7251ba941ce2a2ceb61fcd30d1
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n10 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git show --textconv :smarthome/smarthomeproj/urls.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git cat-file -s 2c66f6c478d4cb272f219bf6db195e3dca7b27dc
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s 82f87d62fa2117a8d386e7d2c73fffc07eb79ec0
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s f90b26a22d80e7741c76c6f3c3cbed676c891020
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/debug.log
+> git show --textconv :smarthome/debug.log
+> git ls-files --stage -- /home/smarthome/smarthome/debug.log
+> git cat-file -s 4ff12145ae8b606411f06134efde160c934d345f
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count bf91d606a9f91e594dfcadb58d93e249962210d8.. -- /home/smarthome/smarthome/debug.log
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n7 -- /home/smarthome/smarthome/debug.log
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count bf91d606a9f91e594dfcadb58d93e249962210d8.. -- /home/smarthome/smarthome/debug.log
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n7 -- /home/smarthome/smarthome/debug.log
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s 90cf6c02e1c17ec79916bdad383e056337919081
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s 74366385b0cc6b7251ba941ce2a2ceb61fcd30d1
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n10 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n10 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s 90cf6c02e1c17ec79916bdad383e056337919081
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git cat-file -s 85e2913b43932959ca411c1b29fe3fca09a1f5a0
+> git rev-list --count 49125b2897f17aae7724f2950fe7b1a755e6ed99.. -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n6 -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count 49125b2897f17aae7724f2950fe7b1a755e6ed99.. -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n6 -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count 49125b2897f17aae7724f2950fe7b1a755e6ed99.. -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n6 -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s f90b26a22d80e7741c76c6f3c3cbed676c891020
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n14 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git show --textconv :smarthome/smarthomeproj/urls.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git cat-file -s 2c66f6c478d4cb272f219bf6db195e3dca7b27dc
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n11 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s 90cf6c02e1c17ec79916bdad383e056337919081
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s 74366385b0cc6b7251ba941ce2a2ceb61fcd30d1
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n10 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n10 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n10 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n10 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n10 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n10 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n10 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s 90cf6c02e1c17ec79916bdad383e056337919081
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s d64f69590c455affafde039f74c3a76467ede955
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n5 -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n5 -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s 90cf6c02e1c17ec79916bdad383e056337919081
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s 74366385b0cc6b7251ba941ce2a2ceb61fcd30d1
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n10 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n10 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git show --textconv :smarthome/smarthomeproj/urls.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git config --get commit.template
+> git cat-file -s 2c66f6c478d4cb272f219bf6db195e3dca7b27dc
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git show --textconv :smarthome/smarthomeproj/settings.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git cat-file -s 82f87d62fa2117a8d386e7d2c73fffc07eb79ec0
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n7 -- /home/smarthome/smarthome/smarthomeproj/settings.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s 74366385b0cc6b7251ba941ce2a2ceb61fcd30d1
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s f90b26a22d80e7741c76c6f3c3cbed676c891020
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git show --textconv :smarthome/smarthomeproj/server/mqtt.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/mqtt.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s 85e2913b43932959ca411c1b29fe3fca09a1f5a0
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s 90cf6c02e1c17ec79916bdad383e056337919081
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git show --textconv :smarthome/smarthomeproj/server/apps.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git cat-file -s d64f69590c455affafde039f74c3a76467ede955
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n5 -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n5 -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n5 -- /home/smarthome/smarthome/smarthomeproj/server/apps.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s 90cf6c02e1c17ec79916bdad383e056337919081
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count ade24d39df88a752d656fdd989eb25c0b7ca2d7d.. -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n15 -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/smarthome/smarthome/smarthomeproj/server/licensePlateRecognition.py
+> git show --textconv :smarthome/smarthomeproj/server/licensePlateRecognition.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/licensePlateRecognition.py
+> git cat-file -s e66f0736e14b0292405efff02c892ad119f755ea
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count fd74b8280cd3372b78a2847fbf3c3c2c34f809c6.. -- /home/smarthome/smarthome/smarthomeproj/server/licensePlateRecognition.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n2 -- /home/smarthome/smarthome/smarthomeproj/server/licensePlateRecognition.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count fd74b8280cd3372b78a2847fbf3c3c2c34f809c6.. -- /home/smarthome/smarthome/smarthomeproj/server/licensePlateRecognition.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n2 -- /home/smarthome/smarthome/smarthomeproj/server/licensePlateRecognition.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git rev-list --count fd74b8280cd3372b78a2847fbf3c3c2c34f809c6.. -- /home/smarthome/smarthome/smarthomeproj/server/licensePlateRecognition.py
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n2 -- /home/smarthome/smarthome/smarthomeproj/server/licensePlateRecognition.py

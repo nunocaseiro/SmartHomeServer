@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from smarthomeproj.server.models import Sensor, SensorValue, Home, Room, Photo, Profile, Vehicle
+from smarthomeproj.server.models import Sensor, SensorValue, Home, Room, Photo, Profile, Vehicle, Favourite
 
 
 class Base64ImageField(serializers.ImageField):
@@ -64,10 +64,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         model = User
         fields = ['id','url', 'username', 'email', 'groups', 'first_name', 'last_name']
 
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Group
-        fields = ['url', 'name']
+
 
 class User1Serializer(serializers.ModelSerializer):
     class Meta:
@@ -153,9 +150,21 @@ class VehicleSerializer(serializers.ModelSerializer):
         model = Vehicle
         fields = ['id','matricula','marca','cor', 'ano']
 
+class FavouriteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Favourite
+        fields =  ['user','sensor']
+
 class ProfileSerializer(serializers.HyperlinkedModelSerializer):
     user = UserSerializer(many=False)
     home = HomeSerializer(many=False)
+    favourites = serializers.SerializerMethodField("get_favourites")
+    def get_favourites(self,obj):
+            fav = Favourite.objects.filter(user=obj.user.id)
+            serializer = FavouriteSerializer(fav, many= True)
+            return serializer.data
+        
     class Meta:
         model = Profile
-        fields = ['user', 'home']
+        fields = ['user', 'home', 'favourites']
+        

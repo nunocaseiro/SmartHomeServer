@@ -7,12 +7,53 @@
 * as described in the license https://aka.ms/vscode-remote/license
 *
 
-Extension host agent listening on 36943
+Extension host agent listening on 33491
 
-[16:28:25] Extension host agent started.
-[16:28:25] [127.0.0.1][2bb39dac][ManagementConnection] New connection established.
-[16:28:25] [127.0.0.1][5a7f0459][ExtensionHostConnection] New connection established.
+[20:00:06] Extension host agent started.
+[20:00:06] [127.0.0.1][a528681e][ManagementConnection] New connection established.
+[20:00:06] [127.0.0.1][04cd052c][ExtensionHostConnection] New connection established.
 bash: cannot set terminal process group (-1): Inappropriate ioctl for device
 bash: no job control in this shell
-[16:28:25] [127.0.0.1][5a7f0459][ExtensionHostConnection] <431234> Launched Extension Host Process.
-[16:28:25] Listing 0 persistent terminals, 0 total terminals
+[20:00:07] [127.0.0.1][04cd052c][ExtensionHostConnection] <543584> Launched Extension Host Process.
+[20:00:07] Listing 0 persistent terminals, 0 total terminals
+[20:00:07] [127.0.0.1][2ee6ebd8][ManagementConnection] New connection established.
+[20:00:07] [127.0.0.1][0eae64ea][ExtensionHostConnection] New connection established.
+[20:00:07] [127.0.0.1][0eae64ea][ExtensionHostConnection] <543595> Launched Extension Host Process.
+[20:00:07] Listing 1 persistent terminals, 1 total terminals
+[20:45:51] [127.0.0.1][6f75b501][ExtensionHostConnection] New connection established.
+[20:45:51] [127.0.0.1][65d120ac][ManagementConnection] New connection established.
+[20:45:51] [127.0.0.1][6f75b501][ExtensionHostConnection] <557465> Launched Extension Host Process.
+[20:45:52] Listing 1 persistent terminals, 1 total terminals
+[22:43:53] [127.0.0.1][a528681e][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[22:43:54] [127.0.0.1][04cd052c][ExtensionHostConnection] <543584> Extension Host Process exited with code: 0, signal: null.
+[23:30:13] [127.0.0.1][2ee6ebd8][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[23:30:14] [127.0.0.1][0eae64ea][ExtensionHostConnection] <543595> Extension Host Process exited with code: 0, signal: null.
+[01:22:31] [127.0.0.1][30dc6e6d][ManagementConnection] New connection established.
+[01:22:31] [127.0.0.1][34de1f1c][ExtensionHostConnection] New connection established.
+[01:22:32] [127.0.0.1][34de1f1c][ExtensionHostConnection] <613890> Launched Extension Host Process.
+[01:22:32] Listing 1 persistent terminals, 1 total terminals
+[01:24:58] [127.0.0.1][30dc6e6d][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[01:24:59] [127.0.0.1][34de1f1c][ExtensionHostConnection] <613890> Extension Host Process exited with code: 0, signal: null.
+[01:25:00] [127.0.0.1][4726ca0e][ManagementConnection] New connection established.
+[01:25:00] [127.0.0.1][756432aa][ExtensionHostConnection] New connection established.
+[01:25:00] [127.0.0.1][756432aa][ExtensionHostConnection] <614409> Launched Extension Host Process.
+[01:25:00] Listing 1 persistent terminals, 1 total terminals
+[01:25:00] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/smarthome/smarthome/smarthomeproj/.vscode'
+[01:27:32] The short reconnection grace time of 5m has expired, so the terminal process with pid 543648 will be shutdown.
+[02:02:22] [127.0.0.1][4726ca0e][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[02:02:23] [127.0.0.1][756432aa][ExtensionHostConnection] <614409> Extension Host Process exited with code: 0, signal: null.
+[02:02:24] [127.0.0.1][1dc70f9c][ManagementConnection] New connection established.
+[02:02:24] [127.0.0.1][4f525a4c][ExtensionHostConnection] New connection established.
+[02:02:24] [127.0.0.1][4f525a4c][ExtensionHostConnection] <624628> Launched Extension Host Process.
+[02:02:24] Listing 1 persistent terminals, 1 total terminals
+[02:02:26] [127.0.0.1][1dc70f9c][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[02:02:27] [127.0.0.1][4f525a4c][ExtensionHostConnection] <624628> Extension Host Process exited with code: 0, signal: null.
+[02:02:28] [127.0.0.1][32bfc75a][ManagementConnection] New connection established.
+[02:02:28] [127.0.0.1][9a49d1bf][ExtensionHostConnection] New connection established.
+[02:02:28] [127.0.0.1][9a49d1bf][ExtensionHostConnection] <624664> Launched Extension Host Process.
+[02:02:28] Listing 1 persistent terminals, 1 total terminals
+[02:02:28] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/smarthome/.vscode'
+[02:02:39] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[02:07:24] The short reconnection grace time of 5m has expired, so the terminal process with pid 614520 will be shutdown.
+[03:26:36] [127.0.0.1][65d120ac][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[03:26:37] [127.0.0.1][6f75b501][ExtensionHostConnection] <557465> Extension Host Process exited with code: 0, signal: null.

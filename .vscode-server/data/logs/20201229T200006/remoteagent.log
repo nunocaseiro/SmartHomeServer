@@ -1,0 +1,56 @@
+[2020-12-29 20:00:06.631] [remoteagent] [info] 
+
+*
+* Visual Studio Code Server
+*
+* Reminder: You may only use this software with Visual Studio family products,
+* as described in the license https://aka.ms/vscode-remote/license
+*
+
+
+[2020-12-29 20:00:06.631] [remoteagent] [info] Extension host agent started.
+[2020-12-29 20:00:06.965] [remoteagent] [info] [127.0.0.1][a528681e][ManagementConnection] New connection established.
+[2020-12-29 20:00:06.968] [remoteagent] [info] [127.0.0.1][04cd052c][ExtensionHostConnection] New connection established.
+[2020-12-29 20:00:07.094] [remoteagent] [info] [127.0.0.1][04cd052c][ExtensionHostConnection] <543584> Launched Extension Host Process.
+[2020-12-29 20:00:07.189] [remoteagent] [info] Listing 0 persistent terminals, 0 total terminals
+[2020-12-29 20:00:07.265] [remoteagent] [info] [127.0.0.1][2ee6ebd8][ManagementConnection] New connection established.
+[2020-12-29 20:00:07.267] [remoteagent] [info] [127.0.0.1][0eae64ea][ExtensionHostConnection] New connection established.
+[2020-12-29 20:00:07.387] [remoteagent] [info] [127.0.0.1][0eae64ea][ExtensionHostConnection] <543595> Launched Extension Host Process.
+[2020-12-29 20:00:07.937] [remoteagent] [info] Listing 1 persistent terminals, 1 total terminals
+[2020-12-29 20:45:51.922] [remoteagent] [info] [127.0.0.1][6f75b501][ExtensionHostConnection] New connection established.
+[2020-12-29 20:45:51.925] [remoteagent] [info] [127.0.0.1][65d120ac][ManagementConnection] New connection established.
+[2020-12-29 20:45:51.935] [remoteagent] [info] [127.0.0.1][6f75b501][ExtensionHostConnection] <557465> Launched Extension Host Process.
+[2020-12-29 20:45:52.193] [remoteagent] [info] Listing 1 persistent terminals, 1 total terminals
+[2020-12-29 22:43:53.895] [remoteagent] [info] [127.0.0.1][a528681e][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2020-12-29 22:43:54.939] [remoteagent] [info] [127.0.0.1][04cd052c][ExtensionHostConnection] <543584> Extension Host Process exited with code: 0, signal: null.
+[2020-12-29 23:30:13.083] [remoteagent] [info] [127.0.0.1][2ee6ebd8][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2020-12-29 23:30:14.199] [remoteagent] [info] [127.0.0.1][0eae64ea][ExtensionHostConnection] <543595> Extension Host Process exited with code: 0, signal: null.
+[2020-12-30 01:22:31.997] [remoteagent] [info] [127.0.0.1][30dc6e6d][ManagementConnection] New connection established.
+[2020-12-30 01:22:31.999] [remoteagent] [info] [127.0.0.1][34de1f1c][ExtensionHostConnection] New connection established.
+[2020-12-30 01:22:32.008] [remoteagent] [info] [127.0.0.1][34de1f1c][ExtensionHostConnection] <613890> Launched Extension Host Process.
+[2020-12-30 01:22:32.231] [remoteagent] [info] Listing 1 persistent terminals, 1 total terminals
+[2020-12-30 01:24:58.467] [remoteagent] [info] [127.0.0.1][30dc6e6d][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2020-12-30 01:24:59.497] [remoteagent] [info] [127.0.0.1][34de1f1c][ExtensionHostConnection] <613890> Extension Host Process exited with code: 0, signal: null.
+[2020-12-30 01:25:00.439] [remoteagent] [info] [127.0.0.1][4726ca0e][ManagementConnection] New connection established.
+[2020-12-30 01:25:00.440] [remoteagent] [info] [127.0.0.1][756432aa][ExtensionHostConnection] New connection established.
+[2020-12-30 01:25:00.447] [remoteagent] [info] [127.0.0.1][756432aa][ExtensionHostConnection] <614409> Launched Extension Host Process.
+[2020-12-30 01:25:00.668] [remoteagent] [info] Listing 1 persistent terminals, 1 total terminals
+[2020-12-30 01:25:00.724] [remoteagent] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/smarthome/smarthome/smarthomeproj/.vscode'
+[2020-12-30 01:27:32.233] [remoteagent] [info] The short reconnection grace time of 5m has expired, so the terminal process with pid 543648 will be shutdown.
+[2020-12-30 02:02:22.243] [remoteagent] [info] [127.0.0.1][4726ca0e][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2020-12-30 02:02:23.332] [remoteagent] [info] [127.0.0.1][756432aa][ExtensionHostConnection] <614409> Extension Host Process exited with code: 0, signal: null.
+[2020-12-30 02:02:24.163] [remoteagent] [info] [127.0.0.1][1dc70f9c][ManagementConnection] New connection established.
+[2020-12-30 02:02:24.165] [remoteagent] [info] [127.0.0.1][4f525a4c][ExtensionHostConnection] New connection established.
+[2020-12-30 02:02:24.175] [remoteagent] [info] [127.0.0.1][4f525a4c][ExtensionHostConnection] <624628> Launched Extension Host Process.
+[2020-12-30 02:02:24.387] [remoteagent] [info] Listing 1 persistent terminals, 1 total terminals
+[2020-12-30 02:02:26.766] [remoteagent] [info] [127.0.0.1][1dc70f9c][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2020-12-30 02:02:27.793] [remoteagent] [info] [127.0.0.1][4f525a4c][ExtensionHostConnection] <624628> Extension Host Process exited with code: 0, signal: null.
+[2020-12-30 02:02:28.710] [remoteagent] [info] [127.0.0.1][32bfc75a][ManagementConnection] New connection established.
+[2020-12-30 02:02:28.711] [remoteagent] [info] [127.0.0.1][9a49d1bf][ExtensionHostConnection] New connection established.
+[2020-12-30 02:02:28.716] [remoteagent] [info] [127.0.0.1][9a49d1bf][ExtensionHostConnection] <624664> Launched Extension Host Process.
+[2020-12-30 02:02:28.947] [remoteagent] [info] Listing 1 persistent terminals, 1 total terminals
+[2020-12-30 02:02:28.979] [remoteagent] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/smarthome/.vscode'
+[2020-12-30 02:02:39.554] [remoteagent] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2020-12-30 02:07:24.388] [remoteagent] [info] The short reconnection grace time of 5m has expired, so the terminal process with pid 614520 will be shutdown.
+[2020-12-30 03:26:36.060] [remoteagent] [info] [127.0.0.1][65d120ac][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2020-12-30 03:26:37.471] [remoteagent] [info] [127.0.0.1][6f75b501][ExtensionHostConnection] <557465> Extension Host Process exited with code: 0, signal: null.

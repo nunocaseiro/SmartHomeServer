@@ -18,3 +18,9 @@
 [2020-12-28 16:31:30.625] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/extensions/ms-toolsai.jupyter-2020.12.414227025/out/client/extension
 [2020-12-28 16:31:34.840] [exthost] [info] ExtensionService#_doActivateExtension ms-python.python {"startup":false,"extensionId":{"value":"ms-python.python","_lower":"ms-python.python"},"activationEvent":"onLanguage:python"}
 [2020-12-28 16:31:34.843] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/smarthome/.vscode-server/extensions/ms-python.python-2020.12.424452561/out/client/extension
+[2020-12-28 18:15:48.759] [exthost] [error] [ms-python.python] provider FAILED
+[2020-12-28 18:15:48.759] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/smarthome/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/smarthome/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
