@@ -59,7 +59,7 @@ class GroupSerializer(serializers.ModelSerializer):
         fields = ('name',)
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
-    groups = GroupSerializer(many=True)
+    #groups = GroupSerializer(many=True)
     class Meta:
         model = User
         fields = ['id','url', 'username', 'email', 'groups', 'first_name', 'last_name']
@@ -141,7 +141,7 @@ class SensorSerializer(serializers.ModelSerializer):
 class HomeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Home
-        fields = ['name','id']
+        fields = ['name','id', 'latitude', 'longitude']
     
 class RoomSerializer(serializers.ModelSerializer):
     class Meta:
@@ -158,7 +158,4 @@ class ProfileSerializer(serializers.HyperlinkedModelSerializer):
     home = HomeSerializer(many=False)
     class Meta:
         model = Profile
-        fields = ['id','user', 'home']
-
-
-
+        fields = ['user', 'home']

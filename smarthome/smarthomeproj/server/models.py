@@ -8,12 +8,15 @@ from django.dispatch import receiver
 # Create your models here.
 class Home(models.Model):
     name = models.CharField(max_length=20)
+    latitude = models.CharField(max_length=20, null=True, blank=True)
+    longitude = models.CharField(max_length=20, null=True, blank=True)
+
     def __str__(self):
         return "%s" % (self.name)
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    home = models.OneToOneField(Home, on_delete=models.CASCADE)
+    home = models.ForeignKey(Home, on_delete=models.CASCADE)
     
 
 @receiver(post_save, sender=User)
@@ -37,6 +40,7 @@ class Room(models.Model):
         ("living", 'LIVING ROOM'),
     ]
     roomtype = models.CharField(max_length=20,choices=ROOM_TYPE, default="bedroom")
+    
     def __str__(self):
         return "%s" % (self.name)
 

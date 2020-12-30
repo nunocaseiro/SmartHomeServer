@@ -149,6 +149,15 @@ class GetUserByUsername(generics.ListAPIView):
         queryset = User.objects.filter(username=username)
         return queryset
 
+class GetUserProfileByUsername(generics.ListAPIView):
+    serializer_class = ProfileSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    def get_queryset(self):
+        username = self.request.query_params.get('username', None)
+        user = User.objects.filter(username=username)
+        queryset = Profile.objects.filter(user=user[0])
+        return queryset
+
 class GetCountSensors(APIView):
     from . import mqtt
     mqtt.client.loop_start()
@@ -193,3 +202,19 @@ class VehicleViewSet(viewsets.ModelViewSet):
     queryset = Vehicle.objects.all()
     serializer_class = VehicleSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+
+class GetStatistics(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    def get(self, request, format=None):
+        if request.method == 'GET':
+            idHome = self.request.query_params.get('home', None)
+            sensorsCount = 0
+            rooms = Room.objects.filter(home=idHome, testing= False)
+            for room in rooms:
+                if room.testing == False:
+                    sensorsofroom = Sensor.objects.filter(room=room.id, ios=False)
+                    sensorsCount+= sensorsofroom.count()
+            
+            roomsCount = rooms.count()
+            return Response({"sensorsCount": sensorsCount, "roomsCount": roomsCount})

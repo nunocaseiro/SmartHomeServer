@@ -56,6 +56,8 @@ urlpatterns = [
     path('api/roomsfortesting/', views.RoomsForIOS.as_view()),
     path('api/sensorsoftype/', views.AllSensorsOfType.as_view()),
     path('api/userdetails/', views.GetUserByUsername.as_view()),
+    path('api/userprofile/', views.GetUserProfileByUsername.as_view()),
+    path('api/statistics/', views.GetStatistics.as_view()),
     path('api/countSensorsByRoom/', views.GetCountSensors.as_view()),
     url(r'^$', TemplateView.as_view(template_name='index.html')),
     url(r'^dj-rest-auth/', include('dj_rest_auth.urls')),
