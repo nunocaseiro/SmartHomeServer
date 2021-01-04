@@ -14,14 +14,14 @@ class Home(models.Model):
     def __str__(self):
         return "%s" % (self.name) 
 
-@receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
-    if created:
-        Profile.objects.create(user=instance)
+#@receiver(post_save, sender=User)
+#def create_user_profile(sender, instance, created, **kwargs):
+#    if created:
+#        Profile.objects.create(user=instance)
 
-@receiver(post_save, sender=User)
-def save_user_profile(sender, instance, **kwargs):
-    instance.profile.save()
+#@receiver(post_save, sender=User)
+#def save_user_profile(sender, instance, **kwargs):
+#    instance.profile.save()
 
 class Room(models.Model):
     name = models.CharField(max_length=20)
@@ -71,13 +71,16 @@ class SensorValue(models.Model):
         return "Id sensor: %s Value: %f" % (self.idsensor, self.value)
 
 class Vehicle(models.Model):
-    marca = models.CharField(max_length=20)
-    matrícula = models.CharField(max_length=6)
-    cor = models.CharField(max_length=20)
-    ano = models.IntegerField(validators=[
+    brand = models.CharField(max_length=20)
+    licenseplate = models.CharField(max_length=6)
+    model = models.CharField(max_length=20)
+    home = models.ForeignKey(Home, on_delete=models.CASCADE, default= 1)
+    year = models.IntegerField(validators=[
             MaxValueValidator(2050),
             MinValueValidator(1900)
         ])
+    def __str__(self):
+        return "%s %s" % (self.licenseplate, self.brand)
 
 class Photo(models.Model):
     photo = models.ImageField(upload_to='static/photos')
@@ -89,13 +92,18 @@ class Photo(models.Model):
 class Favourite(models.Model):
     sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    class Meta:
+        unique_together = ('sensor', 'user',)
     def __str__(self):
-        return "%s" % (self.id)
+        return "%s %s" % (self.sensor.name, self.user.username)
         
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     home = models.ForeignKey(Home, on_delete=models.CASCADE)
 
+class Notification(models.Model):
+    home = models.ForeignKey(Home, on_delete=models.CASCADE, default=0)
+    notification = models.CharField(max_length=50)
 
 
 

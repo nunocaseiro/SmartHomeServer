@@ -33,6 +33,7 @@ router.register(r'photos',views.PhotoViewSet)
 router.register(r'profiles',views.ProfileViewSet)
 router.register(r'vehicles',views.VehicleViewSet)
 router.register(r'favourites',views.FavouriteViewSet)
+router.register(r'notifications',views.NotificationViewSet)
 
 
 admin.site.register(models.Sensor)
@@ -43,7 +44,7 @@ admin.site.register(models.Photo)
 admin.site.register(models.Profile)
 admin.site.register(models.Vehicle)
 admin.site.register(models.Favourite)
-#admin.site.register(models.User, UserAdmin)
+admin.site.register(models.Notification)
 
 
 # Wire up our API using automatic URL routing.
@@ -63,7 +64,12 @@ urlpatterns = [
     path('api/userprofile/', views.GetUserProfileByUsername.as_view()),
     path('api/statistics/', views.GetStatistics.as_view()),
     path('api/countSensorsByRoom/', views.GetCountSensors.as_view()),
+    path('api/vehiclesofhome/', views.GetVehiclesOfHome.as_view()),
     url(r'^$', TemplateView.as_view(template_name='index.html')),
     url(r'^dj-rest-auth/', include('dj_rest_auth.urls')),
-    url("api/insertPhoto/", views.postPhoto)
+    url("api/insertPhoto/", views.postPhoto),
+    path('api/change_password/<int:pk>/', views.ChangePasswordView.as_view(), name='auth_change_password'),
+    path('api/register/', views.RegisterView.as_view(), name='auth_register'),
+    path('api/getNotificationsByUser/',views.NotificationByUserView.as_view())
+
 ]

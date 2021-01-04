@@ -54,3 +54,7 @@
 [2020-12-30 02:07:24.388] [remoteagent] [info] The short reconnection grace time of 5m has expired, so the terminal process with pid 614520 will be shutdown.
 [2020-12-30 03:26:36.060] [remoteagent] [info] [127.0.0.1][65d120ac][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
 [2020-12-30 03:26:37.471] [remoteagent] [info] [127.0.0.1][6f75b501][ExtensionHostConnection] <557465> Extension Host Process exited with code: 0, signal: null.
+[2020-12-30 03:50:12.858] [remoteagent] [info] [127.0.0.1][32bfc75a][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2020-12-30 03:50:13.942] [remoteagent] [info] [127.0.0.1][9a49d1bf][ExtensionHostConnection] <624664> Extension Host Process exited with code: 0, signal: null.
+[2020-12-30 03:50:13.943] [remoteagent] [info] Last EH closed, waiting before shutting down
+[2020-12-30 03:55:13.944] [remoteagent] [info] Last EH closed, shutting down

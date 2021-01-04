@@ -1,16 +1,3 @@
-sudo apt install python3-pip python3-dev libpq-dev curl postgresql-client
-sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl
-sudo -u postgres psql
-sudo -H pip3 install --upgrade pip
-sudo -H pip3 install virtualenv
-mkdir smarthome
-virtualenv smarthomeenv
-source smarthome/bin/activate
-ls
-source smarthomeenv/bin/activate
-pip install django gunicorn psycopg2-binary
-ls
-django-admin.py startproject smarthomeproj ~/smarthome
 cd smarthome
 ls
 cd smarthomeproj/
@@ -1951,4 +1938,63 @@ sudo systemctl status gunicorn
 sudo systemctl restart gunicorn
 sudo systemctl status gunicorn
 deactivate
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+
+source smarthomeenv/bin/activate
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+deactivate
+ls
+git add .
+git commit -m "favourites"
+git push
+source smarthomeenv/bin/activate
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+smarthome/manage.py makemigrations
+smarthome/manage.py migrate
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
 sudo systemctl restart gunicorn

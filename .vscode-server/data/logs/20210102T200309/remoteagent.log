@@ -1,0 +1,45 @@
+[2021-01-02 20:03:09.246] [remoteagent] [info] 
+
+*
+* Visual Studio Code Server
+*
+* Reminder: You may only use this software with Visual Studio family products,
+* as described in the license https://aka.ms/vscode-remote/license
+*
+
+
+[2021-01-02 20:03:09.246] [remoteagent] [info] Extension host agent started.
+[2021-01-02 20:03:09.599] [remoteagent] [info] [127.0.0.1][61e1a0b7][ManagementConnection] New connection established.
+[2021-01-02 20:03:09.602] [remoteagent] [info] [127.0.0.1][5c15bf49][ExtensionHostConnection] New connection established.
+[2021-01-02 20:03:09.719] [remoteagent] [info] [127.0.0.1][5c15bf49][ExtensionHostConnection] <853671> Launched Extension Host Process.
+[2021-01-02 20:03:09.861] [remoteagent] [info] Listing 0 persistent terminals, 0 total terminals
+[2021-01-02 20:03:09.888] [remoteagent] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/smarthome/.vscode'
+[2021-01-02 20:03:30.209] [remoteagent] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2021-01-02 20:34:17.711] [remoteagent] [info] [127.0.0.1][61e1a0b7][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2021-01-02 20:34:18.829] [remoteagent] [info] [127.0.0.1][5c15bf49][ExtensionHostConnection] <853671> Extension Host Process exited with code: 0, signal: null.
+[2021-01-02 20:34:18.831] [remoteagent] [info] Last EH closed, waiting before shutting down
+[2021-01-02 20:38:25.904] [remoteagent] [info] Got delay-shutdown request while in shutdown timeout, delaying
+[2021-01-02 20:38:25.904] [remoteagent] [info] Cancelling previous shutdown timeout
+[2021-01-02 20:38:26.435] [remoteagent] [info] [127.0.0.1][d20cc655][ManagementConnection] New connection established.
+[2021-01-02 20:38:26.437] [remoteagent] [info] [127.0.0.1][c2047d6e][ExtensionHostConnection] New connection established.
+[2021-01-02 20:38:26.445] [remoteagent] [info] [127.0.0.1][c2047d6e][ExtensionHostConnection] <858677> Launched Extension Host Process.
+[2021-01-02 20:38:26.684] [remoteagent] [info] Listing 1 persistent terminals, 1 total terminals
+[2021-01-02 20:38:26.726] [remoteagent] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/smarthome/.vscode'
+[2021-01-02 20:38:26.943] [remoteagent] [info] Replaying 24539 chars and 2 size events.
+[2021-01-02 20:38:37.993] [remoteagent] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2021-01-02 20:43:25.907] [remoteagent] [info] New EH opened, aborting shutdown
+[2021-01-02 22:23:26.141] [remoteagent] [info] [127.0.0.1][d20cc655][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[2021-01-02 22:32:04.508] [remoteagent] [info] [127.0.0.1][d20cc655][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[2021-01-02 22:32:04.511] [remoteagent] [info] [127.0.0.1][7c15b998][ManagementConnection] New connection established.
+[2021-01-02 22:32:04.513] [remoteagent] [info] [127.0.0.1][304500d1][ExtensionHostConnection] New connection established.
+[2021-01-02 22:32:04.521] [remoteagent] [info] [127.0.0.1][304500d1][ExtensionHostConnection] <874251> Launched Extension Host Process.
+[2021-01-02 22:32:04.740] [remoteagent] [info] Listing 1 persistent terminals, 1 total terminals
+[2021-01-02 22:32:04.753] [remoteagent] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/smarthome/.vscode'
+[2021-01-02 22:32:09.515] [remoteagent] [info] Replaying 35778 chars and 2 size events.
+[2021-01-02 22:32:19.353] [remoteagent] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2021-01-02 22:37:04.512] [remoteagent] [info] [127.0.0.1][d20cc655][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+[2021-01-02 22:37:05.643] [remoteagent] [info] [127.0.0.1][c2047d6e][ExtensionHostConnection] <858677> Extension Host Process exited with code: 0, signal: null.
+[2021-01-03 02:14:27.570] [remoteagent] [info] [127.0.0.1][7c15b998][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2021-01-03 02:14:28.689] [remoteagent] [info] [127.0.0.1][304500d1][ExtensionHostConnection] <874251> Extension Host Process exited with code: 0, signal: null.
+[2021-01-03 02:14:28.690] [remoteagent] [info] Last EH closed, waiting before shutting down
+[2021-01-03 02:19:28.691] [remoteagent] [info] Last EH closed, shutting down

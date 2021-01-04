@@ -14,14 +14,15 @@ def on_connect(client, userdata, flags, rc):
     #logger.error("Connected with result code "+str(rc))
     for sensor in allsensors:
         client.subscribe("/"+str(sensor.id))
-        logger.info("/"+sensor.name)
+        #logger.info("/"+sensor.name)
 
 def on_disconnect(client, userdata, rc):
-    client.loop_stop(force=False)
     if rc != 0:
-        print("Unexpected disconnection.")
+        pass
+        #logger.info("Unexpected disconnection.")
     else:
-        print("Disconnected")
+        pass
+        #logger.info("Disconnected")
 
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
@@ -120,4 +121,4 @@ client.username_pw_set("smarthome","smarthome")
 client.on_connect = on_connect
 client.on_message = on_message
 client.on_disconnect = on_disconnect
-client.connect("161.35.8.148", 1883, 60)
+client.connect_async("161.35.8.148", 1883, 60)

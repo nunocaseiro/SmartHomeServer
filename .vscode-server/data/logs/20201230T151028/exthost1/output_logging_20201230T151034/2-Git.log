@@ -1,0 +1,100 @@
+Looking for git in: git
+Using git 2.25.1 from git
+> git rev-parse --git-dir
+Open repository: /home/smarthome
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git check-ignore -v -z --stdin
+> git cat-file -s 20b44b09f2940ba573e41aaad3cd698bf63d1135
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s a17ed9cc5c5cbd96aa632f2e34ce91aa54c756ef
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s 20b44b09f2940ba573e41aaad3cd698bf63d1135
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s 79b3fbfa9a6cb38946fee072f63e5c6a16427ad0
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s a17ed9cc5c5cbd96aa632f2e34ce91aa54c756ef
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s 79b3fbfa9a6cb38946fee072f63e5c6a16427ad0
+> git show --textconv :smarthome/smarthomeproj/urls.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/urls.py
+> git cat-file -s 941aa402b952357c76d3845cac619d2d1068e8cb
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s a17ed9cc5c5cbd96aa632f2e34ce91aa54c756ef
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s 79b3fbfa9a6cb38946fee072f63e5c6a16427ad0
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s a17ed9cc5c5cbd96aa632f2e34ce91aa54c756ef
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s a17ed9cc5c5cbd96aa632f2e34ce91aa54c756ef
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s 20b44b09f2940ba573e41aaad3cd698bf63d1135
+> git show --textconv :smarthome/smarthomeproj/server/views.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/views.py
+> git cat-file -s 79b3fbfa9a6cb38946fee072f63e5c6a16427ad0
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s 20b44b09f2940ba573e41aaad3cd698bf63d1135
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s a17ed9cc5c5cbd96aa632f2e34ce91aa54c756ef
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s 20b44b09f2940ba573e41aaad3cd698bf63d1135
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s a17ed9cc5c5cbd96aa632f2e34ce91aa54c756ef
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s 20b44b09f2940ba573e41aaad3cd698bf63d1135
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s a17ed9cc5c5cbd96aa632f2e34ce91aa54c756ef
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s 20b44b09f2940ba573e41aaad3cd698bf63d1135
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s a17ed9cc5c5cbd96aa632f2e34ce91aa54c756ef
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s 20b44b09f2940ba573e41aaad3cd698bf63d1135
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s a17ed9cc5c5cbd96aa632f2e34ce91aa54c756ef
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s 20b44b09f2940ba573e41aaad3cd698bf63d1135
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s a17ed9cc5c5cbd96aa632f2e34ce91aa54c756ef
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s 20b44b09f2940ba573e41aaad3cd698bf63d1135
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s a17ed9cc5c5cbd96aa632f2e34ce91aa54c756ef
+> git show --textconv :smarthome/smarthomeproj/server/serializers.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/serializers.py
+> git cat-file -s 20b44b09f2940ba573e41aaad3cd698bf63d1135
+> git show --textconv :smarthome/smarthomeproj/server/models.py
+> git ls-files --stage -- /home/smarthome/smarthome/smarthomeproj/server/models.py
+> git cat-file -s a17ed9cc5c5cbd96aa632f2e34ce91aa54c756ef

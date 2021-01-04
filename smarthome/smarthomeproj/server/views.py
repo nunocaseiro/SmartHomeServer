@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User, Group
-from smarthomeproj.server.models import Sensor, SensorValue, Home, Room, Photo, Profile, Vehicle, Favourite
+from smarthomeproj.server.models import Sensor, SensorValue, Home, Room, Photo, Profile, Vehicle, Favourite, Notification
 from rest_framework import viewsets
 from rest_framework import permissions
 from rest_framework import generics
@@ -17,7 +17,7 @@ from rest_framework import permissions
 from itertools import chain
 from . import mqtt as mqtt
 from . import licensePlateRecognition as plate
-from smarthomeproj.server.serializers import UserSerializer, GroupSerializer, User1Serializer, SensorSerializer, SensorValueSerializer, RoomSerializer, HomeSerializer, SensorSerializerMeta, PhotoSerializer, ProfileSerializer, VehicleSerializer, FavouriteSerializer
+from smarthomeproj.server.serializers import UserSerializer, GroupSerializer, User1Serializer, SensorSerializer, SensorValueSerializer, RoomSerializer, HomeSerializer, SensorSerializerMeta, PhotoSerializer, ProfileSerializer, VehicleSerializer, FavouriteSerializer, RegisterSerializer, ChangePasswordSerializer, NotificationSerializer 
 import logging
 
 logger = logging.getLogger("django")
@@ -50,7 +50,8 @@ class GroupViewSet(viewsets.ModelViewSet):
 class UserCreate(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = User1Serializer
-    
+    permission_classes = [permissions.IsAuthenticated]
+
 class SensorViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
@@ -169,6 +170,14 @@ class GetUserProfileByUsername(generics.ListAPIView):
         queryset = Profile.objects.filter(user=user[0])
         return queryset
 
+class GetVehiclesOfHome(generics.ListAPIView):
+    serializer_class = VehicleSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    def get_queryset(self):
+        homeid = self.request.query_params.get('home', None)
+        queryset = Vehicle.objects.filter(home=homeid)
+        return queryset
+
 class GetCountSensors(APIView):
     #from . import mqtt
     #mqtt.client.loop_start()
@@ -207,6 +216,9 @@ class VehicleViewSet(viewsets.ModelViewSet):
     queryset = Vehicle.objects.all()
     serializer_class = VehicleSerializer
     permission_classes = [permissions.IsAuthenticated]
+    #def update(self,request,pk=None):
+    #    mqtt.client.publish("/android", "new vehicle", 1)
+    #    return Response(200)
 
 class FavouriteViewSet(viewsets.ModelViewSet):
     """
@@ -230,3 +242,28 @@ class GetStatistics(APIView):
             
             roomsCount = rooms.count()
             return Response({"sensorsCount": sensorsCount, "roomsCount": roomsCount})
+
+class ChangePasswordView(generics.UpdateAPIView):
+
+    queryset = User.objects.all()
+    permission_classes = (permissions.IsAuthenticated,)
+    serializer_class = ChangePasswordSerializer
+
+class RegisterView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    permission_classes = (permissions.IsAuthenticated,)
+    serializer_class = RegisterSerializer
+
+class NotificationViewSet(viewsets.ModelViewSet):
+    queryset = Notification.objects.all()
+    permission_classes = (permissions.IsAuthenticated,)
+    serializer_class = Notification
+
+class NotificationByUserView(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    serializer_class = NotificationSerializer
+    def get(self, request, format=None):
+       homeid = self.request.query_params.get('home', None)
+       queryset = Notification.objects.filter(home=homeid)
+       return Response({queryset})
+
