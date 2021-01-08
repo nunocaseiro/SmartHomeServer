@@ -102,8 +102,10 @@ class Profile(models.Model):
     home = models.ForeignKey(Home, on_delete=models.CASCADE)
 
 class Notification(models.Model):
-    home = models.ForeignKey(Home, on_delete=models.CASCADE, default=0)
+    profile = models.ForeignKey(Profile,on_delete=models.CASCADE, null=True)
     notification = models.CharField(max_length=50)
+    seen = models.BooleanField(default=False)
+    created = models.DateTimeField(auto_now_add=True)
 
 
 

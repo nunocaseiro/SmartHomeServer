@@ -196,18 +196,31 @@ class FavouriteSerializer(serializers.ModelSerializer):
         model = Favourite
         fields =  ['id','user','sensor']
 
+class NotificationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Notification
+        fields =  ['id', 'notification','profile', 'seen' ,'created']
+        
+
 class ProfileSerializer(serializers.HyperlinkedModelSerializer):
     user = UserSerializer(many=False)
     home = HomeSerializer(many=False)
     favourites = serializers.SerializerMethodField("get_favourites")
+    notifications = serializers.SerializerMethodField("get_notifications")
     def get_favourites(self,obj):
-            fav = Favourite.objects.filter(user=obj.user.id)
-            serializer = FavouriteSerializer(fav, many= True)
-            return serializer.data
+        fav = Favourite.objects.filter(user=obj.user.id)
+        serializer = FavouriteSerializer(fav, many= True)
+        return serializer.data
+    def get_notifications(self,obj):
+        notifications = Notification.objects.filter(profile=obj)
+        serializer = NotificationSerializer(notifications, many=True)
+        return serializer.data
+        
+
         
     class Meta:
         model = Profile
-        fields = ['user', 'home', 'favourites']
+        fields = ['user', 'home', 'favourites', 'notifications']
 
 class ChangePasswordSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True, required=True, validators=[validate_password])
@@ -237,8 +250,3 @@ class ChangePasswordSerializer(serializers.ModelSerializer):
 
         return instance
 
-class NotificationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Notification
-        fields =  ['home','notification']
-        

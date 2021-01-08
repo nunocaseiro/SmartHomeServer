@@ -6,6 +6,7 @@ from .models import Room, Sensor, Photo
 import re
 from . import licensePlateRecognition as plate
 
+
 logger = logging.getLogger("django")
 allsensors = Sensor.objects.all().filter(ios=False)
 # The callback for when the client receives a CONNACK response from the server.
@@ -26,7 +27,7 @@ def on_disconnect(client, userdata, rc):
 
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
-    from .models import Room, Sensor, SensorValue
+    from .models import Room, Sensor, SensorValue, Vehicle, Profile, Notification
 
     try:
         m_decode=str(msg.payload.decode("utf-8","ignore"))
@@ -50,8 +51,8 @@ def on_message(client, userdata, msg):
                     sensorV = SensorValue(idsensor = sensor, value = 0.0)
                     sensorV.save()
                     logger.info("zero")
-                    client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","off")))
-                    client.publish("/"+str(atuador2.id), json.dumps(createMessage("espNuno","server","turn","off")))
+                    client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","off")),qos=1)
+                    client.publish("/"+str(atuador2.id), json.dumps(createMessage("espNuno","server","turn","off")),qos=1)
 
 
             if m_in["value"] == "1.00":
@@ -61,8 +62,8 @@ def on_message(client, userdata, msg):
                     sensorV.save()
                     #publicar mensagem
                     
-                    client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","on")))
-                    client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","photo","on")))
+                    client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","on")),qos=1)
+                    client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","photo","on")),qos=1)
                     # if atuador2 tipo camera entao envia mensagem para tirar foto
         if (m_in["action"] == "photo" and m_in["value"] == "sent"):
             logger.info("KAESTOU")
@@ -73,7 +74,18 @@ def on_message(client, userdata, msg):
             textToCompare = re.sub('[\W_]+', '', text) 
             textToCompare = textToCompare.strip()
             logger.info(textToCompare)
-            allsensors = Sensor.objects.all().filter(ios=False)
+            try:
+                go = Vehicle.objects.get(licenseplate=textToCompare)
+                allProfiles = Profile.objects.all()
+                for profile in allProfiles:
+                    newNotification = Notification.objects.create(profile = profile, notification = "New vehicle detected: OK",seen= False)
+                    newNotification.save()
+            except Vehicle.DoesNotExist:
+                    for profile in allProfiles:
+                        newNotification = Notification(profile = profile, notification = "New vehicle detected: NOT OK", seen=  False)
+                        newNotification.save()
+            client.publish("/android", "teste", qos=1)
+            #allsensors = Sensor.objects.all().filter(ios=False)
             logger.info(atuador.id)
             client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","on")),1)         
       

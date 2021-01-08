@@ -11,7 +11,7 @@ from rest_framework.views import APIView
 from django.http import Http404
 from django.http import HttpResponse
 import json
-
+from django.core import serializers
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework import permissions
 from itertools import chain
@@ -199,7 +199,6 @@ def postPhoto(request):
     """
     List all code snippets, or create a new snippet.
     """
-    
     if request.method == 'POST':
         serializer = PhotoSerializer(data=request.data)
         if serializer.is_valid():
@@ -244,7 +243,6 @@ class GetStatistics(APIView):
             return Response({"sensorsCount": sensorsCount, "roomsCount": roomsCount})
 
 class ChangePasswordView(generics.UpdateAPIView):
-
     queryset = User.objects.all()
     permission_classes = (permissions.IsAuthenticated,)
     serializer_class = ChangePasswordSerializer
@@ -257,13 +255,17 @@ class RegisterView(generics.CreateAPIView):
 class NotificationViewSet(viewsets.ModelViewSet):
     queryset = Notification.objects.all()
     permission_classes = (permissions.IsAuthenticated,)
-    serializer_class = Notification
+    serializer_class = NotificationSerializer
+
 
 class NotificationByUserView(APIView):
     permission_classes = (permissions.IsAuthenticated,)
     serializer_class = NotificationSerializer
     def get(self, request, format=None):
-       homeid = self.request.query_params.get('home', None)
-       queryset = Notification.objects.filter(home=homeid)
-       return Response({queryset})
+       userid = self.request.query_params.get('user', None)
+       user = User.objects.get(pk=userid)
+       profile = Profile.objects.get(user=user)
+       queryset = Notification.objects.filter(profile=profile)
+       data = NotificationSerializer(queryset,many = True)
+       return Response(data.data)
 
