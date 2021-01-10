@@ -68,7 +68,7 @@ class SensorValue(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return "Id sensor: %s Value: %f" % (self.idsensor, self.value)
+        return "Id sensor: %s ||| Value: ||| %f Created: %s" % (self.idsensor, self.value, self.created_at)
 
 class Vehicle(models.Model):
     brand = models.CharField(max_length=20)

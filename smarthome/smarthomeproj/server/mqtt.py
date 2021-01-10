@@ -7,6 +7,7 @@ import re
 from . import licensePlateRecognition as plate
 
 
+
 logger = logging.getLogger("django")
 allsensors = Sensor.objects.all().filter(ios=False)
 # The callback for when the client receives a CONNACK response from the server.
@@ -38,60 +39,98 @@ def on_message(client, userdata, msg):
         logger.error(ValueError)
 
     sensor = Sensor.objects.get(id=idSensor)
+    if (sensor.atuador != None):
+        atuador = Sensor.objects.get(id=sensor.atuador.id)
+
     if (m_in["to"] == "server" and m_in["from"] == "espNuno" ):
-        if (sensor.atuador != None):
-            atuador = Sensor.objects.get(id=sensor.atuador.id)
-
-        if(atuador.sensortype == "led"):
-            if(atuador.atuador != None):
-                atuador2 = Sensor.objects.get(id=atuador.atuador.id)
-                #enviar estado em vez de value
-            if m_in["value"] == "0.00":
-                #if sensorValue.value == 1.00:
-                    sensorV = SensorValue(idsensor = sensor, value = 0.0)
-                    sensorV.save()
-                    logger.info("zero")
-                    client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","off")),qos=1)
-                    client.publish("/"+str(atuador2.id), json.dumps(createMessage("espNuno","server","turn","off")),qos=1)
-
-
-            if m_in["value"] == "1.00":
-                #if sensorValue.value == 0.00:
-                    logger.info("um")
-                    sensorV = SensorValue(idsensor = sensor, value = 1.0)
-                    sensorV.save()
-                    #publicar mensagem
+        if (m_in["action"] == "sval"):
+            sensorV = SensorValue(idsensor = sensor, value = m_in["value"])
+            sensorV.save()
+            #logger.info("SENSOR ATUADOR:"  + str(sensor.atuador))
+            
+            if (sensor.atuador != None):
+                if (sensor.sensortype == "motion"):
+                    #logger.info("ATUADOR:"  + str(atuador))
                     
-                    client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","on")),qos=1)
-                    client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","photo","on")),qos=1)
-                    # if atuador2 tipo camera entao envia mensagem para tirar foto
+                    if(atuador.sensortype == "led"):
+                        #logger.info("ATUADOR:"  + str(atuador.sensortype))
+                        #logger.info("ATUADOR:"  + str(sensorV.value))
+
+                        if sensorV.value == "0.00":
+                            #logger.info("TURN OFF")
+                            client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","off")),qos=1)
+                        if sensorV.value == "1.00":
+                            #logger.info("TURN OFF")
+                            client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","on")),qos=1)
+
+                if (sensor.sensortype == "led"): 
+                    logger.info(str(sensor.name) + "||" + str(sensor.sensortype) + "||" +str(atuador.id))       
+                    if(atuador.sensortype == "camera"):
+                        if sensorV.value == "1.00":
+                            client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","photo","take")),qos=1)
+                        if sensorV.value == "0.00":
+                            client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","photo","off")),qos=1)
+                            
+                if (sensor.sensortype == "camera"):
+                    if(atuador.sensortype == "servo"):
+                        if sensorV.value == "0.00":
+                            #logger.info("TURN OFF")
+                            client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","off")),qos=1)
+                        if sensorV.value == "1.00":
+                            #logger.info("TURN OFF")
+                            client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","on")),qos=1)
+
         if (m_in["action"] == "photo" and m_in["value"] == "sent"):
-            logger.info("KAESTOU")
-            photo = Photo.objects.latest('created_at')
-            logger.info(str(photo.photo))
-            text = plate.extractLicensePlate(str(photo.photo))
-            logger.info(text)
-            textFinal = re.sub('[\W_]+', '', text) 
-            textFinal = textFinal.strip()
-            logger.info(textFinal)
-            try:
-                go = Vehicle.objects.get(licenseplate=textFinal)
-                allProfiles = Profile.objects.all()
-                lastPhoto = Photo.objects.latest('created_at') 
-                for profile in allProfiles:
-                    newNotification = Notification.objects.create(profile = profile, notification = "New vehicle detected",seen= False, licensePlate = textFinal, photo=lastPhoto, description = "allowed")
-                    newNotification.save()
-            except Vehicle.DoesNotExist:
+
+            if (sensor != None):
+                logger.info("KAESTOU")
+                photo = Photo.objects.latest('created_at')
+                logger.info(str(photo.photo))
+                text = plate.extractLicensePlate(str(photo.photo))
+                logger.info(text)
+                textFinal = re.sub('[\W_]+', '', text) 
+                textFinal = textFinal.strip()
+                logger.info(textFinal)
+                try:
+                    go = Vehicle.objects.get(licenseplate=textFinal)
+                    allProfiles = Profile.objects.all()
+                    lastPhoto = Photo.objects.latest('created_at') 
+                    for profile in allProfiles:
+                        newNotification = Notification.objects.create(profile = profile, notification = "New vehicle detected",seen= False, licensePlate = textFinal, photo=lastPhoto, description = "allowed")
+                        newNotification.save()
+                        client.publish("/"+str(sensor.id), json.dumps(createMessage("espNuno","server","photo","on")),qos=1)
+                except Vehicle.DoesNotExist:
                     for profile in allProfiles:
                         newNotification = Notification.objects.create(profile = profile, notification = "New vehicle detected",seen= False, licensePlate = textFinal, photo=lastPhoto, description = "not allowed")                        
                         newNotification.save()
-            client.publish("/android", "newPhoto", qos=1)
-            #allsensors = Sensor.objects.all().filter(ios=False)
-            logger.info(atuador.id)
-            client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","on")),1)         
-      
-        
-    
+                client.publish("/android", "newPhoto", qos=1)
+            
+                   
+
+    #         if(atuador.atuador != None):
+    #             atuador2 = Sensor.objects.get(id=atuador.atuador.id)
+    #             #enviar estado em vez de value
+                        #if m_in["value"] == "0.00":
+                        #    client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","off")),qos=1)
+    #             if sensorValue.value == 1.00:
+                    
+    #                 logger.info("zero")
+    #                 client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","off")),qos=1)
+    #                 client.publish("/"+str(atuador2.id), json.dumps(createMessage("espNuno","server","turn","off")),qos=1)
+    #                 client.publish("/android", "updateSensors", qos = 1)
+
+
+    #         if m_in["value"] == "1.00":
+    #             #if sensorValue.value == 0.00:
+    #                 logger.info("um")
+    #                 sensorV = SensorValue(idsensor = sensor, value = 1.0)
+    #                 sensorV.save()
+    #                 #publicar mensagem
+                    
+    #                 client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","on")),qos=1)
+    #                 client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","photo","on")),qos=1)
+    #                 client.publish("/android", "updateSensors", qos= 1)
+    #                 # if atuador2 tipo camera entao envia mensagem para tirar foto """
 
 def createMessage(to,fr0m,action,value):
     send_msg = {
@@ -101,32 +140,6 @@ def createMessage(to,fr0m,action,value):
         "value":value
     }
     return send_msg
-
-
-
-    """ if (sensor.atuador != None):
-        atuador = Sensor.objects.get(id=sensor.atuador.id)
-#separar o que envio do que recebo
-        if(atuador.sensortype == "led"):
-            if(atuador.atuador != None):
-                atuador2 = Sensor.objects.get(id=atuador.atuador.id)
-                #enviar estado em vez de value
-            if msg.payload.decode("utf-8")== "0.00":
-                sensorV = SensorValue(idsensor = sensor, value = 0.0)
-                sensorV.save()
-                logger.info("zero")
-                #publicar mensagem
-                client.publish("/"+str(atuador.id), "off")
-                client.publish("/"+str(atuador2.id), "off")
-
-            if msg.payload.decode("utf-8")== "1.00":
-                logger.info("um")
-                sensorV = SensorValue(idsensor = sensor, value = 1.0)
-                sensorV.save()
-                #publicar mensagem
-                client.publish("/"+str(atuador.id), "on")
-                client.publish("/"+str(atuador2.id), "on") """
-
 
 
 client = mqtt.Client("server")
