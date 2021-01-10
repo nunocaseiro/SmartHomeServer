@@ -27,7 +27,7 @@ def on_disconnect(client, userdata, rc):
 
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
-    from .models import Room, Sensor, SensorValue, Vehicle, Profile, Notification
+    from .models import Room, Sensor, SensorValue, Vehicle, Profile, Notification, Photo
 
     try:
         m_decode=str(msg.payload.decode("utf-8","ignore"))
@@ -71,20 +71,21 @@ def on_message(client, userdata, msg):
             logger.info(str(photo.photo))
             text = plate.extractLicensePlate(str(photo.photo))
             logger.info(text)
-            textToCompare = re.sub('[\W_]+', '', text) 
-            textToCompare = textToCompare.strip()
-            logger.info(textToCompare)
+            textFinal = re.sub('[\W_]+', '', text) 
+            textFinal = textFinal.strip()
+            logger.info(textFinal)
             try:
-                go = Vehicle.objects.get(licenseplate=textToCompare)
+                go = Vehicle.objects.get(licenseplate=textFinal)
                 allProfiles = Profile.objects.all()
+                lastPhoto = Photo.objects.latest('created_at') 
                 for profile in allProfiles:
-                    newNotification = Notification.objects.create(profile = profile, notification = "New vehicle detected: OK",seen= False)
+                    newNotification = Notification.objects.create(profile = profile, notification = "New vehicle detected",seen= False, licensePlate = textFinal, photo=lastPhoto, description = "allowed")
                     newNotification.save()
             except Vehicle.DoesNotExist:
                     for profile in allProfiles:
-                        newNotification = Notification(profile = profile, notification = "New vehicle detected: NOT OK", seen=  False)
+                        newNotification = Notification.objects.create(profile = profile, notification = "New vehicle detected",seen= False, licensePlate = textFinal, photo=lastPhoto, description = "not allowed")                        
                         newNotification.save()
-            client.publish("/android", "teste", qos=1)
+            client.publish("/android", "newPhoto", qos=1)
             #allsensors = Sensor.objects.all().filter(ios=False)
             logger.info(atuador.id)
             client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","on")),1)         

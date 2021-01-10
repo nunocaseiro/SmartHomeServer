@@ -87,7 +87,7 @@ class Photo(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return "Id sensor: %s" % (self.photo)
+        return "%s" % (self.photo)
 
 class Favourite(models.Model):
     sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE)
@@ -104,6 +104,9 @@ class Profile(models.Model):
 class Notification(models.Model):
     profile = models.ForeignKey(Profile,on_delete=models.CASCADE, null=True)
     notification = models.CharField(max_length=50)
+    licensePlate = models.CharField(max_length = 6, null = True)
+    description = models.CharField(max_length = 20, null = True)
+    photo = models.ForeignKey(Photo, on_delete=models.CASCADE, null=True)
     seen = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
 

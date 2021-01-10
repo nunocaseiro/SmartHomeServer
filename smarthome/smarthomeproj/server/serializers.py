@@ -197,9 +197,15 @@ class FavouriteSerializer(serializers.ModelSerializer):
         fields =  ['id','user','sensor']
 
 class NotificationSerializer(serializers.ModelSerializer):
+    photo = serializers.SerializerMethodField("get_photo")
+    def get_photo(self,obj):
+        serializer = PhotoSerializer(obj.photo)
+        return serializer.data["photo"]
     class Meta:
         model = Notification
-        fields =  ['id', 'notification','profile', 'seen' ,'created']
+        fields =  ['id', 'notification','licensePlate','description', 'profile', 'seen' ,'created', 'photo']
+   
+
         
 
 class ProfileSerializer(serializers.HyperlinkedModelSerializer):
