@@ -46,6 +46,8 @@ def on_message(client, userdata, msg):
         if (m_in["action"] == "sval"):
             sensorV = SensorValue(idsensor = sensor, value = m_in["value"])
             sensorV.save()
+            client.publish("/android", json.dumps(createMessage("server","android", "updateSensors", "value")), qos= 1)
+            #client.publish("/android", "updateSensors", qos= 1)
             #logger.info("SENSOR ATUADOR:"  + str(sensor.atuador))
             
             if (sensor.atuador != None):
@@ -70,9 +72,10 @@ def on_message(client, userdata, msg):
                             client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","photo","take")),qos=1)
                         if sensorV.value == "0.00":
                             client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","photo","off")),qos=1)
-                            
+
                 if (sensor.sensortype == "camera"):
-                    if(atuador.sensortype == "servo"):
+                    
+                    if(atuador.sensortype == "plug"):
                         if sensorV.value == "0.00":
                             #logger.info("TURN OFF")
                             client.publish("/"+str(atuador.id), json.dumps(createMessage("espNuno","server","turn","off")),qos=1)
@@ -91,20 +94,22 @@ def on_message(client, userdata, msg):
                 textFinal = re.sub('[\W_]+', '', text) 
                 textFinal = textFinal.strip()
                 logger.info(textFinal)
+                allProfiles = Profile.objects.all()
+                lastPhoto = Photo.objects.latest('created_at') 
                 try:
                     go = Vehicle.objects.get(licenseplate=textFinal)
-                    allProfiles = Profile.objects.all()
-                    lastPhoto = Photo.objects.latest('created_at') 
                     for profile in allProfiles:
                         newNotification = Notification.objects.create(profile = profile, notification = "New vehicle detected",seen= False, licensePlate = textFinal, photo=lastPhoto, description = "allowed")
                         newNotification.save()
                         client.publish("/"+str(sensor.id), json.dumps(createMessage("espNuno","server","photo","on")),qos=1)
+                        logger.info(createMessageAndroid("android", profile.user.username,"newPhoto", str(newNotification.id)))
+                        client.publish("/android", json.dumps(createMessageAndroid("android", profile.user.username,"newPhoto", str(newNotification.id))), qos=1)
                 except Vehicle.DoesNotExist:
                     for profile in allProfiles:
                         newNotification = Notification.objects.create(profile = profile, notification = "New vehicle detected",seen= False, licensePlate = textFinal, photo=lastPhoto, description = "not allowed")                        
                         newNotification.save()
-                client.publish("/android", "newPhoto", qos=1)
-            
+                        client.publish("/android", json.dumps(createMessageAndroid("android", profile.user.username,"newPhoto", str(newNotification.id))), qos=1)
+                #client.publish("/android", "newPhoto", qos=1)
                    
 
     #         if(atuador.atuador != None):
@@ -140,6 +145,16 @@ def createMessage(to,fr0m,action,value):
         "value":value
     }
     return send_msg
+
+def createMessageAndroid(to,user,action,value):
+    send_msg = {
+        "to": to,
+        "user": user,
+        "action":action,
+        "value":value
+    }
+    return send_msg
+
 
 
 client = mqtt.Client("server")

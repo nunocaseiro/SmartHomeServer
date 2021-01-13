@@ -51,7 +51,7 @@ class Sensor(models.Model):
     sensortype = models.CharField(max_length=20,choices=SENSOR_TYPE, default="Undefined")
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
     ios = models.BooleanField(default=True)
-    atuador = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True)
+    atuador = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True)
     gpio = models.IntegerField(
         default=1,
         validators=[
@@ -63,7 +63,7 @@ class Sensor(models.Model):
         return "%s" % (self.name)
 
 class SensorValue(models.Model):
-    idsensor = models.ForeignKey(Sensor, on_delete=models.CASCADE)
+    idsensor  = models.ForeignKey(Sensor, on_delete=models.CASCADE)
     value = models.DecimalField(max_digits=3, decimal_places=1)
     created_at = models.DateTimeField(auto_now_add=True)
 

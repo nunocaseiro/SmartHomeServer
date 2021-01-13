@@ -60,6 +60,12 @@ class SensorViewSet(viewsets.ModelViewSet):
     #mqtt.client.publish("mensagens/teste", payload="enviei mensagens", qos=0, retain=False)
     serializer_class = SensorSerializer
     permission_classes = [permissions.IsAuthenticated]
+    def create(self, request, *args, **kwargs):
+        serializer = SensorSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        s = serializer.save()
+        mqtt.client.subscribe("/"+str(s.id))
+        return Response(serializer.data)
 
 class SensorValueViewSet(viewsets.ModelViewSet):
     """

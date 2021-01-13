@@ -8,6 +8,7 @@ logger = logging.getLogger("django")
 def extractLicensePlate(path):
     img = cv2.imread("/home/smarthome/smarthome/" + path,cv2.IMREAD_COLOR)
     
+#remover se n interpretar as fotos 
     img = cv2.resize(img, (600,400) )
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) 
