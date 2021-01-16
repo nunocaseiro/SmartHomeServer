@@ -172,7 +172,7 @@ class SensorSerializer(serializers.ModelSerializer):
         
     class Meta:
         model = Sensor
-        fields = ['id', 'name', 'sensortype','room', 'gpio', 'value', 'roomname', 'roomtype']
+        fields = ['id', 'name', 'sensortype','room', 'gpio', 'value', 'roomname', 'roomtype', 'ios']
     
     
 
@@ -184,7 +184,7 @@ class HomeSerializer(serializers.ModelSerializer):
 class RoomSerializer(serializers.ModelSerializer):
     class Meta:
         model = Room
-        fields = ['id','name','home','ip', 'roomtype']
+        fields = ['id','name','home','ip', 'roomtype', 'testing']
 
 class VehicleSerializer(serializers.ModelSerializer):
     class Meta:
