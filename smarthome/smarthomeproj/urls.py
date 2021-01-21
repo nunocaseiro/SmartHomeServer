@@ -70,6 +70,9 @@ urlpatterns = [
     url("api/insertPhoto/", views.postPhoto),
     path('api/change_password/<int:pk>/', views.ChangePasswordView.as_view(), name='auth_change_password'),
     path('api/register/', views.RegisterView.as_view(), name='auth_register'),
-    path('api/getNotificationsByUser/',views.NotificationByUserView.as_view())
+    path('api/getNotificationsByUser/',views.NotificationByUserView.as_view()),
+    path('api/sensorsandroid/',views.SensorsForAndroid.as_view()),
+    path('api/subscribeMqtt/', views.subscribeMqtt.as_view()),
+    path('api/sensortypes/',views.GetTypes.as_view())
 
 ]

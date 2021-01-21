@@ -10,6 +10,7 @@ from rest_framework.generics import RetrieveAPIView
 from rest_framework.views import APIView
 from django.http import Http404
 from django.http import HttpResponse
+from rest_framework.decorators import action
 import json
 from django.core import serializers
 from rest_framework.decorators import api_view, permission_classes
@@ -57,15 +58,11 @@ class SensorViewSet(viewsets.ModelViewSet):
     API endpoint that allows users to be viewed or edited.
     """
     queryset = Sensor.objects.all()
-    #mqtt.client.publish("mensagens/teste", payload="enviei mensagens", qos=0, retain=False)
+   
     serializer_class = SensorSerializer
     permission_classes = [permissions.IsAuthenticated]
-    def create(self, request, *args, **kwargs):
-        serializer = SensorSerializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        s = serializer.save()
-        mqtt.client.subscribe("/"+str(s.id))
-        return Response(serializer.data)
+    #last = Sensor.objects.latest('created')
+    #logger.info(last)
 
 class SensorValueViewSet(viewsets.ModelViewSet):
     """
@@ -136,6 +133,14 @@ class RoomsForAndroid(generics.ListAPIView):
         queryset = Room.objects.all().filter(testing=False)
         return queryset
 
+class SensorsForAndroid(generics.ListAPIView):
+    serializer_class = SensorSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    def get_queryset(self):
+      
+        queryset = Sensor.objects.all().filter(ios=False)
+        return queryset
+
 
 class SensorsOfRoom(generics.ListAPIView):
     serializer_class = SensorSerializer
@@ -184,6 +189,8 @@ class GetVehiclesOfHome(generics.ListAPIView):
         queryset = Vehicle.objects.filter(home=homeid)
         return queryset
 
+
+
 class GetCountSensors(APIView):
     #from . import mqtt
     #mqtt.client.loop_start()
@@ -198,6 +205,21 @@ class GetCountSensors(APIView):
         queryset = Sensor.objects.filter(room=idroom).count()
        
         return Response(queryset)
+
+class subscribeMqtt(APIView):
+    serializer_class = SensorSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    def get(self, request, format=None):
+        from . import mqtt
+        """
+        This view should return a list of all the purchases for
+        the user as determined by the username portion of the URL. 
+        """
+        sensor = self.request.query_params.get('sensor', None)
+        ##queryset = Sensor.objects.get(pk=sensor)
+        mqtt.client.subscribe("/"+str(sensor), qos= 1)
+       
+        return Response("OK", status=status.HTTP_201_CREATED)
 
 @api_view(['POST'])
 @permission_classes((permissions.AllowAny,))
@@ -274,4 +296,9 @@ class NotificationByUserView(APIView):
        queryset = Notification.objects.filter(profile=profile)
        data = NotificationSerializer(queryset,many = True)
        return Response(data.data)
+
+class GetTypes(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    def get(self, request):
+        return Response({"data": {"led","plug","camera","servo","motion","temperature","luminosity"}})
 

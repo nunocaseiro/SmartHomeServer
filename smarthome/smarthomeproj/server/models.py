@@ -45,19 +45,22 @@ class Sensor(models.Model):
         ("plug", 'PLUG'),
         ("camera", 'CAMERA'),
         ("servo", 'SERVO'),
-        ("motion",'MOTION')
+        ("motion",'MOTION'),
+        ("temperature","TEMPERATURE"),
+        ("luminosity", "LUMINOSITY")
     ]
     name = models.CharField(max_length=20)
     sensortype = models.CharField(max_length=20,choices=SENSOR_TYPE, default="Undefined")
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
     ios = models.BooleanField(default=True)
-    atuador = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True)
+    actuator = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True)
     gpio = models.IntegerField(
         default=1,
         validators=[
             MaxValueValidator(40),
             MinValueValidator(1)
         ])
+    created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return "%s" % (self.name)

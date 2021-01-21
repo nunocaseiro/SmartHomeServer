@@ -1,3 +1,7 @@
 module.exports = {
-    outputDir : '/home/smarthome/smarthome/static'
+  watchOptions: {
+    ignored: /node_modules/
+  },
+      outputDir : '/home/smarthome/smarthome/static'
+    //outputDir : '/home/smarthome/smarthome/staticFrontend'
   }

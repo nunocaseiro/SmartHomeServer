@@ -25,8 +25,8 @@ SECRET_KEY = '@run21fmoa2wr+k*h+b82j2fg@kpl(t1c#990&$3j0u6(x=@&r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['161.35.8.148','localhost']
-
+#ALLOWED_HOSTS = ['161.35.8.148','localhost']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -150,6 +150,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ORIGIN_WHITELIST = (
        'http://localhost:3000',
+       'http://localhost:8081',
+       'http://161.35.8.148'
 )
 
 # Internationalization

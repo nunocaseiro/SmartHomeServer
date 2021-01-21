@@ -3,8 +3,12 @@ from rest_framework import serializers
 from smarthomeproj.server.models import Sensor, SensorValue, Home, Room, Photo, Profile, Vehicle, Favourite, Notification
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
+from . import mqtt as mqtt
+import logging
+import json
+from json.decoder import JSONDecodeError
 
-
+logger = logging.getLogger("django")
 class Base64ImageField(serializers.ImageField):
     """
     A Django REST framework field for handling image-uploads through raw post data.
@@ -142,6 +146,7 @@ class SensorSerializer(serializers.ModelSerializer):
     value = serializers.SerializerMethodField("get_last_value")
     roomname = serializers.SerializerMethodField("get_room_name")
     roomtype = serializers.SerializerMethodField("get_room_type")
+    status = serializers.SerializerMethodField("get_status")
 
     def get_last_value(self,obj):
             #queryset = SensorValue.objects.all().filter(idsensor=idsensor).order_by('-created_at')[:1]
@@ -160,6 +165,30 @@ class SensorSerializer(serializers.ModelSerializer):
             return serializer.data["name"]
         except Exception:
                 return 0
+
+    def get_status(self,obj):
+        value = SensorValue.objects.all().filter(idsensor=obj.id).order_by('-created_at')[:1]
+        serializer = SensorValueSerializer(value, many=True)
+        value = serializer.data[0]["value"]
+
+        if (obj.sensortype == "led" or obj.sensortype == "motion" or obj.sensortype == "plug" or obj.sensortype == "camera"):
+            if (value == 0.0):
+                return "Off"
+            else:
+                return "On"
+        
+        elif (obj.sensortype == "servo"):
+            if (value == 0.0):
+                return "Opened"
+            else:
+                return "Closed"
+        
+        else:
+            return "Ok"
+
+        
+
+        
     
     def get_room_type(self,obj):
             #queryset = SensorValue.objects.all().filter(idsensor=idsensor).order_by('-created_at')[:1]
@@ -172,7 +201,14 @@ class SensorSerializer(serializers.ModelSerializer):
         
     class Meta:
         model = Sensor
-        fields = ['id', 'name', 'sensortype','room', 'gpio', 'value', 'roomname', 'roomtype', 'ios']
+        fields = ['id', 'name', 'sensortype','room', 'gpio', 'value', 'roomname', 'roomtype', 'ios', 'actuator', 'status']
+
+    def create(self, validated_data):
+        sensor = Sensor.objects.create(**validated_data)
+        logger.info(sensor.id)
+        mqtt.client.publish("/0", json.dumps(mqtt.createMessage("server","android", "updateSensors", "/"+str(sensor.id))), qos= 1)
+        #mqtt.client.reinitialise()
+        return sensor
     
     
 
