@@ -169,26 +169,25 @@ class SensorSerializer(serializers.ModelSerializer):
     def get_status(self,obj):
         value = SensorValue.objects.all().filter(idsensor=obj.id).order_by('-created_at')[:1]
         serializer = SensorValueSerializer(value, many=True)
-        value = serializer.data[0]["value"]
+        if ( len(serializer.data) > 0):
+            value = serializer.data[0]["value"]
 
-        if (obj.sensortype == "led" or obj.sensortype == "motion" or obj.sensortype == "plug" or obj.sensortype == "camera"):
-            if (value == 0.0):
-                return "Off"
+            if (obj.sensortype == "led" or obj.sensortype == "motion" or obj.sensortype == "plug" or obj.sensortype == "camera"):
+                if (value == 0.0):
+                    return "Off"
+                else:
+                    return "On"
+            
+            elif (obj.sensortype == "servo"):
+                if (value == 0.0):
+                    return "Opened"
+                else:
+                    return "Closed"
+            
             else:
-                return "On"
-        
-        elif (obj.sensortype == "servo"):
-            if (value == 0.0):
-                return "Opened"
-            else:
-                return "Closed"
-        
+                return "Ok"
         else:
-            return "Ok"
-
-        
-
-        
+            return "no value"
     
     def get_room_type(self,obj):
             #queryset = SensorValue.objects.all().filter(idsensor=idsensor).order_by('-created_at')[:1]
@@ -201,15 +200,18 @@ class SensorSerializer(serializers.ModelSerializer):
         
     class Meta:
         model = Sensor
-        fields = ['id', 'name', 'sensortype','room', 'gpio', 'value', 'roomname', 'roomtype', 'ios', 'actuator', 'status']
+        fields = ['id', 'name', 'sensortype','room', 'gpio', 'value', 'roomname', 'roomtype', 'ios', 'actuator', 'status', 'temp_lim', 'lux_lim']
 
     def create(self, validated_data):
         sensor = Sensor.objects.create(**validated_data)
         logger.info(sensor.id)
+        sensorV = SensorValue(idsensor = sensor, value = 0.0)
+        sensorV.save()
         mqtt.client.publish("/0", json.dumps(mqtt.createMessage("server","android", "updateSensors", "/"+str(sensor.id))), qos= 1)
         #mqtt.client.reinitialise()
+        
         return sensor
-    
+
     
 
 class HomeSerializer(serializers.ModelSerializer):

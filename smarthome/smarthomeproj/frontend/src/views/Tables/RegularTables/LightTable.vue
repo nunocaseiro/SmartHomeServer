@@ -22,6 +22,25 @@
                 </template>
             </el-table-column>
 
+            <el-table-column label="Sensor status"
+                             min-width="310px"
+                             prop="status">
+                <template v-slot="{row}">
+                    <b-media no-body class="align-items-center">
+                        
+                        <b-media-body>
+                            <label class="switch">
+                                <input type="checkbox" v-on:change="handleStatus(row)">
+                                <span class="slider round"></span>
+                            </label>
+
+
+                            <span class="font-weight-600 name mb-0 text-sm">{{row.status}}</span>
+                        </b-media-body>
+                    </b-media>
+                </template>
+            </el-table-column>
+
              <el-table-column label="Type"
                              min-width="310px"
                              prop="type">
@@ -64,20 +83,7 @@
                 </template>
             </el-table-column>
 
-             <el-table-column label="Sensor status"
-                             min-width="310px"
-                             prop="status">
-                <template v-slot="{row}">
-                    <b-media no-body class="align-items-center">
-                        <!-- <a href="#" class="avatar rounded-circle mr-3">
-                            <img alt="Image placeholder" :src="row.img">
-                        </a> -->
-                        <b-media-body>
-                            <span class="font-weight-600 name mb-0 text-sm">{{row.status}}</span>
-                        </b-media-body>
-                    </b-media>
-                </template>
-            </el-table-column>
+             
 
             
         </el-table>
@@ -97,7 +103,8 @@
       return {
         room: '',
         sensors: [],
-        currentPage: 1
+        currentPage: 1,
+        
       };
     },
     mounted() {
@@ -118,6 +125,9 @@
               }
           }
           return 'Empty'
+      },
+      handleStatus(value){
+          console.log(value)
       }
      },
   }

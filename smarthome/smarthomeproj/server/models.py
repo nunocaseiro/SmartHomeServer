@@ -60,14 +60,17 @@ class Sensor(models.Model):
             MaxValueValidator(40),
             MinValueValidator(1)
         ])
+    temp_lim = models.DecimalField(max_digits=3, decimal_places=1, null = True, blank = True)
+    lux_lim = models.IntegerField(null = True, blank = True)
     created = models.DateTimeField(auto_now_add=True)
-
+    auto = models.BooleanField(default=True)
+    
     def __str__(self):
         return "%s" % (self.name)
 
 class SensorValue(models.Model):
     idsensor  = models.ForeignKey(Sensor, on_delete=models.CASCADE)
-    value = models.DecimalField(max_digits=3, decimal_places=1)
+    value = models.DecimalField(max_digits=6, decimal_places=2)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

@@ -39,6 +39,10 @@
       return {
         rooms: []
       };
+    },mqtt:{
+        'all' (data, topic) {
+          console.log(topic + ': ' + String.fromCharCode.apply(null, data))
+      },
     },
     methods: {
       getRooms(){
@@ -46,9 +50,13 @@
           console.log(response)
           this.rooms = response.data
         })
-      }
-     },
+      },
+      
+    },
+    
     mounted() {
+      
+      this.$mqtt.publish('all', 'message to Sub1')
       this.getRooms()
     }
   };

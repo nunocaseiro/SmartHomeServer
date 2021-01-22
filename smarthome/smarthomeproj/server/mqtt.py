@@ -5,7 +5,7 @@ from json.decoder import JSONDecodeError
 from .models import Room, Sensor, Photo
 import re
 from . import licensePlateRecognition as plate
-
+from decimal import Decimal
 
 
 logger = logging.getLogger("django")
@@ -30,7 +30,7 @@ def on_disconnect(client, userdata, rc):
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
     from .models import Room, Sensor, SensorValue, Vehicle, Profile, Notification, Photo
-   
+    
     try:
         m_decode=str(msg.payload.decode("utf-8","ignore"))
         logger.info(str(m_decode))
@@ -42,18 +42,27 @@ def on_message(client, userdata, msg):
         logger.error(ValueError)
 
     if(idSensor == 0):
+        if(m_in["action"] == "updateSensors"):
             client.subscribe(m_in["value"], qos=1)
-            logger.info(m_in["value"])
+            logger.info("update Sensor: " + m_in["value"])
+            
+        if (m_in["action"] == "removeSensor"):
+            client.unsubscribe(m_in["value"], qos=1)
+            logger.info("remove Sensor: " + m_in["value"])
+            
+        publishUpdateSensor()
     else:
         sensor = Sensor.objects.get(id=idSensor)
         if (sensor.actuator != None):
             actuator = Sensor.objects.get(id=sensor.actuator.id)
-
-        if (m_in["to"] == "server" and m_in["from"] == "espNuno" ):
+        m_from = m_in["from"]
+        logger.info(m_from)
+        if (m_in["to"] == "server" and ( m_from == "espNuno" or m_from == "espJoao") ):
             if (m_in["action"] == "sval"):
+                logger.info("SENSOR ATUADOR:"  + m_in["value"])
                 sensorV = SensorValue(idsensor = sensor, value = m_in["value"])
                 sensorV.save()
-                client.publish("/android", json.dumps(createMessage("server","android", "updateSensors", "value")), qos= 1)
+                #publishUpdateSensorValue()
                 #client.publish("/android", "updateSensors", qos= 1)
                 #logger.info("SENSOR ATUADOR:"  + str(sensor.actuator))
                 
@@ -66,29 +75,47 @@ def on_message(client, userdata, msg):
                             #logger.info("ATUADOR:"  + str(sensorV.value))
 
                             if sensorV.value == "0.00":
-                                #logger.info("TURN OFF")
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage("espNuno","server","turn","off")),qos=1)
+                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
                             if sensorV.value == "1.00":
-                                #logger.info("TURN OFF")
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage("espNuno","server","turn","on")),qos=1)
+                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
 
                     if (sensor.sensortype == "led"): 
                         logger.info(str(sensor.name) + "||" + str(sensor.sensortype) + "||" +str(actuator.id))       
                         if(actuator.sensortype == "camera"):
                             if sensorV.value == "1.00":
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage("espNuno","server","photo","take")),qos=1)
+                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","photo","take")),qos=1)
                             if sensorV.value == "0.00":
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage("espNuno","server","photo","off")),qos=1)
+                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","photo","off")),qos=1)
 
                     if (sensor.sensortype == "camera"):
                         
                         if(actuator.sensortype == "plug" or actuator.sensortype == "servo"):
                             if sensorV.value == "0.00":
                                 #logger.info("TURN OFF")
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage("espNuno","server","turn","off")),qos=1)
+                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
                             if sensorV.value == "1.00":
                                 #logger.info("TURN OFF")
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage("espNuno","server","turn","on")),qos=1)
+                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
+
+                    if (sensor.sensortype == "temperature"):
+                        
+                        if(actuator.sensortype == "led" ):
+                            if Decimal(sensorV.value) > Decimal(sensor.temp_lim):
+                                #logger.info("TURN OFF")
+                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
+                            if Decimal(sensorV.value) < Decimal(sensor.temp_lim):
+                                #logger.info("TURN OFF")
+                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
+                    
+                    if (sensor.sensortype == "luminosity"):
+                        
+                        if(actuator.sensortype == "led" ):
+                            if Decimal(sensorV.value) > Decimal(sensor.lux_lim):
+                                logger.info("TURN OFF")
+                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
+                            if Decimal(sensorV.value) < Decimal(sensor.lux_lim):
+                                logger.info("TURN OFF")
+                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
                                 
 
             if (m_in["action"] == "photo" and m_in["value"] == "sent"):
@@ -184,6 +211,13 @@ def createMessageAndroid(to,user,action,value):
 
 def subscribe(aux):
     client.subscribe("/"+str(aux), qos= 1)
+
+def publishUpdateSensor():
+    client.publish("all", json.dumps(createMessage("all","server", "updateSensors", "value")), qos= 1)
+
+def publishUpdateSensorValue():
+    client.publish("all", json.dumps(createMessage("all","server", "updateSensorValue", "value")), qos= 1)
+ 
 
 client = mqtt.Client("server")
 client.username_pw_set("smarthome","smarthome")

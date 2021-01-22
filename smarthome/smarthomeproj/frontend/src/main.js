@@ -12,6 +12,7 @@ import axios from 'axios';
 import store from './store/store.js';
 import SensorDetail from './views/Dashboard/SensorDetail.vue'
 import dropdown from 'vue-dropdowns';
+import VueMqtt from 'vue-mqtt';
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(Dashboard);
@@ -20,6 +21,7 @@ Vue.config.productionTip = false
 
 Vue.component(SensorDetail)
 Vue.component('dropdown', dropdown)
+Vue.use(VueMqtt, 'ws://161.35.8.148:8083/ws', {clientId: 'WebClient-' + parseInt(Math.random() * 100000), defaultProcotcol: "mqtt", username: "smarthome", password:"smarthome"});
 
 if (store.getters.getUser != null){
   store.state.user = store.getters.getUser;
@@ -33,7 +35,10 @@ new Vue({
   el: '#app',
   render: h => h(App),
   router,
-  store
+  store,
+  mounted(){
+    this.$mqtt.subscribe('all')
+  }
 });
 
 

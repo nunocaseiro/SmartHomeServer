@@ -64,6 +64,12 @@ class SensorViewSet(viewsets.ModelViewSet):
     #last = Sensor.objects.latest('created')
     #logger.info(last)
 
+    def destroy(self, request, *args, **kwargs):
+        sensor = self.get_object()
+        mqtt.client.publish("/0", json.dumps(mqtt.createMessage("server","android", "removeSensor", sensor.id)), qos= 1)
+        sensor.delete()
+        return Response('delete success')
+
 class SensorValueViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
@@ -71,6 +77,8 @@ class SensorValueViewSet(viewsets.ModelViewSet):
     queryset = SensorValue.objects.all()
     serializer_class = SensorValueSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+   
 
 class HomeViewSet(viewsets.ModelViewSet):
     """
