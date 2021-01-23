@@ -37,7 +37,7 @@ new Vue({
   router,
   store,
   mounted(){
-    this.$mqtt.subscribe('all')
+    this.$mqtt.subscribe('#')
   }
 });
 

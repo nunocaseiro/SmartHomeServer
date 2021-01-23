@@ -69,54 +69,54 @@ def on_message(client, userdata, msg):
                 if (sensor.actuator != None):
                     if (sensor.sensortype == "motion"):
                         #logger.info("ATUADOR:"  + str(actuator))
-                        
-                        if(actuator.sensortype == "led"):
-                            #logger.info("ATUADOR:"  + str(actuator.sensortype))
-                            #logger.info("ATUADOR:"  + str(sensorV.value))
+                        if (sensor.auto == True):
+                            if(actuator.sensortype == "led"):
+                                    #logger.info("ATUADOR:"  + str(actuator.sensortype))
+                                    #logger.info("ATUADOR:"  + str(sensorV.value))
 
-                            if sensorV.value == "0.00":
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
-                            if sensorV.value == "1.00":
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
+                                if sensorV.value == "0.00":
+                                    client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
+                                if sensorV.value == "1.00":
+                                    client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
 
                     if (sensor.sensortype == "led"): 
-                        logger.info(str(sensor.name) + "||" + str(sensor.sensortype) + "||" +str(actuator.id))       
-                        if(actuator.sensortype == "camera"):
-                            if sensorV.value == "1.00":
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","photo","take")),qos=1)
-                            if sensorV.value == "0.00":
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","photo","off")),qos=1)
+                        logger.info(str(sensor.name) + "||" + str(sensor.sensortype) + "||" +str(actuator.id))     
+                        if (sensor.auto == True):  
+                            if(actuator.sensortype == "camera"):
+                                if sensorV.value == "1.00":
+                                    client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","photo","take")),qos=1)
+                                if sensorV.value == "0.00":
+                                    client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","photo","off")),qos=1)
 
                     if (sensor.sensortype == "camera"):
-                        
-                        if(actuator.sensortype == "plug" or actuator.sensortype == "servo"):
-                            if sensorV.value == "0.00":
-                                #logger.info("TURN OFF")
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
-                            if sensorV.value == "1.00":
-                                #logger.info("TURN OFF")
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
+                        if (sensor.auto == True):
+                            if(actuator.sensortype == "plug" or actuator.sensortype == "servo"):
+                                if sensorV.value == "0.00":
+                                    #logger.info("TURN OFF")
+                                    client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
+                                if sensorV.value == "1.00":
+                                    #logger.info("TURN OFF")
+                                    client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
 
                     if (sensor.sensortype == "temperature"):
-                        
-                        if(actuator.sensortype == "led" ):
-                            if Decimal(sensorV.value) > Decimal(sensor.temp_lim):
-                                #logger.info("TURN OFF")
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
-                            if Decimal(sensorV.value) < Decimal(sensor.temp_lim):
-                                #logger.info("TURN OFF")
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
+                        if (sensor.auto == True):
+                            if(actuator.sensortype == "led" ):
+                                if Decimal(sensorV.value) > Decimal(sensor.temp_lim):
+                                    #logger.info("TURN OFF")
+                                    client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
+                                if Decimal(sensorV.value) < Decimal(sensor.temp_lim):
+                                    #logger.info("TURN OFF")
+                                    client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
                     
                     if (sensor.sensortype == "luminosity"):
-                        
-                        if(actuator.sensortype == "led" ):
-                            if Decimal(sensorV.value) > Decimal(sensor.lux_lim):
-                                logger.info("TURN OFF")
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
-                            if Decimal(sensorV.value) < Decimal(sensor.lux_lim):
-                                logger.info("TURN OFF")
-                                client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
-                                
+                        if (sensor.auto == True):
+                            if(actuator.sensortype == "led" ):
+                                if Decimal(sensorV.value) > Decimal(sensor.lux_lim):
+                                    logger.info("TURN OFF")
+                                    client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
+                                if Decimal(sensorV.value) < Decimal(sensor.lux_lim):
+                                    logger.info("TURN OFF")
+                                    client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
 
             if (m_in["action"] == "photo" and m_in["value"] == "sent"):
 

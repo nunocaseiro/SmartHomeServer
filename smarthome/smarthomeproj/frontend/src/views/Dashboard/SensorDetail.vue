@@ -36,26 +36,28 @@
                     </select>
 
                     <label for="actuators">Actuator: </label>
-                    <select class="form-control mb-3 w-100" id="actuators" name="actuators" v-model="sensor.actuator" >
+                    <select class="form-control mb-3 w-100" id="actuators" name="actuators" v-model="sensor.actuator" placeholder="Actuator" >
                     <option v-bind:value="'None'">None</option>
                     <option v-for="sensor in this.allSensorsOfRoom" v-bind:value="sensor.id">{{sensor.name}}</option>   
                     </select>
-    
-                    <label for="gpio">Gpio: </label>
-                  <base-input value
-                              class="mb-3"
-                              name="gpio"
-                                type="value"
-                             
-                              placeholder="GPIO"
-                              v-model="sensor.gpio"
-                             >
-                  </base-input>
+                    
+                    <label for="actuators" v-if="sensor.sensortype=='luminosity'">Luminosity limit: </label>
+                    <base-input value class="mb-3" type="number" name="luminosity" placeholder="Luminosity limit" v-model="sensor.lux_lim" v-if="sensor.sensortype=='luminosity'"> </base-input>
 
+
+                    <label for="actuators" v-if="sensor.sensortype=='temperature'" >Temperature limit: </label>
+                    <base-input value class="mb-3" type="number" name="temperature" placeholder="Temperature limit" v-model="sensor.temp_lim" v-if="sensor.sensortype=='temperature'"> </base-input>
+
+                    <label for="gpio">Gpio: </label>
+                    <base-input value class="mb-3" name="gpio" type="number" placeholder="GPIO" v-model="sensor.gpio"> </base-input>
+
+                    <label for="auto">Auto: </label>
+                    <base-checkbox class="mb-3" name="auto" v-model="sensor.auto" ></base-checkbox>
                   
-                  <div class="text-center">
-                    <base-button type="primary" native-type="submit" class="my-4">Save</base-button>
-                  </div>
+                    <div class="text-center">
+                      <base-button type="primary" native-type="submit" class="my-4" v-on:click="saveSensor()">Save</base-button>
+                       <base-button type="danger" native-type="submit" class="my-4" v-on:click="deleteSensor()">Delete</base-button>
+                    </div>
                 </b-form>
               </validation-observer>
             </b-card-body>
@@ -71,10 +73,12 @@
 </template>
 <script>
 import axios from 'axios'
+import BaseCheckbox from '../../components/Inputs/BaseCheckbox.vue';
 
 
 export default {
     components: {
+        BaseCheckbox
     
     }, 
     data() {
@@ -182,6 +186,20 @@ export default {
             }
                
         },
+        saveSensor(){
+          axios.put('http://161.35.8.148/api/sensors/'+this.sensor.id+'/', this.sensor).then(response=>{
+            console.log(response)
+          })
+        },
+        deleteSensor(){
+          axios.delete('http://161.35.8.148/api/sensors/'+this.sensor.id+'/').then(response=>{
+            console.log(response)
+            setTimeout(()=>{
+            
+            this.$router.push("/")
+          },1000)
+          })
+        }
             
      },
 };

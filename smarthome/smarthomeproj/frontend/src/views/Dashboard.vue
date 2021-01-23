@@ -26,8 +26,7 @@
   import StatsCard from '@/components/Cards/StatsCard';
   import LightTable from './Tables/RegularTables/LightTable'
   import axios from 'axios'
-
-
+  
   export default {
     components: {
       BaseProgress,
@@ -42,7 +41,7 @@
     },mqtt:{
         'all' (data, topic) {
           console.log(topic + ': ' + String.fromCharCode.apply(null, data))
-      },
+      }
     },
     methods: {
       getRooms(){
@@ -55,8 +54,6 @@
     },
     
     mounted() {
-      
-      this.$mqtt.publish('all', 'message to Sub1')
       this.getRooms()
     }
   };

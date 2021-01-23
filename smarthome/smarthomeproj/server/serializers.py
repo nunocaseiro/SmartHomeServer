@@ -200,7 +200,7 @@ class SensorSerializer(serializers.ModelSerializer):
         
     class Meta:
         model = Sensor
-        fields = ['id', 'name', 'sensortype','room', 'gpio', 'value', 'roomname', 'roomtype', 'ios', 'actuator', 'status', 'temp_lim', 'lux_lim']
+        fields = ['id', 'name', 'sensortype','room', 'gpio', 'value', 'roomname', 'roomtype', 'ios', 'actuator', 'status', 'temp_lim', 'lux_lim', 'auto']
 
     def create(self, validated_data):
         sensor = Sensor.objects.create(**validated_data)
