@@ -55,9 +55,10 @@ def on_message(client, userdata, msg):
         sensor = Sensor.objects.get(id=idSensor)
         if (sensor.actuator != None):
             actuator = Sensor.objects.get(id=sensor.actuator.id)
-        m_from = m_in["from"]
-        logger.info(m_from)
-        if (m_in["to"] == "server" and ( m_from == "espNuno" or m_from == "espJoao") ):
+        
+        if (m_in["to"] == "server" and ( m_in["from"] == "espNuno" or m_in["from"] == "espJoao") ):
+            m_from = m_in["from"]
+            #logger.info(m_from)
             if (m_in["action"] == "sval"):
                 logger.info("SENSOR ATUADOR:"  + m_in["value"])
                 sensorV = SensorValue(idsensor = sensor, value = m_in["value"])
@@ -80,7 +81,7 @@ def on_message(client, userdata, msg):
                                     client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
 
                     if (sensor.sensortype == "led"): 
-                        logger.info(str(sensor.name) + "||" + str(sensor.sensortype) + "||" +str(actuator.id))     
+                        #logger.info(str(sensor.name) + "||" + str(sensor.sensortype) + "||" +str(actuator.id))     
                         if (sensor.auto == True):  
                             if(actuator.sensortype == "camera"):
                                 if sensorV.value == "1.00":
@@ -112,10 +113,10 @@ def on_message(client, userdata, msg):
                         if (sensor.auto == True):
                             if(actuator.sensortype == "led" ):
                                 if Decimal(sensorV.value) > Decimal(sensor.lux_lim):
-                                    logger.info("TURN OFF")
+                                    #logger.info("TURN OFF")
                                     client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
                                 if Decimal(sensorV.value) < Decimal(sensor.lux_lim):
-                                    logger.info("TURN OFF")
+                                    #logger.info("TURN OFF")
                                     client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
 
             if (m_in["action"] == "photo" and m_in["value"] == "sent"):

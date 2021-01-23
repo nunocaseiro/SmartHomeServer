@@ -32,7 +32,7 @@
                             <span class="font-weight-600 name mb-0 text-sm" v-if="row.sensortype == 'motion' || row.sensortype == 'luminosity' || row.sensortype == 'camera' || row.sensortype == 'temperature' ">{{row.status}}</span>
 
                              <label class="switch" v-if="row.sensortype == 'led' || row.sensortype == 'plug' || row.sensortype == 'servo'">
-                                <input type="checkbox" :id="'checkbox'+row.id"  v-on:change="handleStatus(row)">
+                                <input :value="" type="checkbox" :id="'checkbox'+row.id"  v-on:change="handleStatus(row)">
                                 <span class="slider round"></span>
                             </label>
                         </b-media-body>
