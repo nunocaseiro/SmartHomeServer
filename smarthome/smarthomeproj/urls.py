@@ -54,7 +54,6 @@ urlpatterns = [
     path('api/admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('account/register', views.UserCreate.as_view()),
-    #re_path('^api/sensorsvalues/idsensor/(?P<username>.+)/$', views.LastValue.as_view()),
     path('api/lastvaluesensor/', views.LastValue.as_view()),
     path('api/sensorsofroom/', views.SensorsOfRoom.as_view()),
     path('api/roomsfortesting/', views.RoomsForIOS.as_view()),

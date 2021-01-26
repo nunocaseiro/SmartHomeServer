@@ -31,15 +31,12 @@ def on_disconnect(client, userdata, rc):
 def on_message(client, userdata, msg):
     from .models import Room, Sensor, SensorValue, Vehicle, Profile, Notification, Photo
     
-    try:
-        m_decode=str(msg.payload.decode("utf-8","ignore"))
-        logger.info(str(m_decode))
-        m_in=json.loads(m_decode)        
-        idSensor = int(msg.topic[1:])
-        
-    #logger.info(idSensor)
-    except ValueError:
-        logger.error(ValueError)
+    #try:
+    m_decode=str(msg.payload.decode("utf-8","ignore"))
+    logger.info(str(m_decode))
+    m_in=json.loads(m_decode)        
+    idSensor = int(msg.topic[1:])
+
 
     if(idSensor == 0):
         if(m_in["action"] == "updateSensors"):
@@ -147,6 +144,11 @@ def on_message(client, userdata, msg):
                                 newNotification.save()
                                 client.publish("/android", json.dumps(createMessageAndroid("android", profile.user.username,"newPhoto", str(newNotification.id))), qos=1)
                     #client.publish("/android", "newPhoto", qos=1)
+            
+    #logger.info(idSensor)
+    #except ValueError:
+    #    logger.error(ValueError)
+
 
 def getLicense(path):
         import requests

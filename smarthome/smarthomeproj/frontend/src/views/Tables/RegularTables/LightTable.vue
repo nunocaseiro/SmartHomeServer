@@ -156,6 +156,10 @@
                 
               }
           }
+
+          if (action == "updateSensors" || action == "removeSensor"){
+              this.getSensors()
+          }
           
       },
     },
