@@ -30,11 +30,6 @@ const routes = [
         name: 'profile',
         component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/UserProfile.vue')
       },
-      {
-        path: '/tables',
-        name: 'tables',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/RegularTables.vue')
-      }
     ]
   },
   {
@@ -50,11 +45,6 @@ const routes = [
         meta:{
           forVisitors:true
         }
-      },
-      {
-        path: '/register',
-        name: 'register',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Register.vue')
       },
       { path: '*', component: NotFound }
     ]

@@ -9,10 +9,10 @@ from decimal import Decimal
 
 
 logger = logging.getLogger("django")
-
+allsensors = Sensor.objects.all().filter(ios=False)
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
-    allsensors = Sensor.objects.all().filter(ios=False)
+    
     #logger.error("Connected with result code "+str(rc))
     client.subscribe("/0")
     for sensor in allsensors:
@@ -43,9 +43,9 @@ def on_message(client, userdata, msg):
             client.subscribe(m_in["value"], qos=1)
             logger.info("update Sensor: " + m_in["value"])
             
-        if (m_in["action"] == "removeSensor"):
-            client.unsubscribe(m_in["value"], qos=1)
-            logger.info("remove Sensor: " + m_in["value"])
+        #if (m_in["action"] == "removeSensor"):
+        #    client.unsubscribe(m_in["value"], qos=1)
+        #    logger.info("remove Sensor: " + m_in["value"])
             
         publishUpdateSensor()
     else:
@@ -53,7 +53,7 @@ def on_message(client, userdata, msg):
         if (sensor.actuator != None):
             actuator = Sensor.objects.get(id=sensor.actuator.id)
         
-        if (m_in["to"] == "server" and ( m_in["from"] == "espNuno" or m_in["from"] == "espJoao") ):
+        if (m_in["to"] == "server" and ( m_in["from"] == "9" or m_in["from"] == "10" or m_in["from"] == "27") ):
             m_from = m_in["from"]
             #logger.info(m_from)
             if (m_in["action"] == "sval"):
@@ -99,10 +99,10 @@ def on_message(client, userdata, msg):
                     if (sensor.sensortype == "temperature"):
                         if (sensor.auto == True):
                             if(actuator.sensortype == "led" ):
-                                if Decimal(sensorV.value) > Decimal(sensor.temp_lim):
+                                if Decimal(sensorV.value) < Decimal(sensor.temp_lim):
                                     #logger.info("TURN OFF")
                                     client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
-                                if Decimal(sensorV.value) < Decimal(sensor.temp_lim):
+                                if Decimal(sensorV.value) > Decimal(sensor.temp_lim):
                                     #logger.info("TURN OFF")
                                     client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
                     
@@ -114,6 +114,18 @@ def on_message(client, userdata, msg):
                                     client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
                                 if Decimal(sensorV.value) < Decimal(sensor.lux_lim):
                                     #logger.info("TURN OFF")
+                                    client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
+
+                    if (sensor.sensortype == "plug"):
+                        #logger.info("ATUADOR:"  + str(actuator))
+                        if (sensor.auto == True):
+                            if(actuator.sensortype == "led"):
+                                    #logger.info("ATUADOR:"  + str(actuator.sensortype))
+                                    #logger.info("ATUADOR:"  + str(sensorV.value))
+
+                                if sensorV.value == "0.00":
+                                    client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","off")),qos=1)
+                                if sensorV.value == "1.00":
                                     client.publish("/"+str(actuator.id), json.dumps(createMessage(m_from,"server","turn","on")),qos=1)
 
             if (m_in["action"] == "photo" and m_in["value"] == "sent"):
@@ -135,7 +147,7 @@ def on_message(client, userdata, msg):
                             for profile in allProfiles:
                                 newNotification = Notification.objects.create(profile = profile, notification = "New vehicle detected",seen= False, licensePlate = plate.upper(), photo=photo, description = "allowed")
                                 newNotification.save()
-                                client.publish("/"+str(sensor.id), json.dumps(createMessage("espNuno","server","photo","on")),qos=1)
+                                client.publish("/"+str(sensor.id), json.dumps(createMessage("9","server","photo","on")),qos=1)
                                 logger.info(createMessageAndroid("android", profile.user.username,"newPhoto", str(newNotification.id)))
                                 client.publish("/android", json.dumps(createMessageAndroid("android", profile.user.username,"newPhoto", str(newNotification.id))), qos=1)
                         except Vehicle.DoesNotExist:

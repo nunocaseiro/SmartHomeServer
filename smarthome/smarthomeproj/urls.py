@@ -34,6 +34,7 @@ router.register(r'profiles',views.ProfileViewSet)
 router.register(r'vehicles',views.VehicleViewSet)
 router.register(r'favourites',views.FavouriteViewSet)
 router.register(r'notifications',views.NotificationViewSet)
+router.register(r'housekeys',views.HouseKeyViewSet)
 
 
 admin.site.register(models.Sensor)
@@ -45,6 +46,7 @@ admin.site.register(models.Profile)
 admin.site.register(models.Vehicle)
 admin.site.register(models.Favourite)
 admin.site.register(models.Notification)
+admin.site.register(models.HouseKey)
 
 
 # Wire up our API using automatic URL routing.
@@ -53,7 +55,7 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('api/admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('account/register', views.UserCreate.as_view()),
+    path('account/register/', views.UserCreate.as_view()),
     path('api/lastvaluesensor/', views.LastValue.as_view()),
     path('api/sensorsofroom/', views.SensorsOfRoom.as_view()),
     path('api/roomsfortesting/', views.RoomsForIOS.as_view()),
@@ -67,11 +69,18 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='index.html')),
     url(r'^dj-rest-auth/', include('dj_rest_auth.urls')),
     url("api/insertPhoto/", views.postPhoto),
-    path('api/change_password/<int:pk>/', views.ChangePasswordView.as_view(), name='auth_change_password'),
+    path('api/changepassword/<int:pk>/', views.ChangePasswordView.as_view(), name='auth_change_password'),
     path('api/register/', views.RegisterView.as_view(), name='auth_register'),
     path('api/getNotificationsByUser/',views.NotificationByUserView.as_view()),
     path('api/sensorsandroid/',views.SensorsForAndroid.as_view()),
     path('api/subscribeMqtt/', views.subscribeMqtt.as_view()),
-    path('api/sensortypes/',views.GetTypes.as_view())
+    path('api/sensortypes/',views.GetTypes.as_view()),
+    path('api/favouritesofuser/',views.FavouritesOfUser.as_view()),
+    path('api/accounts/',views.AccountsOfHome.as_view()),
+    path('api/checkkey/', views.CheckHouseReg.as_view()),
+    path('api/gethousewkey/',views.GetHouseWithKey.as_view()),
+    path('api/deletephoto/',views.DeleteProfilePhoto.as_view())
+
+    
 
 ]

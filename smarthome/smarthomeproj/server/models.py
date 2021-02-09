@@ -4,24 +4,21 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.conf import settings
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+import random
 
 # Create your models here.
 class Home(models.Model):
     name = models.CharField(max_length=20)
     latitude = models.CharField(max_length=20, null=True, blank=True)
     longitude = models.CharField(max_length=20, null=True, blank=True)
+    key = models.CharField(
+           max_length = 10,
+           editable= True,
+           null = True,
+           unique=True)
 
     def __str__(self):
         return "%s" % (self.name) 
-
-#@receiver(post_save, sender=User)
-#def create_user_profile(sender, instance, created, **kwargs):
-#    if created:
-#        Profile.objects.create(user=instance)
-
-#@receiver(post_save, sender=User)
-#def save_user_profile(sender, instance, **kwargs):
-#    instance.profile.save()
 
 class Room(models.Model):
     name = models.CharField(max_length=20)
@@ -33,6 +30,8 @@ class Room(models.Model):
         ("garage", 'GARAGE'),
         ("kitchen", 'KITCHEN'),
         ("living", 'LIVING ROOM'),
+        ("bathroom", 'BATHROOM'),
+        ("other", 'OTHER')
     ]
     roomtype = models.CharField(max_length=20,choices=ROOM_TYPE, default="bedroom")
     
@@ -104,9 +103,10 @@ class Favourite(models.Model):
         return "%s %s" % (self.sensor.name, self.user.username)
         
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    home = models.ForeignKey(Home, on_delete=models.CASCADE)
-
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    home = models.ForeignKey(Home, on_delete=models.CASCADE, null = True)
+    photo = models.ImageField(upload_to='static/profile', null = True, blank= True)
+    
 class Notification(models.Model):
     profile = models.ForeignKey(Profile,on_delete=models.CASCADE, null=True)
     notification = models.CharField(max_length=50)
@@ -115,6 +115,20 @@ class Notification(models.Model):
     photo = models.ForeignKey(Photo, on_delete=models.CASCADE, null=True)
     seen = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
+
+def create_new_ref_number():
+      return str(random.randint(1000000000, 9999999999))
+
+class HouseKey(models.Model):
+      key = models.CharField(
+           max_length = 10,
+           blank=True,
+           editable=False,
+           unique=True,
+           default=create_new_ref_number()
+      )
+      def __str__(self):
+        return "%s" % (self.key)
 
 
 

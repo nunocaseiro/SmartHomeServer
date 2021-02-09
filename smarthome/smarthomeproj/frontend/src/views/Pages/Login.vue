@@ -9,6 +9,11 @@
               <h1 class="text-white">Welcome!</h1>
             </b-col>
           </b-row>
+          <b-row class="justify-content-center">
+            <b-col xl="5" lg="6" md="8" class="px-5">
+              <a class="btn btn-dark btn-lg" role="button" href="http://arci-smarthome.space/static/app-debug.apk" style="margin-top: 50px">Download Android App</a>
+            </b-col>
+          </b-row>
         </div>
       </b-container>
       <div class="separator separator-bottom separator-skew zindex-100">
@@ -20,6 +25,9 @@
     </div>
     <!-- Page content -->
     <b-container class="mt--8 pb-5">
+
+          
+
       <b-row class="justify-content-center">
 
         <b-col lg="5" md="7">
@@ -57,9 +65,6 @@
           <b-row class="mt-3">
             <b-col cols="6">
               <router-link to="/dashboard" class="text-light"><small>Forgot password?</small></router-link>
-            </b-col>
-            <b-col cols="6" class="text-right">
-              <router-link to="/register" class="text-light"><small>Create new account</small></router-link>
             </b-col>
           </b-row>
         </b-col>

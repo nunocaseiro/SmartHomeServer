@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User, Group
-from smarthomeproj.server.models import Sensor, SensorValue, Home, Room, Photo, Profile, Vehicle, Favourite, Notification
+from smarthomeproj.server.models import Sensor, SensorValue, Home, Room, Photo, Profile, Vehicle, Favourite, Notification, HouseKey
 from rest_framework import viewsets
 from rest_framework import permissions
 from rest_framework import generics
@@ -18,7 +18,7 @@ from rest_framework import permissions
 from itertools import chain
 from . import mqtt as mqtt
 from . import licensePlateRecognition as plate
-from smarthomeproj.server.serializers import UserSerializer, GroupSerializer, User1Serializer, SensorSerializer, SensorValueSerializer, RoomSerializer, HomeSerializer, SensorSerializerMeta, PhotoSerializer, ProfileSerializer, VehicleSerializer, FavouriteSerializer, RegisterSerializer, ChangePasswordSerializer, NotificationSerializer 
+from smarthomeproj.server.serializers import UserSerializer, GroupSerializer, User1Serializer, SensorSerializer, SensorValueSerializer, RoomSerializer, HomeSerializer, SensorSerializerMeta, PhotoSerializer, ProfileSerializer, VehicleSerializer, FavouriteSerializer, RegisterSerializer, ChangePasswordSerializer, NotificationSerializer , ProfileSerializerCompact, HouseKeySerializer
 import logging
 
 logger = logging.getLogger("django")
@@ -37,7 +37,7 @@ class ProfileViewSet(viewsets.ModelViewSet):
     """
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
-    permission_classes = [permissions.IsAuthenticated]    
+    permission_classes = [permissions.AllowAny]    
 
 
 class GroupViewSet(viewsets.ModelViewSet):
@@ -51,6 +51,11 @@ class GroupViewSet(viewsets.ModelViewSet):
 class UserCreate(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = User1Serializer
+    permission_classes = [permissions.IsAuthenticated]
+
+class HouseKeyViewSet(viewsets.ModelViewSet):
+    queryset = HouseKey.objects.all()
+    serializer_class = HouseKey
     permission_classes = [permissions.IsAuthenticated]
 
 class SensorViewSet(viewsets.ModelViewSet):
@@ -79,7 +84,7 @@ class SensorViewSet(viewsets.ModelViewSet):
 
     def destroy(self, request, *args, **kwargs):
         sensor = self.get_object()
-        mqtt.client.publish("/0", json.dumps(mqtt.createMessage("server","android", "removeSensor", sensor.id)), qos= 1)
+        mqtt.client.publish("/0", json.dumps(mqtt.createMessage("server","android", "removeSensor", "/"+str(sensor.id))), qos= 1)
         sensor.delete()
         return Response('delete success')
 
@@ -99,7 +104,16 @@ class HomeViewSet(viewsets.ModelViewSet):
     """
     queryset = Home.objects.all()
     serializer_class = HomeSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
+
+    def destroy(self, request, *args, **kwargs):
+        home = self.get_object()
+        profiles = Profile.objects.filter(home=home)
+        for profile in profiles:
+            user = User.objects.get(pk=profile.user.id)
+            user.delete()
+        home.delete()
+        return Response(data='delete success')
 
 class PhotoViewSet(viewsets.ModelViewSet):
     """
@@ -149,18 +163,28 @@ class RoomsForIOS(generics.ListAPIView):
 class RoomsForAndroid(generics.ListAPIView):
     serializer_class = RoomSerializer
     permission_classes = [permissions.IsAuthenticated]
-    def get_queryset(self):
-      
-        queryset = Room.objects.all().filter(testing=False)
-        return queryset
+    def get(self, request, format=None):
+        idhome = self.request.query_params.get('home', None)
+        home = Home.objects.filter(pk=idhome).first()
+        rooms = Room.objects.filter(home=home, testing=False)
+        data = RoomSerializer(rooms, many = True)
+        return Response(data.data)
 
 class SensorsForAndroid(generics.ListAPIView):
     serializer_class = SensorSerializer
     permission_classes = [permissions.IsAuthenticated]
-    def get_queryset(self):
-      
-        queryset = Sensor.objects.all().filter(ios=False)
-        return queryset
+    def get(self, request, format=None):
+        idhome = self.request.query_params.get('home', None)
+        home = Home.objects.filter(pk=idhome).first()
+        rooms = Room.objects.filter(home=home, testing=False)
+        sensors = []
+        for room in rooms:
+            sensorsofroom = Sensor.objects.filter(room=room)
+            for sensor in sensorsofroom:
+                sensors.append(sensor)
+        logger.info(sensors)
+        data = SensorSerializer(sensors, many = True)
+        return Response(data.data)
 
 
 class SensorsOfRoom(generics.ListAPIView):
@@ -195,7 +219,7 @@ class GetUserByUsername(generics.ListAPIView):
 
 class GetUserProfileByUsername(generics.ListAPIView):
     serializer_class = ProfileSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
     def get_queryset(self):
         username = self.request.query_params.get('username', None)
         user = User.objects.filter(username=username)
@@ -298,7 +322,7 @@ class ChangePasswordView(generics.UpdateAPIView):
 
 class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
-    permission_classes = (permissions.IsAuthenticated,)
+    permission_classes = (permissions.AllowAny,)
     serializer_class = RegisterSerializer
 
 class NotificationViewSet(viewsets.ModelViewSet):
@@ -323,3 +347,64 @@ class GetTypes(APIView):
     def get(self, request):
         return Response({"data": {"led","plug","camera","servo","motion","temperature","luminosity"}})
 
+
+class CheckHouseReg(APIView):
+    permission_classes = [permissions.AllowAny]
+    def get(self,request):
+        key = self.request.query_params.get('key', None)
+        keyExists= False
+        homeExists = False
+        profilesExists = False
+        foundKey = HouseKey.objects.filter(key=key).first()
+        if (foundKey):
+            keyExists = True
+            foundHome = Home.objects.filter(key=foundKey).first()
+            if (foundHome):
+                homeExists = True
+                nrProfiles = Profile.objects.filter(home=foundHome).count()
+                if (nrProfiles > 0):
+                    profilesExists = True 
+        return Response({"validKey": keyExists, "homeCreated": homeExists, "profilesCreated":profilesExists})
+                
+           
+
+class FavouritesOfUser(APIView):
+    serializer_class = FavouriteSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    def get(self, request, format=None):
+        username = self.request.query_params.get('username', None)
+        user = User.objects.filter(username=username).first()
+        queryset = Favourite.objects.filter(user=user)
+        data = FavouriteSerializer(queryset,many= True)
+        return Response(data.data)
+
+class AccountsOfHome(APIView):
+    serializer_class = ProfileSerializerCompact
+    permission_classes = [permissions.IsAuthenticated]
+    def get(self, request, format=None):
+        serializer_context = {
+            'request': request,
+        }
+        homeParam = self.request.query_params.get('home', None)
+        home = Home.objects.filter(pk=homeParam).first()
+        queryset = Profile.objects.filter(home=home)
+        data = ProfileSerializerCompact(queryset,many=True, context= serializer_context)
+        return Response(data.data)
+
+class GetHouseWithKey(APIView):
+    serializer_class = HomeSerializer
+    permission_classes = [permissions.AllowAny]
+    def get(self,request,format=None):
+        key = self.request.query_params.get('key', None)
+        home = Home.objects.get(key=key)
+        data = HomeSerializer(home)
+        return Response(data.data)
+
+class DeleteProfilePhoto(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    def get(self,request,format=None):
+        key = self.request.query_params.get('profile',None)
+        profile = Profile.objects.get(pk=key)
+        profile.photo = None
+        profile.save()
+        return Response({"Photo deleted with sucess"})

@@ -1,13 +1,5 @@
 <template>
   <card>
-    <b-row align-v="center" slot="header" >
-      <b-col cols="8">
-        <h3 class="mb-0">Edit profile </h3>
-      </b-col>
-      <b-col cols="4" class="text-right">
-        <a href="#!" class="btn btn-sm btn-primary">Settings</a>
-      </b-col>
-    </b-row>
 
     <b-form @submit.prevent="updateProfile">
       <h6 class="heading-small text-muted mb-4">User information</h6>

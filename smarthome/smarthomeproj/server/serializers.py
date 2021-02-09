@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from smarthomeproj.server.models import Sensor, SensorValue, Home, Room, Photo, Profile, Vehicle, Favourite, Notification
+from smarthomeproj.server.models import Sensor, SensorValue, Home, Room, Photo, Profile, Vehicle, Favourite, Notification, HouseKey
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
 from . import mqtt as mqtt
@@ -64,11 +64,11 @@ class GroupSerializer(serializers.ModelSerializer):
         model = Group
         fields = ('name',)
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     #groups = GroupSerializer(many=True)
     class Meta:
         model = User
-        fields = ['id','url', 'username', 'email', 'groups', 'first_name', 'last_name']
+        fields = ['id', 'username', 'email', 'groups', 'first_name', 'last_name']
 
 
 
@@ -94,10 +94,11 @@ class RegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True, required=True, validators=[validate_password])
     password2 = serializers.CharField(write_only=True, required=True)
     groups = serializers.CharField(required=True)
+    home = serializers.IntegerField(write_only=True)
 
     class Meta:
         model = User
-        fields = ('username', 'password', 'password2', 'email', 'first_name', 'last_name', 'groups')
+        fields = ('username', 'password', 'password2', 'email', 'first_name', 'last_name', 'groups','home')
         extra_kwargs = {
             'first_name': {'required': True},
             'last_name': {'required': True}
@@ -120,14 +121,26 @@ class RegisterSerializer(serializers.ModelSerializer):
         group = Group.objects.get(name = validated_data['groups'])
         user.groups.add(group)
         user.set_password(validated_data['password'])
-        user.save()
-
-        return user
+        user = user.save()
+        
+        userGet = User.objects.get(username=validated_data['username'])
+        logger.info(userGet)
+        homeObj = Home.objects.get(pk=validated_data['home'])
+        logger.info(homeObj)
+        profile=Profile.objects.create(user=userGet,home = homeObj)
+        
+        return userGet
 
 class SensorValueSerializer(serializers.ModelSerializer):
     class Meta:
         model = SensorValue
         fields = ['id','idsensor', 'value']
+
+class HouseKeySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = HouseKey
+        fields = ['key']
+
 
 class PhotoSerializer(serializers.ModelSerializer):
     photo = Base64ImageField(
@@ -180,9 +193,9 @@ class SensorSerializer(serializers.ModelSerializer):
             
             elif (obj.sensortype == "servo"):
                 if (value == 0.0):
-                    return "Opened"
-                else:
                     return "Closed"
+                else:
+                    return "Opened"
             
             else:
                 return "Ok"
@@ -217,7 +230,8 @@ class SensorSerializer(serializers.ModelSerializer):
 class HomeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Home
-        fields = ['name','id', 'latitude', 'longitude']
+        fields = ['name','id', 'latitude', 'longitude','key']
+    
     
 class RoomSerializer(serializers.ModelSerializer):
     class Meta:
@@ -227,7 +241,7 @@ class RoomSerializer(serializers.ModelSerializer):
 class VehicleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vehicle
-        fields = ['id','licenseplate','brand','model', 'year']
+        fields = ['id','licenseplate','brand','model', 'year','home']
 
 class FavouriteSerializer(serializers.ModelSerializer):
     class Meta:
@@ -251,6 +265,9 @@ class ProfileSerializer(serializers.HyperlinkedModelSerializer):
     home = HomeSerializer(many=False)
     favourites = serializers.SerializerMethodField("get_favourites")
     notifications = serializers.SerializerMethodField("get_notifications")
+    photo = Base64ImageField(
+        max_length=None, use_url=True,
+    )
     def get_favourites(self,obj):
         fav = Favourite.objects.filter(user=obj.user.id)
         serializer = FavouriteSerializer(fav, many= True)
@@ -264,7 +281,14 @@ class ProfileSerializer(serializers.HyperlinkedModelSerializer):
         
     class Meta:
         model = Profile
-        fields = ['user', 'home', 'favourites', 'notifications']
+        fields = ['id','user', 'home', 'favourites', 'notifications', 'photo']
+
+class ProfileSerializerCompact(serializers.HyperlinkedModelSerializer):
+    user = UserSerializer(many=False)
+    
+    class Meta:
+        model = Profile
+        fields = ['user', 'photo']
 
 class ChangePasswordSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True, required=True, validators=[validate_password])

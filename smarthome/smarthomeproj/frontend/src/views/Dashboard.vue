@@ -3,10 +3,10 @@
 
     <base-header class="pb-4 pb-8 pt-5 pt-md-5 bg-gradient-success">
       <!-- Card stats -->
-
+    <a class="btn btn-dark btn-lg" role="button" href="http://arci-smarthome.space/static/app-debug.apk" style="margin-top: 50px">Download Android App</a>
     </base-header>
     <b-container fluid class="mt--6">
-      
+    
     <!--Tables-->
       <div v-for="room in rooms" :key="room.id">
         <light-table v-bind:dataRoom="room" ></light-table>
@@ -45,7 +45,7 @@
     },
     methods: {
       getRooms(){
-        axios.get('http://161.35.8.148/api/actualrooms/').then(response=>{
+        axios.get('http://161.35.8.148/api/actualrooms/?home=1').then(response=>{
           console.log(response)
           this.rooms = response.data
         })

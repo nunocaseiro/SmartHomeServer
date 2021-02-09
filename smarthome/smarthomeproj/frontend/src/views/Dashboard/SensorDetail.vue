@@ -111,7 +111,7 @@ export default {
         })
       },
       getRooms(){
-        axios.get('http://161.35.8.148/api/actualrooms/').then(response=>{
+        axios.get('http://161.35.8.148/api/actualrooms?home=1').then(response=>{
           
           this.allRooms = response.data
           this.getSensor();

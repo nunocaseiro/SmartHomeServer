@@ -104,12 +104,10 @@
         this.$sidebar.displaySidebar(true)
       },
        logout(){
-      axios.post('http://161.35.8.148/dj-rest-auth/logout/').then(response=>{
-          this.$store.commit('clearUser')
+        this.$store.commit('clearUser')
           setTimeout(()=>{
             this.$router.push("/login")
           })
-        })
     }
     },
     beforeDestroy() {

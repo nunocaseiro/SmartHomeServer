@@ -32,7 +32,7 @@
                             <span class="font-weight-600 name mb-0 text-sm" v-if="row.sensortype == 'motion' || row.sensortype == 'luminosity' || row.sensortype == 'camera' || row.sensortype == 'temperature' ">{{row.status}}</span>
 
                              <label class="switch" v-if="row.sensortype == 'led' || row.sensortype == 'plug' || row.sensortype == 'servo'">
-                                <input :value="" type="checkbox" :id="'checkbox'+row.id"  v-on:change="handleStatus(row)">
+                                <input type="checkbox" :id="'checkbox'+row.id"  v-on:change="handleStatus(row)">
                                 <span class="slider round"></span>
                             </label>
                         </b-media-body>
@@ -177,7 +177,7 @@
       getSensorName(id){
           for (var i = 0; i < this.sensors.length; i++){
               if( this.sensors[i].id == id){
-                  return this.sensors[i].name
+                  return this.sensors[i].id
               }
           }
           return 'Empty'
@@ -186,10 +186,10 @@
           var checkbox = document.getElementById("checkbox"+sensor.id);
           if (checkbox.checked){
               sensor.value = 1.00
-              this.$mqtt.publish('/'+sensor.id, JSON.stringify({"to": "esp"+this.dataRoom.name, "from": "server", "action": "turn", "value": "on"}))
+              this.$mqtt.publish('/'+sensor.id, JSON.stringify({"to": String(this.dataRoom.id), "from": "server", "action": "turn", "value": "on"}))
           }else{
               sensor.value = 0.00
-              this.$mqtt.publish('/'+sensor.id, JSON.stringify({"to": "esp"+this.dataRoom.name, "from": "server", "action": "turn", "value": "off"}))
+              this.$mqtt.publish('/'+sensor.id, JSON.stringify({"to": String(this.dataRoom.id), "from": "server", "action": "turn", "value": "off"}))
           }
           
       },
