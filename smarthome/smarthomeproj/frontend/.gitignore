@@ -13,5 +13,6 @@ yarn-error.log*
 *.njsproj
 *.slnghg
 debug.log
-
+.*
+!/.gitignore
 smarthome/static/arci-smarthome.apk
